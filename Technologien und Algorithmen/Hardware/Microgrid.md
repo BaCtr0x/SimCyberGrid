@@ -1,0 +1,1 @@
+Microgrids comprise local low-voltage and even medium-voltage distribution systems with distributed energy resources and storage devices in order to satisfy the demands of energy consumers. Such systems can be operated in a semi-autonomous way, if interconnected to the grid, or in an autonomous way (islanding mode), if disconnected from the main grid.

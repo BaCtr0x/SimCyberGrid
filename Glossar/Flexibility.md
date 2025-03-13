@@ -1,0 +1,1 @@
+*Flexibility* is the changes in consumption/injection of electrical power from/to the power system from their current/normal patterns in response to certain signals, either voluntarily or mandatory.

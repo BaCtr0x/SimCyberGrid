@@ -38,7 +38,7 @@
    - Integrierte Steuerung von E-Fahrzeugen
    - Nutzung als dezentrale Energiespeicher
    - Automatisierte Verguetung durch Smart Contracts
-6) __UC-PS-6-IM:__ Tansactive Control von Microgrids - Island Mode
+6) __UC-PS-6-IM:__ Tansactive Control von [[Microgrids|Microgrids]] - Island Mode
    - Autonome Steuerung von Inselnetzen
    - Verrechnung von Energietransaktionen per DLT
    - Sicherstellung der Netzstabilitaet

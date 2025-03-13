@@ -41,7 +41,7 @@ IPsec uses a combination of **three core protocols**:
 
 ### Why Use IPsec?
 ✔ **Strong Security** → Encrypts and authenticates data.
-✔ **Prevents Eavesdropping** → Protects against MITM ([[Man_in_the_Middle|Man-in-the-Middle]]) attacks.
+✔ **Prevents Eavesdropping** → Protects against MITM ([[Man in the Middle|Man-in-the-Middle]]) attacks.
 ✔ **Ensures Data Integrity** → Detects and blocks tampered packets.
 ✔ **Supports VPNs** → Used for **remote access VPNs and site-to-site tunnels**.
 ✔ **Works with IPv4 & IPv6** → Provides security across modern networks.

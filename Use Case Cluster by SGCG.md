@@ -1,0 +1,34 @@
+- Access Control (Substation Remote Access Example)
+- (AMI) Billing
+- Billing
+- Blackout management
+- (AMI) Collect events and status information
+- (AMI) Configure events, statuses and actions
+- Connect an active actor to the grid
+- Controlling the grid (locally/ remotely) manually or automatically
+- Customer
+- (AMI) Customer information provision
+- Demand and production (generation) flexibility
+- (AMI) Energy market events
+- Exchange of metered data
+- Flexibility markets
+- Generation Maintenance
+- Generation Operation Scheduling
+- Generation Transverse
+- Grid reliability using market-based mechanisms
+- Grid stability
+- (AMI) Installation & configuration
+- Maintaining grid assets
+- Manage commercial relationship for electricity supply
+- Managing power quality
+- Market Settlements
+- Monitor AMI event
+- Monitoring the grid flows
+- Operate DER(s)
+- Operate wholesale electricity market
+- Protecting the grid assets
+- Provide and collect contractual measurements
+- Reconfiguring the network in case of fault
+- System and security management
+- Trading front office operation
+- Weather condition forecasting & observation
