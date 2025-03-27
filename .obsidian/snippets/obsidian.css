@@ -7,8 +7,8 @@
 \pard\pardeftab720\sa320\partightenfactor0
 
 \f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
-.CodeMirror-lines, .CodeMirror-selected, .markdown-preview-section \{ max-width: 700px; margin: auto; \}}
+.CodeMirror-lines, .CodeMirror-selected, .markdown-preview-section \{ max-width: 1400px; margin: auto; \}}
 .markdown-source-view, .markdown-preview-view {
-max-width: 900px;
+max-width: 1400px;
 margin: auto;
 }
