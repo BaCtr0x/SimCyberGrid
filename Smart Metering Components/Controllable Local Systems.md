@@ -1,1 +1,1 @@
-Controllable Local Systems (CLS) may range from local power generation plants, controllable loads such as air condition and intelligent household appliances ("white goods") to applications in home automation. CLS may utilize the services of the [[Gateway]] for communication services.
+Controllable Local Systems (CLS) may range from local power generation plants, controllable loads such as air condition and intelligent household appliances ("white goods") to applications in home automation. CLS may utilize the services of the [[Smart Meter Gateway]] for communication services.

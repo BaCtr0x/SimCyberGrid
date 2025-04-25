@@ -1,0 +1,12 @@
+The Smart Meter Gateway (SMGW) serves as the communication component between the components in the LAN of the consumer and the outside world. It can be seen as a special kind of firewall dedicated to the Smart Metering functionality. It also collects, processes and stores the records from Meter(s) and ensures that only authorized parties have access to them or derivatives thereof. Before sending relevant information the information will be signed and encrypted using the services of the TOE. The Gateway features a mandatory user interface, enabling authorized consumers to access the data relevant to them. The Gateways will be evaluated separately according to the requirements in the corresponding Protection Profile.
+In addition SMGWs are used in the realm of dynamic tariff structures. These enable utilities to implement and manage complex tariff models such as 
+time-of-use pricing, critical peak pricing and real-time pricing. This allows the energy provider to incentivize the users energy consumption behavior to change according to the grid stability and efficiency objectives of the network. 
+## SMGWs in Germany
+In Germany the SMGWs are governed by specific technical guidelines outline the given requirements. For this the BSI TR-03109 is one of the most important guidelines. In general these guidelines ensure robust security measures, such as end-to-end encryption and robust authentication protocols in order to protect sensitive consumer and grid data. It is mandatory for each SMGW to comply to these requirements to ensure data integrity and confidentiality across all communication channels. 
+Furthermore the BSI defines several communication modes between the SMGW and the grid operator (GO) under the tariff application cases (TAC). The communication modes are designed for contractual purposes and for power grid measurement data supply with high frequencies. Note here that a high measurement resolution is important and desirable, which leads us to focus on TAC7 and TAC14. 
+![[TAC_Table.png]]
+
+In addition to the security features provided by the SMGW is also ensures interoperability across various manufacturers and utility systems, which is critical in a sector such as this one where multiple manufacturers provided different hardware which all have to work together seamlessly.
+
+Example JSON for TAC14:
+![[JSON_TAC14.png]]

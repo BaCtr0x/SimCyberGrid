@@ -4,7 +4,7 @@ The following figure provides an overview over the TOE as part of a complete Sma
 ![[TOE_Direct_Environment.png]]
 
 ### Components
-- [[Gateway]]
+- [[Smart Meter Gateway]]
 - [[Meter]]
 - [[Security Module]]
 - [[Controllable Local Systems]]
@@ -71,7 +71,7 @@ All these security features are used by the Gateway to uphold the overall securi
 | Malfunction              | An attacker with high attack potential tries to cause a malfunction of the TSF or of the IC Embedded Software by applying environmental stress in order to (i) deactivate or modify security features or functions of the TOE or (ii) circumvent or deactivate or modify security functions of the IC Embedded Software.<br>This may be achieved e.g. by operating conditions, exploiting errors in the IC Embedded Software or misuse of administration function. To exploit this an attacker needs information about the functional operation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ## Rationale for Security Objectives
-![[Screenshot 2025-04-22 at 14.46.14.png]]![[Screenshot 2025-04-22 at 14.46.35.png]]
+![[Rationale_for_Security_Objectives_for_the_TOE.png]]![[Rational_for_Security_Objectives_for_the_TOE_part2.png]]
 
 ### Cryptographic Support
 The Security Module serves as a cryptographic service provider for the Smart meter Gateway and provides services in the following cryptographic areas:

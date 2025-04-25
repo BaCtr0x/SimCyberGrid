@@ -1,6 +1,6 @@
 ## General
 First ECKA stands for `Elliptic-Curve Key Agreement`, which is the shorthand that is used by the BSI, on most cases it is shortened to `EC`. Second, DH stands for `Diffie-Hellman`, which is a classic two-party key-agreement or key-exchange scheme.
-So ECKA-DH is the elliptic-curve analogue to DH: two parties combine their private key with the other party's public key to obtain a shares secret. In the Smart-Meter-Gateway world the operation is performed inside the certified [[Security Module]] and then handed to the [[Gateway]] firmware for the KDF and later use. 
+So ECKA-DH is the elliptic-curve analogue to DH: two parties combine their private key with the other party's public key to obtain a shares secret. In the Smart-Meter-Gateway world the operation is performed inside the certified [[Security Module]] and then handed to the [[Smart Meter Gateway]] firmware for the KDF and later use. 
 
 ## Mathematical Core (Single-pass "basic" ECKA-DH)
 | Party     | Static data                                                                   | Ephemeral (optional)                      |

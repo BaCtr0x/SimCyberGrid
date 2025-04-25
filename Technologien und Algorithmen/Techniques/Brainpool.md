@@ -1,5 +1,5 @@
 ## General
-**Brainpool** is a _family_ of prime‑field elliptic‑curve domain parameters published by the German Federal Office for Information Security (BSI). They are standardized in **RFC 5639** and BSI **TR‑03111** and are named _brainpoolP160r1, …, brainpoolP512t1_ (P = prime‑field, r = random curve, t = “twisted” co‑factor‑1 variant). Typical uses: [[ECDSA]], ECDH / [[ECKA-DH]], and [[TLS]] in German e‑ID cards, [[Gateway|Smart-Meter Gateway]], ePassport chips, automotive V2X, etc.
+**Brainpool** is a _family_ of prime‑field elliptic‑curve domain parameters published by the German Federal Office for Information Security (BSI). They are standardized in **RFC 5639** and BSI **TR‑03111** and are named _brainpoolP160r1, …, brainpoolP512t1_ (P = prime‑field, r = random curve, t = “twisted” co‑factor‑1 variant). Typical uses: [[ECDSA]], ECDH / [[ECKA-DH]], and [[TLS]] in German e‑ID cards, [[Smart Meter Gateway|Smart-Meter Gateway]], ePassport chips, automotive V2X, etc.
 
 
 ## Why They were Created
