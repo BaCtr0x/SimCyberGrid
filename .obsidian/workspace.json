@@ -8,105 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8f437fae73d4ce33",
+            "id": "5a708a7caf31053c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technologien und Algorithmen/Techniques/Spear_Phishing.md",
+                "file": "Security/Threat Analysis Techniques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spear_Phishing"
+              "title": "Threat Analysis Techniques"
             }
           },
           {
-            "id": "b5164e6975771421",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SGAM Model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SGAM Model"
-            }
-          },
-          {
-            "id": "0c363b6a0aadea04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SGIS Security Levels.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SGIS Security Levels"
-            }
-          },
-          {
-            "id": "48562676274f1387",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SGAM Model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SGAM Model"
-            }
-          },
-          {
-            "id": "ec3edf9381a6e60f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technologien und Algorithmen/Techniques/COSEM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "COSEM"
-            }
-          },
-          {
-            "id": "005aac0c06a1bf1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Sicherheitsstandards.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sicherheitsstandards"
-            }
-          },
-          {
-            "id": "20486f3b37e8e1ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Use Case Zusammenfassung.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Use Case Zusammenfassung"
-            }
-          },
-          {
-            "id": "113db4ddd8242b35",
+            "id": "78405fc2c4baa767",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -120,21 +36,35 @@
             }
           },
           {
-            "id": "5a708a7caf31053c",
+            "id": "adb82ec8720adfad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Glossar/Flexibility.md",
+                "file": "Security/GAE-1 and GAE-2 Cryptanalytic Attacks Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flexibility"
+              "title": "GAE-1 and GAE-2 Cryptanalytic Attacks Overview"
             }
           },
           {
-            "id": "173a07663fbb63d3",
+            "id": "5bfd541946b49d8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Sicherheitsangriffe.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sicherheitsangriffe"
+            }
+          },
+          {
+            "id": "28d9dc29cafaf763",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -142,9 +72,37 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "198f91f5e930dfaa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Famous Attacks/Stuxnet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stuxnet"
+            }
+          },
+          {
+            "id": "4d5227d244a3638c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vorgaben/Kommunikation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kommunikation"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -201,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 243.5,
+    "collapsed": true
   },
   "right": {
     "id": "2bc0937f071acec5",
@@ -265,13 +224,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SGIS Security Levels.md",
+                "file": "Security/Famous Attacks/Stuxnet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SGIS Security Levels"
+              "title": "Outline of Stuxnet"
             }
           }
         ],
@@ -279,7 +238,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5
+    "width": 211.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -291,49 +251,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c84c5630b7d88ddc",
+  "active": "78405fc2c4baa767",
   "lastOpenFiles": [
+    "Security/Famous Attacks/Stuxnet.md",
+    "Security/Threat Analysis Techniques.md",
+    "Vorgaben/Kommunikation.md",
+    "Notes Meeting.md",
+    "risk_matrix_stuxnet_smart_grid 2.png",
+    "Technologien und Algorithmen/Techniques/Brainpool.md",
+    "Security/Sicherheitsangriffe.md",
+    "risk_matrix_stuxnet_smart_grid 1.png",
+    "risk_matrix_stuxnet_smart_grid.png",
+    "Dataflow Diagram Smart Grid.md",
+    "Vorgaben",
+    "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
+    "Technologien und Algorithmen/Techniques/Target of Evaulation.md",
+    "Screenshot 2025-04-22 at 14.46.35.png",
+    "Screenshot 2025-04-22 at 14.46.14.png",
+    "Screenshot 2025-04-22 at 14.45.34.png",
+    "Smart Metering Components/Gateway Operator.md",
+    "Smart Metering Components/Consumer.md",
+    "Smart Metering Components/Gateway Administrator.md",
+    "Technologien und Algorithmen/Algorithmen/PACE.md",
+    "Smart Metering Components/Controllable Local Systems.md",
+    "Smart Metering Components/Meter.md",
+    "Smart Metering Components/Security Module.md",
+    "Smart Metering Components/Gateway.md",
+    "Smart Metering Components",
+    "TOE_Direct_Environment.png",
     "SGAM Model.md",
-    "SGIS Security Levels.md",
+    "Security/GAE-1 and GAE-2 Cryptanalytic Attacks Overview.md",
+    "Technologien und Algorithmen/Techniques/LTE 4G.md",
+    "Technologien und Algorithmen/Algorithmen/GEA-x Family.md",
+    "Technologien und Algorithmen/Algorithmen/A5x Family.md",
+    "Technologien und Algorithmen/Techniques/GSM - Second Generation (2G).md",
+    "Technologien und Algorithmen/Techniques/UMTS 3G.md",
+    "Technologien und Algorithmen/Algorithmen/EEA3 - Based on ZUC Stream Cipher.md",
+    "Security/Famous Attacks",
     "Images/European_set_of_recommendations_domain_overview.png",
     "Images/Security_Standard_Coverage.png",
-    "Use Case Cluster by SGCG.md",
-    "Security/Sicherheitsstandards.md",
     "Images/SGIS_Levels.png",
-    "Notes Meeting.md",
-    "Images/SGAM_Model.png",
-    "Security/Sicherheitsangriffe.md",
-    "Microgrids.md",
-    "Technologien und Algorithmen/Techniques/COSEM.md",
-    "Technologien und Algorithmen/Techniques/DLMS.md",
-    "Technologien und Algorithmen/Techniques/X.509.md",
-    "Technologien und Algorithmen/Techniques/Role-Based Access Control.md",
-    "Glossar/Flexibility.md",
     "Security",
-    "Use Case Zusammenfassung.md",
-    "Use-Cases.md",
-    "Technologien und Algorithmen/Techniques/Spear_Phishing.md",
-    "Technologien und Algorithmen/Techniques/RADIUS.md",
-    "Technologien und Algorithmen/Techniques/Quality of Service.md",
-    "Technologien und Algorithmen/Techniques/MPLS.md",
-    "Technologien und Algorithmen/Techniques/IEEE 802.1x.md",
-    "Technologien und Algorithmen/Algorithmen/DNS.md",
-    "Glossar/Deman Side Management.md",
-    "Glossar/Demand Response.md",
     "Glossar",
-    "Technologien und Algorithmen/Hardware/Microgrid.md",
-    "Technologien und Algorithmen/Techniques/Man in the Middle.md",
-    "Technologien und Algorithmen/Techniques/Drive by Compromise.md",
     "Unterlagen/Masterarbeit_Moritz.pdf",
-    "Images/Smart_Grid_Plane_SGAM.png",
-    "Images/IEEE_802.1x.png",
     "Technologien und Algorithmen/Techniques",
-    "Images/Blockchain Technology.png",
-    "Images/Timestamped Append-only Log-Blockchain.png",
     "Images",
     "Technologien und Algorithmen/Hardware",
-    "Technologien und Algorithmen/Algorithmen",
-    "Technologien und Algorithmen",
-    "Unterlagen"
+    "Technologien und Algorithmen/Algorithmen"
   ]
 }

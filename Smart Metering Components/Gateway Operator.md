@@ -1,0 +1,1 @@
+The Gateway operator is responsible for installing and maintaining the Gateway. They are also responsible for gathering Meter Data from the Gateway and for providing these data to the corresponding external entities. 

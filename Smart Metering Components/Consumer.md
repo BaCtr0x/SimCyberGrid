@@ -1,0 +1,1 @@
+The individual or organization that "owns" the Meter Data. In most cases this will be tenants or house owners consuming electricity, water, gas or further commodities. However, it is also possible that the consumer produces or stores energy (e.g. with their own solar panel).

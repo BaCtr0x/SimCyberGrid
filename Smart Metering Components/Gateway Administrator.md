@@ -1,0 +1,1 @@
+The Smart Meter Gateway Administrator in short Gateway Administrator is one who is in charge of the administration of the Gateway and its integrated [[Security Module]] (TOE), in particular the management of keys and certificates, is interacting with the TOE via the Gateway.

@@ -54,4 +54,113 @@
 	- Auch in dem SGCG Dokument mal nachschauen und Sascha Fragen, ob die Scenarien definiert haben
 	- Vielleicht auch in den Worksop nen Scenario aufbauen, dann hat man ein Kundenspecifisches welches relevant ist, vielleicht gleich am Anfang ein scenario definieren
 - [x] einmal SGAM genau aufschrieben
-- [ ] schauen wie SGCG und MEDIT an das komplexe allgemeine ding rangegangen sind 
+- [x] schauen wie SGCG und MEDIT an das komplexe allgemeine ding rangegangen sind 
+- [x] Ba von Milenas Studi nochmal anschauen
+
+### Notes Weekly 28.03.2025
+- Praesentation vom Projekt noch so auf 3 Folien aufbauschen
+- Fragebogen macht Felix und vorbereiten des Raumes macht er auch 
+	- Koennen danach auch gemeinsam in die Mensa gehen oder so und die meisten kommen wahrscheinlich so an, dass die schon gegessen haben. Ich sollte mir also lieber was mitbringen
+- TRL (BSI) fuer die Sicherheit von Smart Meter Gateway, sind aber auch in NIS2 drin
+- Sascha erstellt eine Liste mit allen Angriffen die er finden kann und laesst die dann von Merlin von Stromnetz Hamburg priorisieren. Damit haben wir dann auch schon eine gute Uebersicht. 
+- Naechste Woche einmal Merlin mit in dem Meeting haben damit er einmal sagen kann ob wir auf dem richtigen Track sind.
+- Nebenbei schon mal ein paar Punkte was wir so brauchen und wie das mit Hardware in dem Workshop anstossen (Felix fragt Merlin mal und sonst naechste Woche fragen)
+- Was brauchen wir noch an Software? Ausm Stand brauchen wir wohl nicht wirklich was oder? Hat OWASP Kosten?
+- Monopoly vielleicht mitbringen, damit wir geld haben fuer die Priorisierung
+
+### Notes Milena Weekly 01.04.2025
+- Freitag schonmal schaerfen was genau der SImulator koennen soll und dann schauen wir damit in dem Workshop weiter wie genau wie damit auch Sicherheitskram machen koennen
+- [x] Kurze Zusammenfassung schreiben nach dem Workshop an Milena schreiben
+- [x] Ich schau mir die alten Angriffe wie Stuxnet und co an, am besten schon einen fuer Freitag vorbereiten
+
+### Notes Weekly 04.04.2025:
+- Wie erwartet ist es fuer HNE irrelevant was hinter dem Zaehler passiert, es geht nur darum was bei denen ankommt und was es fuer auswirkungen haben kann. Das wir das im Hintergrund simulieren ist recht irrelevant
+- Fokus bei uns ist mehr bei den Verteilnetzen und nicht primaer Microgrids, weil das andere interessanter ist und weitreichender ist. Vorallem weil die angriffe auf Microgrids zum Teil verhindert werden koennen indem dann einfach das Grid abgeschaltet wird.
+- Angriffe koennen auch allgemein sein, da wir von HNE nichts genaues bekommen koennen und wenn wir die aktuelle Angriffe abbilden, dann reicht es, wenn wir sehen koennen ob das netz resilient gegen den Angriff ist oder nicht. 
+	- Also interessant wie sich die Angriffe, die vielleicht urspruenglich von behinde the meter kommen auf front of the meter auswirken. Also nicht relevant wie wir da rein kommen und sondern was man dann machen kann. Koennte auch interessant sein, ob man sowas wie authentication escallation und andere unauthorized accesses umgesetzt werden koennen, wenn man von behind the meter kommt
+	- Welche Angriffe lassen sich auf Front of the Meter ausfuehren, weil die Kommunikation nicht mehr so gerichtet und geschuetzt ist, wie es vorher war, sondern jetzt auch ueber wireless networks arbeitet
+
+
+## Workshop 08.04.2025
+- Einmal nachschauen wie jetzt die Rollen der Partner sind, damit die Rollenverteilung stimmt und auch jeder weiss ob er assozierter oder Beteiligter Partner ist, damit die Gelder am Ende auch laufen
+- Die finale Version des Antrages ist nicht bei HNE/Merlin angekommen
+- MIttelspannung scheint auch interessant zu sein, weil dort auch immer mehr Ausbau in der Ebene passiert und dort die Smart Messungen stattfinden. Muss ab 2026 eingebunden werden.
+- Interessant was von Niederspannung auf die Mittelspannung fuer Auswirkungen haben koennte und was wir am Ende erzeugen koennen
+- Zum Teil werden nicht kritische Informationen ueber Lora kommuniziert, muss ich mir mal ansehen, scheint aber kein sicherer Kanal zu sein
+	- Lora ist sehr enegieeffizient, aber halt nicht besonders sicher
+	- Kommunikation soll ueber GSM und LTE passieren, nichtmal 5G und auch nicht 450MHz:D
+- Scope fuer das Projekt als HAW und TH abstecken, damit wir nicht ueber unsere Masse gehen und damit das Projekt nicht aus dem Ruder laeuft, vor allem auch im Bezug auf Hersteller und Behinde-the-Meter. 
+	- Nach VDE ist Behinde-the-Meter sehr interessant.
+	- Behinde-the-Meter ist eher der Forschungsbereich, aber die Auswirkungen sind in Front-of-the-Meter interessant, weil dort eben HNE liegt und fuer die dort die Auswirkungen ankommen
+	- Aktuell ist die Auswirkung die Homeanlagen haben noch nicht soo relevant, weil es noch das Stromnetz nicht lahmlegen kann, aber wenn das so weiter geht wie es aktuell passiert, dann wird das bald der Fall sein, also ist das auf jeden Fall sehr relevant wie man auch auf der Ebene dann in die Front-of-the-Meter Auswirkungen ballern kann.
+- Wie von uns gedacht mit den Angriffen betrachten wir die Auswirkungen von Angriffen und Abstrahieren von wo was kommt, also sowas wie zerstoerte Objekte sind am ende nicht sonderlich anders als wenn das Objekt einfach nicht mehr erreichbar ist und auch nichts mehr macht.
+	- Dabei kann man dann gut in unterschiedlichen Ebenen abstrahieren, also Wo kommen die Werte her und wie kommen die irgendwo rein
+- Gewuenscht von Dawood, dass die Nutzung von dem Simulator einfach ist, damit das am Ende ueberhaupt jemand nutzt, aber am Ende ist es ja mehr eine Sache von Monesi, ausser die Angriffe, dass dort ein einfaches Interface oder so ist, damit das auch genutzt wird und nicht verstaubt 
+- Idee von Merlin, dass man versucht den Simulator von vornerein so aufbaut, dass man den in der Lehre verwenden kann, also das der fuer die TH und die HAW verwendbar ist, weil sowas wie HNE das Ding am Ende nicht nutzen wird, weil die das nur nutzen um zu sehen ob es gebraucht wird und dann wird es kommerziell eingekauft. 
+
+
+## Weekly 10.04.2025:
+- Schauen welche Use-Cases wir jetzt alle rausschmeissen koennen und wie wir die mappen koennen in der Excel. Dann eine Threshold bestimmen, damit wir damit was rausschmeissen koennen. 
+- 25.04. am FTZ ist letzter Tag von Moritz. Kann vielleicht vorbeischauen 
+- HiSolutions schaut Sascha nach was man da machen kann und ob Volker mal einen ordentlichen Kontakt mitbringt
+- Poster fuer SimCyberGrid machen, mir mal ueberlegen, was ich da von der Sicherheitsseite aus machen kann 
+- Wissenschaftliches Review, bzw mal ein Dokument mit den Use Cases und Co zum Vorzeigen bis 25.05. basteln
+
+
+## Weekly Milena 15.04.2025:
+- [x] Wie wollen wir das mit Threat Modeling machen? Wir koennen zum einen eine Threatanalyse machen mit sowas wie STRIDE oder Attacktrees, aber das deckt ja nur einen Teil ab, der am Ende auch nicht soo relevant ist. Wollen wir dabei dann lieber was anderes nehmen, damit wir Angriffe auf das Netz betrachten, wie eher auf die Netzstabilitaet bezogen sind?
+- [x] Soll ich dann schon mal versuchen eine grobe Version eines Data Flow Diagrams (DFD) zu erstellen?
+- [x] Wollen wir eigentlich in dem Simulator auch Mitigation techniques identifizieren und umsetzen oder ist es am ende mehr ein "so ist der aktuelle Stand und wenn man angriff X drauf faehrt, dann passiert Y?". So wirkte es zumindest von HNE aus, dass die daran interessiert sind, was man alles machen kann und vor allem auch was man als Angreifer von Behinde the Meter machen kann um Auswirkungen auf Front of the Meter zu haben.
+- DFD erstellen und anhand von vielleicht STUXNET die unterschiedlichen Threat analysis tools ausprobieren. Vielleicht ist noch was besser als risk matrix with attack trees
+- Weitere Angriffe raussuchen
+- Nachfragen ob GSM wirklich richtig war, weil 2G scheint mir sehr unsicher
+
+
+## Weekly 17.04.2025:
+- [x] Meinte Merlin wirklich GSM und nicht UTMS, weil GSM ist 2G und da kam vor 2 Jahren erst nen Paper raus, das gezeigt hat, das GEA-1 und GEA-2 unsicher sind, also die Verschluesselungen von 2G und nicht mehr aktuell sind.
+- Einmal schauen was wir haben und was wir fuer die Use Cases brauchen damit man die in dem Simulator umsetzten kann. Das muessen wir einmal klaeren, damit wir damit dann weiter machen koennen, weil der Uebergang zwischen was in Hardware da ist und was in Software gebraucht wird, bzw. wie man das umsetzen kann.
+	- Es gibt aber Vorgaben vom BSI und der Netzagentur ueber die die Kommunikation funktionieren soll. 
+	- Wir machen also eher eine Vorstellung von der Umsetzung und muessen dann schauen was da wirklich passieren soll und damit wir uns nicht irgendwas komisches ausdenken 
+	- Einmal suchen welche Vorgaben gibt es da schon sei es in Dokumenten von beispielsweise dem BSI und anderen Agenturen und dann schauen was wir noch selber aufbauen muessen
+	- Bis naechsten Woche einmal schauen ob man von Use Case oder von Paragraph 14 a kommen kann und schauen was man da so zusammenbasteln kann, kommt dann von Moritz und Felix
+	- Darauf basierend kann ich dann auch nen Dataflow Diagram machen und dann weiter mit den Angriffen arbeiten 
+	- Kann mir auch weiter die Angriffe anschauen, dann koennen wir die nutzen wenn Felixes Ansatz funktioniert. Und sonst schon mal die Technischen Vorgaben fuer die Kommunikation anschauen. 
+
+## Weekly 24.04.2025
+- Moritz hat schon mal einen Ansatz erstellt und kann damit dann zeigen was er sich ueberlegt hat. 
+	- Cluster als Kategorie, dazu dann den Use-Case
+	- und dann stellen wir die drei Anforderungspositionen des Simulators vor, also:
+		- Kommunikationssimulation
+		- Stromnetzsimulation
+		- Co-Simulation
+		- Testfall (kam von Milena)
+	- Die koennen wir dann fuer alle Use-Cases machen
+- Felix macht es auf graphischer Natur, ist aber schon eher Threatanalyse. 
+	- Hat ein Beispiel vom Frauenhofer
+	- Schauen was man bei der Abbildung dann pro Komponente an Protokolle hat
+	- Auch schauen was man dann fuer Angriffe auf die Teile fahren kann.
+	- Auch interessant, PV is ENWG und dadrunter ist dann alles Paragraph 14
+	- Das Bild ist alles behinde of the meter und dann front of the meter ist alles vor dem CLS Kanal
+- Bauen uns ein Beispiel in der Tabelle von Moritz, dann haben wir schon mal einen Ansatz mit dem man arbeiten kann und dann auch schauen kann ob man Felixes Graphic gleich nutzen kann.
+	- Dabei auch genau schauen welches Format die Daten haben und wie diese Kommuniziert werden, also als JSON oder so und welche Encryption wird darauf gefahren und was muss der Simulator an der Stelle koennen (also ist das einfach nen Smart Meter Gateway das einem einen Wert gibt? Oder haben wir einfach Lastprofildaten oder aehnliches, muessen wir eh zum Teil ueber Profile machen, da wir nicht alle Haushalte in einem Niederspannungsnetzscenario simulieren koennen.)
+	- Eine BeispielJSON ist in Moritzes MA oder aehnliches 
+	- Extra fuer die Co-Simulation brauchen wir nen JSON Parser, der die erstellt und auch wieder einlesen kann
+	- ==Gibt es eine Pruefung ob das Format richtig ist oder gibt es die gar nicht, dann kann einem ja uebergeben was jemand will und was dann passiert?==
+	- Brauchen positiven und negativen Testfall
+	- Koennen das noch bei Felixes graphischer Version einbinden oder so eine grobe Threatanalyse machen mit Assets und Co
+- Ueberlegen was man als JIRA nutzen koennen, gibt es ne kostenlose Version? Vielleicht nen Gitlab oder so? Nen Github mit 2FA wuerde ja auch gehen
+- Einzel als Use-Case stimmt das Format und sind die Werte in einem passenden Rahmen und schauen ob wir die in einem bereits ausgewaehlten Use-Case schon haben
+- Mal schauen was unter Tarifliche Leistungen in der TR zu finden ist, da ist Kommunikation mit Kommunikationsfrequenz und Co. 
+	- Schauen welche wir davon brauchen und welche davon schon mal unter welche unter die Use-Cases fallen
+	- Minuetlich (TAC 14) und alle 15 Min (TAC 7) schein sinnvoll zu sein
+- Jeder such sich nen Cluster raus und Use Cases und macht das schon mal in der Tabelle eintragen 
+
+## Weakly Milena 24.05.2025
+- schon gleich mal in der Anforderungsanalyse auch gleich mal Threats die einem Auffallen mit-notiert
+- vielleicht ne Threatanalyse mit STRIDE und Attack Tree
+- [ ] Schon mal das Beispiel von Heute mit Assets und Threats aufschrieben, damit man ein vollstaendiges Beispiel haben
+- [ ] Bei Moritz das Beispiel mit der JSON suchen und schauen was da alles zu erwaehnt wird. 
+- [ ] David Engelhard und Daniel Kratzge mal schauen ob man das Gitlab fuer Forschungsprojekte nutzen kann und was Github so kann an Educational kram machen kann 
+	- vielleicht gibt es ja sogar nen Portformat von Excel auf Github/Gitlab oder anderes
+	- Sebastian auch mal fragen was man so als alternative nutzen kann
+	- 
