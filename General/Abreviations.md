@@ -41,4 +41,5 @@
 | MMS         | Manufacturing Message Specification                             |
 | SV          | Sample Value                                                    |
 | CMS         | Cryptographic Message Syntax, Inhaltsdatensicherung nach ASN. 1 |
+| OCSP        | Online Certificate Status Protocol                              |
 |             |                                                                 |
