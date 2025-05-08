@@ -199,4 +199,11 @@
 	- **System and Security Management** (Fraglich wie weit man da Anforderungen aufbauen kann oder ob das am Ende eher eine Sache ist von Security muss halt stimmen)
 	- **Monitoring the Grid flows**
 	- **Collect events and status information**: Ist wahrscheinlich sinnvoll das mit zu nehmen, weil das dich zu Monitoring the Grid flows gehoert oder?
-	- 
+- Naechste Woche ist Tag der Energie da muss ich in Bergedorf sein
+- Erste Zeile Assets sind alle die wir brauchen fuer das Smart-Grid, also reicht das schon
+- Einmal das Grid last Diagramm darstellen und dann abklaeren
+- [ ] Felix einmal Fragen ob er mir die Folien von Kolja schicken kann, die er in dem Meeting hatte 
+- Wenn system wie SCADA unbekannt ist, weil es da unterschiedliche Optionen gibt, dann lieber ein System aufschreiben, welches Anforderung XY kann und nicht festlegen mit SCADA betiteln $\rightarrow$ also was wir wissen koennen wir aufschreiben, der rest bleibt dann als etwas undefiniertes System, was etwas koennen muss
+- 16:30-17:00 mit Felix nochmal zusammensetzen und dann einmal durch die Use-Cases mit den Anforderungen machen, kann auch grob sein
+- 
+- 
