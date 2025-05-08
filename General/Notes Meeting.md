@@ -191,4 +191,12 @@
 - thread analyse Beispiele raussuchen, welche es auf Verteiltensystemen gibt, damit man mal ein Beispiel hat und sich daran orientiren kann
 - am ende eher grob in den Anforderungen blieben und nicht soo detailiert bleiben und dann lieber agieler aufbauen 
 - [ ] Fuer Donnersag prio dass ich ne uebersicht uber die BSI Dokumente machen und dann darueber sprechen was wir da raus nehmen koennen
-- 
+
+
+## Weekly 08.05.2025
+- Grundlegend wuerde ich sagen, dass es sinnvoll ist, wenn ich eher mich auf die Kommunikation beschreanke, da kann ich mich noch ganz gut bewegen, aber sobald das an Stormnetzspezifische Punkte kommt und vor allem Hardware bin ich eher raus
+- Cluster die ich uebernehmen kann sind:
+	- **System and Security Management** (Fraglich wie weit man da Anforderungen aufbauen kann oder ob das am Ende eher eine Sache ist von Security muss halt stimmen)
+	- **Monitoring the Grid flows**
+	- **Collect events and status information**: Ist wahrscheinlich sinnvoll das mit zu nehmen, weil das dich zu Monitoring the Grid flows gehoert oder?
+	- 
