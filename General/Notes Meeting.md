@@ -158,9 +158,37 @@
 ## Weakly Milena 24.05.2025
 - schon gleich mal in der Anforderungsanalyse auch gleich mal Threats die einem Auffallen mit-notiert
 - vielleicht ne Threatanalyse mit STRIDE und Attack Tree
-- [ ] Schon mal das Beispiel von Heute mit Assets und Threats aufschrieben, damit man ein vollstaendiges Beispiel haben
-- [ ] Bei Moritz das Beispiel mit der JSON suchen und schauen was da alles zu erwaehnt wird. 
-- [ ] David Engelhard und Daniel Kratzge mal schauen ob man das Gitlab fuer Forschungsprojekte nutzen kann und was Github so kann an Educational kram machen kann 
+- [x] Schon mal das Beispiel von Heute mit Assets und Threats aufschrieben, damit man ein vollstaendiges Beispiel haben
+- [x] Bei Moritz das Beispiel mit der JSON suchen und schauen was da alles zu erwaehnt wird. 
+- [x] David Engelhard und Daniel Kratzge mal schauen ob man das Gitlab fuer Forschungsprojekte nutzen kann und was Github so kann an Educational kram machen kann 
 	- vielleicht gibt es ja sogar nen Portformat von Excel auf Github/Gitlab oder anderes
 	- Sebastian auch mal fragen was man so als alternative nutzen kann
-	- 
+
+
+## Weekly Milena 29.04.2025
+- Das Beispiel der Anforderungen sollten genauer sein
+- [x] aufschrieben was sind die Schutzziele, sodass man fuer die Use-Case Anforderugen dann auch etwas allgemeineres hat, um sowas wie eine Priorisierung hat, also sowas wie Hauptproblem ist Datenmanipulation [[Schutzziele]]
+- [ ] Gibts im praktischen bereich raussuchen was man als beispiele hat fuer angriffe und vielleicht finde ich das jemanden der das mal als Beispiel an irgendwas durchgeht
+	- raussuchen wie gehen die mit der komplexitaet um und wie kann man damit dann arbeiten um auch fuer uns weitere 
+	- Auch mal schauen ob es nen Medit talk gibt [gibts nicht]
+	- Kann auch aus nem anderen Projekt oder Bereich kommen, mal weiter im Verteilensystembereich schauen 
+	- Einfach schauen ob ich was finde, was mir sagt wie man die Threats etwas reduzieren oder verallgemeinern kann ohne in Bereichen zu ungenau zu werden
+
+## Weekly Milena 06.05.2025
+### Notes for the Meeting
+- Habe nicht alles von Donnerstag geschafft, weil ich etwas fuer die Doktorarbeit gemacht habe und dann von den 32 Dokumenten vom BSI zu SMGW abgelenkt wurde, da koennte einiges drinstehen was wir brauchen, wie Anforderungen an unseren Simulator und Testfaelle, aber das dauert noch ein bisschen bis ich das auf unseren Kram mappen kann. Denke aber erstmal das da schon einiges drinsteht, was wir brauchen werden.
+- Anforderungen in TR-03109-1 beschreibt die Anforderungen an das SMGW und die notwendigen Sicherheitsprotokolle. Es soll laut ChatGPT auch alles genau spezifiziert sein, also auch die Formate der jeweiligen Werte in den Dateien, aber das habe ich noch nicht so gut gefunden, ist aber auch sehr viel zum durchschauen
+	- Fuer alle zu Protokollierenden Anforderungen und Parameter, die in den Anforderungen aufgelistet werden, gibt es ab Seite $311$ auch eine Tabelle mit groben Fehlermeldungen und den zugehoerigen Datentypen fuer die beteiligten Parameter.
+- Testfaelle sind in einem Dokument festgehalten das unter TR-03109-1 Testspezifikation zur Technischen Richtlinie TR-03109-1
+	- Scheint relevant fuer uns zu sein, weil dort auch definiert wird, was getan werden soll, wenn beispielsweise das XML Format nicht stimmt und welche Fehlermeldung ausgegeben wird. Vielleicht kann man also fuer all die Faelle einfach auf das Dokument verweisen
+- Ich habe einmal Schutzziele aufgeschrieben, kann die nachher mal als Excel oder so aufschreiben und dann in Teams werfen. Leider kann man in Teams nicht Markdown bearbeiten, sonst heatte ich das einfach da hochgeladen
+- In BSI TR-03109-1 Anlage I: CMS-Datenformat fuer die Inhaltsdatenverschluesselung und -signatur werden wie der Name erahnen laesst die Datenformate fuer die Inhaltsdatenverschluesselung und -signatur spezifiziert, dabei gehen sie auch soweit und stellen Datentypen da, wie bit string
+- Ich habe David Engelhardt angeschrieben wegen GitLab, aber noch keine Antwort bekommen. Sebastian wusste leider auch nicht ob das fuer externe nutzbar ist. 
+- Bei den Anforderungen muss das so formuliert werden, dass es sich dicht an dem realen Bild orientiert oder waere sowas wie:
+  Jeder Messwert, den der Netz-Simulator generiert, wird vom Kommunikations-Simulator in einen `InfoReport`-Container serialisiert.
+
+### Notes from the Meeting
+- thread analyse Beispiele raussuchen, welche es auf Verteiltensystemen gibt, damit man mal ein Beispiel hat und sich daran orientiren kann
+- am ende eher grob in den Anforderungen blieben und nicht soo detailiert bleiben und dann lieber agieler aufbauen 
+- [ ] Fuer Donnersag prio dass ich ne uebersicht uber die BSI Dokumente machen und dann darueber sprechen was wir da raus nehmen koennen
+- 

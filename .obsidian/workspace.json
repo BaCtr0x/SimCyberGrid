@@ -11,26 +11,28 @@
             "id": "5a708a7caf31053c",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/JSON_TAC14.png"
-              },
-              "icon": "lucide-image",
-              "title": "JSON_TAC14"
-            }
-          },
-          {
-            "id": "adb82ec8720adfad",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/GAE-1 and GAE-2 Cryptanalytic Attacks Overview.md",
+                "file": "General/Abreviations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GAE-1 and GAE-2 Cryptanalytic Attacks Overview"
+              "title": "Abreviations"
+            }
+          },
+          {
+            "id": "67141bc047f385fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ECKA-DH"
             }
           },
           {
@@ -48,44 +50,21 @@
             }
           },
           {
-            "id": "28d9dc29cafaf763",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "198f91f5e930dfaa",
+            "id": "9da6247459301841",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Famous Attacks/Stuxnet.md",
+                "file": "Security/Schutzziele.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stuxnet"
-            }
-          },
-          {
-            "id": "4d5227d244a3638c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Vorgaben/Kommunikation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kommunikation"
+              "title": "Schutzziele"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,7 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 202.5
   },
   "right": {
     "id": "2bc0937f071acec5",
@@ -206,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/JSON_TAC14.png",
+                "file": "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of JSON_TAC14"
+              "title": "Outline of ECKA-DH"
             }
           }
         ],
@@ -220,7 +199,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,52 +211,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c84c5630b7d88ddc",
+  "active": "67141bc047f385fb",
   "lastOpenFiles": [
-    "Smart Metering Components/Smart Meter Gateway.md",
-    "Images/JSON_TAC14.png",
-    "Images/TAC_Table.png",
-    "Analysis/Dataflow Diagram Smart Grid.md",
-    "Smart Metering Components/Security Module.md",
-    "Security/SGIS Security Levels.md",
-    "Technologien und Algorithmen/Hardware/Smart Meter Gateway.md",
-    "General",
-    "Use_cases",
-    "Analysis",
-    "Images/Rational_for_Security_Objectives_for_the_TOE_part2.png",
-    "Images/TOE_Direct_Environment.png",
-    "Images/risk_matrix_stuxnet_smart_grid 2.png",
-    "Images/Rationale_for_Security_Objectives_for_the_TOE.png",
-    "Screenshot 2025-04-22 at 14.45.34.png",
-    "risk_matrix_stuxnet_smart_grid 1.png",
-    "risk_matrix_stuxnet_smart_grid.png",
+    "Technologien und Algorithmen/Techniques/COSEM.md",
+    "Technologien und Algorithmen/Algorithmen/ECDSA.md",
     "General/Notes Meeting.md",
-    "Security/Famous Attacks/Stuxnet.md",
-    "Security/Threat Analysis Techniques.md",
+    "Security/Schutzziele.md",
+    "General/Abreviations.md",
+    "General/Jira Alternativen.md",
     "Vorgaben/Kommunikation.md",
-    "Technologien und Algorithmen/Techniques/Brainpool.md",
-    "Security/Sicherheitsangriffe.md",
-    "Vorgaben",
-    "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
-    "Technologien und Algorithmen/Techniques/Target of Evaulation.md",
+    "Konferenzen/Tag der Energieforschung 2025.md",
+    "Images/2025_TdE_SimCyberGrid_V1.pdf",
     "Smart Metering Components/Gateway Operator.md",
-    "Smart Metering Components/Consumer.md",
-    "Smart Metering Components/Gateway Administrator.md",
-    "Technologien und Algorithmen/Algorithmen/PACE.md",
-    "Smart Metering Components/Controllable Local Systems.md",
-    "Smart Metering Components/Meter.md",
-    "Smart Metering Components",
-    "Technologien und Algorithmen/Techniques/SGAM Model.md",
+    "Technologien und Algorithmen/Techniques/OBIS-Kennzahlen.md",
+    "Smart Metering Components/Akteure am SMGW.md",
+    "Images/Screenshot 2025-04-29 at 14.00.53.png",
+    "Images/Smart-Meter-Gateway and its Environment.png",
+    "Security/Sicherheitsstandards.md",
+    "Security/Sicherheitsangriffe.md",
     "Security/GAE-1 and GAE-2 Cryptanalytic Attacks Overview.md",
-    "Technologien und Algorithmen/Techniques/LTE 4G.md",
-    "Technologien und Algorithmen/Algorithmen/GEA-x Family.md",
-    "Technologien und Algorithmen/Algorithmen/A5x Family.md",
-    "Technologien und Algorithmen/Techniques/GSM - Second Generation (2G).md",
+    "Security/SGIS Security Levels.md",
+    "Security/Threat Analysis Techniques.md",
+    "Technologien und Algorithmen/Techniques/Role-Based Access Control.md",
+    "Technologien und Algorithmen/Techniques/DLMS.md",
+    "2025_TdE_SimCyberGrid_V1.1.pptx",
+    "Konferenzen",
+    "Analysis/Dataflow Diagram Smart Grid.md",
+    "Images/JSON_TAC14.png",
+    "Images/OpenProject_Pricing.png",
+    "Images/Taiga_Pricing.png",
+    "Images/Nuclino_Pricing.png",
+    "Images/Notion_pricing.png",
+    "Images/Monday_Pricing.png",
+    "Screenshot 2025-04-22 at 14.45.34.png",
+    "Use_cases/Use-Cases.md",
+    "Use_cases/Use Case Zusammenfassung.md",
+    "Use_cases/Use Case Cluster by SGCG.md",
+    "Use_cases",
+    "Technologien und Algorithmen/Techniques/SGAM Model.md",
+    "Smart Metering Components/Smart Meter Gateway.md",
+    "Images/risk_matrix_stuxnet_smart_grid 2.png",
+    "General",
+    "Analysis",
+    "Notes Meeting.md",
+    "Security/Famous Attacks/Stuxnet.md",
+    "Vorgaben",
+    "Smart Metering Components",
     "Security/Famous Attacks",
-    "Images/European_set_of_recommendations_domain_overview.png",
-    "Security",
-    "Glossar",
-    "Unterlagen/Masterarbeit_Moritz.pdf",
-    "Technologien und Algorithmen/Techniques"
+    "Security"
   ]
 }

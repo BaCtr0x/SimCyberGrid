@@ -1,0 +1,30 @@
+- GitLab schein eine alternative sein und mit nem Public Repo/Group sollte das auch mit externen gehen
+	- Man kann dann so eine Struktur aufbauen:
+		- [Epics](https://docs.gitlab.com/ee/user/group/epics/): Think of epics as the big picture. They represent major features, overarching goals, or long-term initiatives within your project. Need to revamp your website? That's an epic! Epics help you organize your work into larger, manageable chunks.
+		- [Issues](https://docs.gitlab.com/ee/user/project/issues/): Issues are the individual tasks or work items that contribute to your project goals. Each issue represents a specific action, like "design the homepage" or "write the 'about us' page." Issues are the building blocks of your project, and they provide a clear way to track individual tasks.
+		- [Labels](https://docs.gitlab.com/ee/user/project/labels.html): Labels are like tags that help you categorize and filter your work. You can use labels to indicate priority (e.g., high, medium, low), status (e.g., to do, in progress, done), or assign issues to specific teams or individuals. Labels provide a flexible way to organize and prioritize your work.
+		- Boards: GitLab's issue boards are your visual workspace. They provide a Kanban-style view of your project, allowing you to see the status of all your issues at a glance. Drag and drop issues across different lists (e.g., "To Do," "Doing," "Done") to visualize your workflow and track progress. In GitLab, you can create boards for [issues](https://docs.gitlab.com/ee/user/project/issue_board.html) and [Epics](https://docs.gitlab.com/ee/user/group/epics/epic_boards.html).
+		- [Milestones](https://docs.gitlab.com/ee/user/project/milestones/): Milestones mark significant checkpoints or target dates within your project. They help you track progress towards specific goals and deadlines. For example, you might have milestones for completing a major feature, releasing a beta version, or launching the final product.
+		- [Tasks](https://docs.gitlab.com/ee/user/tasks.html): For those extra granular steps, break down your issues into smaller tasks. This helps with delegation, clarifies individual responsibilities, and ensures nothing gets overlooked. Tasks provide a way to create checklists within issues, making it easier to track progress on complex tasks.
+	- [ ] David Engelhard fragen wie das ist ob man beim GitLab auch extern drauf kommt, wenn das Kompliziert wird dann ueber Github und dem Academic Plan machen
+- Gibt noch [Monday](https://monday.com/)
+	- Das hat auch GitLab Integration und scheint fast alles was Jira hat zu koennen, ist aber teurer: ![[Monday_Pricing.png]]
+- [Notion](https://www.notion.com/) koennte auch gehen, ist allgemeiner, aber wenn man die besonderen Features nicht haben will ist das soweit ich weiss kostenlos fuer alle
+	- Allerdings hat Notion keine Integration von GitLab und Co, da es eher ein general Purpose Tool ist und einst ein Texteditor war.
+	- Mittlerweile kann der einiges mehr, wie unterschiedliche Arten vor Boards gutes Tracking von Todos und aehnlichem, also an sich alles was man fuer Projektmanagement braucht. Zumindest von dem was ich so weiss
+	- In der Kostenlosen Version ist allerdings meist auch die Datengroesse limitiert, sollte aber bei uns fuers Planen nicht das Problem sein und liegt auch bei glaub ich 5MB, also fuer Excel und Co kein Problem.![[Notion_pricing.png]]
+- [Nuclino](https://www.nuclino.com/product) ist aehnlich zu Notion, aber etwas mehr lightweight. 
+	- Wurde einst als issue tracking tool entwickelt, kann aber auch gut fuer sprint planning, onboarding, wiki und anderes verwendet werden.
+	- ![[Nuclino_Pricing.png]]
+- [OpenProject](https://www.openproject.org/) ist ne Open-Source alternative made in Germany und kostenlos fuer unsere groesse
+	- Entwickelt fuer Projektmanagement und besitzt glaube ich alles was wir brauchen 
+	- Ist cloud basiert, kann aber auch selbst gehostet werden, also wenn wir nen Server haben oder ueber Datensicherheit sprechen und das nicht public haben wollen sollte das auch einfach gehen, ist angeblich nur ein einzelnes Dockerimage, also einfach zu bauen![[OpenProject_Pricing.png]]
+- [Taiga](https://taiga.io/) ist auch ein Open-Source Projekt und fuer uns kostenlos
+	- Hat einige Integerationsmoeglichkeiten, dazu auch Github und GitLab integration
+	- Einige Moeglichkeiten auch durch Zapier integration![[Taiga_Pricing.png]]
+
+- Letze Open-Source Option is [Plane](https://plane.so/)
+	- ist auch eine Projectmanagement und Knowledgebase Software, die vom Stil her etwas Notion folgt.
+	- Dabei bietet sie alles Jira wichtige Funktionenen wie Issue Types + properties, Bulk Ops
+	- Funktioniert aktuell nur mit GitLab Clouds und nicht mit self-manages GitLab instances, gleiches gilt fuer GitHub
+	- Wie alle Freemium Dinger auch in kostenlos ok, aber die Frage ist, ob wir vielleicht einige der erweiterten Optionen brauchen![[Screenshot 2025-04-29 at 14.00.53.png]]
