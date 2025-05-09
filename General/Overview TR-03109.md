@@ -30,3 +30,41 @@ Wenn ich das alles richtig erkannt habe, dann definiert die TR-03109, ein bissch
 - Kommunikation: Hier reicht erstmal TR-03109, da wir auch keine Marktfluesse abbilden wollen, sollte dies alles abdeken
 - Physik: Hier brauchen wir wie oben die VDE-AR-N 4105 (LV) und 4110 (MV), das [BDEW-Lastprofile](https://www.bdew.de/energie/standardlastprofile-strom/) ist noch hilfreich um ein deutsches Verhalten zu erhalten
 - **Security/Complicane**: [IT-SiG 2.0](https://www.bsi.bund.de/EN/Das-BSI/Auftrag/Gesetze-und-Verordungen/IT-SiG/2-0/it_sig-2-0_node.html), [KRITIS-Verordnung](https://www.gesetze-im-internet.de/bsi-kritisv/BJNR095800016.html), [BDEW-ICS Whitepaper](https://www.bdew.de/media/documents/BDEW-OE-VSE-Whitepaper-3.0.pdf) ergaenzen die TR-03109 um weitere Threat-Basen aufzustellen]
+
+
+## TAF vs TAC
+Sie hängen zusammen, benennen aber zwei unterschiedliche Dinge:
+
+|Kürzel|Offizielle Bedeutung|Rolle im SMGW-Kosmos|
+|---|---|---|
+|**TAF**|**T**arif-**A**nwendungs-**F**all (Nummern 1 … 15)|_Fachlicher Use Case_ aus MsbG/BSI-Verordnung – z. B.  <br>• **TAF 7**: registrierende Messung KW/h  <br>• **TAF 14**: hochfrequente Messwertbereitstellung (≤ 60 s)|
+|**TAC**|meist in Hersteller- oder FNN-Dokus als **T**arif-**A**nwendungsfall-**C**ontainer|_Technischer Payload-Behälter_, der Messwerte eines bestimmten TAF umfasst – konkret das JSON-/XML-Objekt, das der InfoReport überträgt. Beispiel: ein „TAC-14“-JSON ist der Container, der alle Sekundärwerte für **TAF 14** transportiert.|
+
+### Was bedeutet das praktisch?
+- **TAF** beschreibt **was** fachlich geliefert werden muss (Intervall, Granularität, Rechenregeln).
+- **TAC** beschreibt **wie** dieselben Werte **verpackt** sind, wenn sie das Gateway verlassen (Feldnamen, Datentypen, OBIS-Mapping).
+
+> Wenn also ein Hersteller sagt:  
+> „Unser Gateway schickt **TAC 14** als JSON“  
+> meint er:  
+> „Wir liefern die Messwerte des fachlichen Use-Case **TAF 14** im dafür definierten JSON-Container.“
+
+**Kurzform:**  
+_TAF = Use-Case-Nummer, TAC = Daten­container für genau diesen Use Case._
+
+
+## Gateway-ACK
+**ACK** ist die Kurzform von **Acknowledge / Acknowledgement** – also einer Bestätigung, dass ein Telegramm oder Befehl erfolgreich **empfangen, verstanden und (soweit gefordert) ausgeführt** wurde.
+Im Umfeld des Smart-Meter-Gateway (SMGW) nimmt die ACK-Botschaft je nach Protokoll eine leicht andere Form an:
+
+|Ebene|Typisches Medium|Beispiel-ACK|Was wird bestätigt?|
+|---|---|---|---|
+|**HTTP-REST (WAN)**|HTTP-Status + optionales JSON|`HTTP/1.1 201 Created` + JSON‐Body `{ "status":"applied" }`|Ein _ControlMessage_ wurde angenommen – Vorgabe in FNN-Mikroprozesse für `POST /smgw/control`|
+|**Control-ACK-Resource**|separater REST-Aufruf|`POST /smgw/control-ack` mit Payload `{"cid":"123","result":"ok"}`|Gateway meldet explizit, dass der Befehl mit der Correlation-ID 123 ausgeführt wurde (TR-03109-5, CLS)|
+|**IEC 61850 GOOSE / MMS**|Feld `stNum/seqNum` oder MMS-`Confirm`‐PDU|neue Sequence-Nummer → Empfänger weiß, dass der vorherige Frame ankam|Schutz-/Schaltbefehl wurde empfangen (Stations-Ebene)|
+|**TLS / TCP-ACK**|Transport-Protokoll|TCP-ACK-Flag|Nur garantiert, dass das Paket an der Socket-Schicht ankam – _nicht_, dass der Inhalt verarbeitet wurde|
+
+### Warum ist das wichtig?
+1. **Verlässliche Steuerung:** Ohne Gateway-ACK kann der Absender (z. B. VNB-SCADA) nicht wissen, ob ein Lastabwurf- oder Schaltbefehl tatsächlich wirksam wurde.
+2. **Retransmission-Logik:** TR-03109-5 bzw. FNN-Spezifikationen verlangen, dass der Absender bei ausbleibender Bestätigung noch × mal wiederholt – dafür braucht man eine definierte ACK-Frist.
+3. **Audit / Nachweis:** Das Protokoll des Gateway-ACK dient als Beleg gegenüber Regulierer oder Marktpartnern, dass Pflichthandlungen (Redispatch, §14a-Steuerung …) ausgeführt wurden.

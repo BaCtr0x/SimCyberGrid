@@ -204,6 +204,26 @@
 - Einmal das Grid last Diagramm darstellen und dann abklaeren
 - [ ] Felix einmal Fragen ob er mir die Folien von Kolja schicken kann, die er in dem Meeting hatte 
 - Wenn system wie SCADA unbekannt ist, weil es da unterschiedliche Optionen gibt, dann lieber ein System aufschreiben, welches Anforderung XY kann und nicht festlegen mit SCADA betiteln $\rightarrow$ also was wir wissen koennen wir aufschreiben, der rest bleibt dann als etwas undefiniertes System, was etwas koennen muss
-- 16:30-17:00 mit Felix nochmal zusammensetzen und dann einmal durch die Use-Cases mit den Anforderungen machen, kann auch grob sein
+- [x] 16:30-17:00 mit Felix nochmal zusammensetzen und dann einmal durch die Use-Cases mit den Anforderungen machen, kann auch grob sein
 - 
+
+## Notes Meeting Sofie 09.05.2025
+- Arbeiten primaer auf Niederspannungsebene und machen da dann das UX. 
+- Sofie ist fuer das UX verantwortlich und Alex hilft dabei und macht noch was anderes (wieder vergessen)
+- Wollen uns alle 2 Monate mal treffen und besprechen was sich bei wem getan hat
+- Habe vorgeschlagen, dass wir uns mit bei denen orientieren, ist sinnvoller, da die schon Anforderungen haben und wissen was sie abbilden wollen. Also wenn wir das Backend von denen sind, dann muessen wir schauen, dass wir das abbilden, was die brauchen.
+	- Dabei auch mal Sascha fragen, ob wir die Anforderungen von Monesi bekommen koennen, dann kann man da mal schauen was die noch so haben und gucken ob wir das beachten muessen oder ob das bei uns schon mit drin ist.
+- habe deren UX design fuer die Niederspannungsuebersicht gesehen, sieht gut aus, aber viele Details fehlen noch, also noch nicht soo informativ fuer uns, aber das wird noch werden, denke das wird interessant werden, damit wir auch wissen wie wir Fehlermeldungen handhaben sollten
+
+## Notes Meeting Felix 09.05.2025
+- [ ] Ist ein LoadShedding immer das gleiche, ob fuer spannung oder frequenz?
+- [ ] Sind Operate DER, Protecting Grid Assets und Blackout management noch relevant?
+- Sollte ja aber gut gehen, wenn wir so wie heute arbeiten, dann kann ich meinen Teil bis naechste Woche fertig haben
 - 
+
+## Notes Milena 13.05.2025
+- 
+
+## Notes Weekly 15.05.2025
+- [ ] Sascha fragen ob wir die Anforderungen von Monesi bekommen koennen
+- [ ] 
