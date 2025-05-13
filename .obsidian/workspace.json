@@ -105,7 +105,8 @@
               "title": "Overview TR-03109"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -226,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Abreviations.md",
+                "file": "Use_cases/Anforderungen.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Abreviations"
+              "title": "Outline of Anforderungen"
             }
           }
         ],
@@ -252,17 +253,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a708a7caf31053c",
+  "active": "f25843410e4fe679",
   "lastOpenFiles": [
+    "General/Overview TR-03109.md",
+    "General/Abreviations.md",
     "Use_cases/Anforderungen.md",
     "Technologien und Algorithmen/Techniques/Nachrichten Typen.md",
-    "General/Overview TR-03109.md",
     "General/Notes Meeting.md",
     "Images/TAC_Table.png",
     "Standards/IEC 61850.md",
     "Standards/IEC 62351.md",
     "Vorgaben/Kommunikation.md",
-    "General/Abreviations.md",
     "Images/IEC_62351_Overview.png",
     "Images/IEC_62351_Overview.png",
     "Technologien und Algorithmen/Techniques/GOOSE.md",
