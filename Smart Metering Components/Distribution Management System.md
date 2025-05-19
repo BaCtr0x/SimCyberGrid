@@ -1,0 +1,1 @@
+Das Distribution Management System (DMS) ist die Software-Platform im Kontrollraum des [[Distribution System Operator|DSO]]. Sie ergaenzt/erweitert das klassische [[SCADA - Supervisory Control and Data Acquisition|SCADA]] um Funktionen wie Lastfluss-Berechnung, Spannungs-/Frequenz-Ueberwachung, Volt-Var-Optimierung, Outage- und Work-Management usw.

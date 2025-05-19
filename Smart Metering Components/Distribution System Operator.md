@@ -1,0 +1,1 @@
+Der Distribution System Operator (DSO) ist der Netzbetreiber auf Mittel- und Niederspannungsebene. In Deutschland typischerweise Stadt- oder Regionalwerke, in der EU nach Art. 2(29) der Strommarkt-Richtlinie definiert.

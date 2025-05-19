@@ -53,10 +53,10 @@
 
 ## Exchange of Metering Data
 
-| Use Case                          | Anforderungen                                                                                                                                                                                                                                                                                   | Quellen                                                                                                                                                                         |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AEP – Operational Data Store / SG | Aggregierte, pseudonymisierte Messdaten‑Batches (IEC 61968‑9 CIM XML ‘MeterReading’) sind CMS‑signiert per HTTPS‑TLS 1.3 (mutual SM‑PKI) an den ODS zu liefern; der Simulator muss vor Upload ein HMAC‑basierte Pseudonymisierung (SHA‑256 Salt) durchführen und eine 200‑OK‑Bestätigung        | Die beiden Metering-Data-Use-Cases sind mit passenden Kommunikations-Simulator-Anforderungen und Quellen erstellt.  <br>Download »Kommunikations-Simulator – Metering Data UCs« |
-| ORNL – F10 Microgrid UI & Data    | Echtzeit‑Messwerte (IEC 61850 LN MMXU) sind im 1 s‑Raster via WebSocket‑TLS 1.3 an die UI zu pushen, während Nicht‑Echtzeit‑Dumps als OPC UA Binary über HTTPS‑TLS in die Historian‑Datenbank geschrieben werden; jede Insert‑Operation benötigt eine positive OPC UA ‘ServiceResult’‑ACK ≤1 s. | IEC 61850‑7‑2; OPC UA IEC 62541‑6; IEC 62351‑3; ORNL F10 Spec; TR‑03109‑1                                                                                                       |
+| Use Case                          | Anforderungen                                                                                                                                                                                                                                                                                      | Quellen                                                                                                                                                                         |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AEP – Operational Data Store / SG | Aggregierte, pseudonymisierte Messdaten‑Batches (IEC 61968‑9 CIM XML ‘MeterReading’) sind CMS‑signiert per HTTPS‑TLS 1.3 (mutual SM‑PKI) an den ODS zu liefern; der Simulator muss vor Upload ein HMAC‑basierte Pseudonymisierung (SHA‑256 Salt) durchführen und eine 200‑OK‑Bestätigung versenden | Die beiden Metering-Data-Use-Cases sind mit passenden Kommunikations-Simulator-Anforderungen und Quellen erstellt.  <br>Download »Kommunikations-Simulator – Metering Data UCs« |
+| ORNL – F10 Microgrid UI & Data    | Echtzeit‑Messwerte (IEC 61850 LN MMXU) sind im 1 s‑Raster via WebSocket‑TLS 1.3 an die UI zu pushen, während Nicht‑Echtzeit‑Dumps als OPC UA Binary über HTTPS‑TLS in die Historian‑Datenbank geschrieben werden; jede Insert‑Operation benötigt eine positive OPC UA ‘ServiceResult’‑ACK ≤1 s.    | IEC 61850‑7‑2; OPC UA IEC 62541‑6; IEC 62351‑3; ORNL F10 Spec; TR‑03109‑1                                                                                                       |
 
 ## Operate DER
 
@@ -71,7 +71,7 @@
 | NEDO – Peak Shifting by Battery Aggregation                       | Für Peak‑Shifting muss der Kommunikations‑Simulator Day‑Ahead Lade/Entlade‑Schedule (OpenADR 2.0b ‘oadrDistributeEvent’ with Schedule Payload) CMS‑signiert via TLS 1.3 an alle Battery‑Gateways senden; Gateways liefern SOC‑Telemetrie im 5 s‑Raster zurück und müssen jeweils eine Event‑ACK ≤2 s bereitstellen.                                                                                                                              | OpenADR 2.0b; IEC 63110; IEC 62351‑3; TR‑03109‑5; NEDO Peak Shift Guide                |
 | PAP11 – PEV impact on distribution operations                     | Der Kommunikations‑Simulator muss nahezu Echtzeit‑Ladeleistungen von PEV‑Ladestationen (IEC 63110 ‘MeterValues’) im 1 s‑Raster an das DMS‑SCADA übermitteln und CLS‑‘TargetPower’‑Befehle zur Lade‑Reduktion oder Vehicle‑to‑Grid‑Abgabe CMS‑signiert über TLS 1.3 an die Stationen leiten; Quittung ≤1 s ist zu verifizieren.                                                                                                                   | IEC 63110; SAE J2847/20; IEEE 2030.5; TR‑03109‑5; IEEE PAP11 Doc                       |
 | Utility‑Customer PV + Storage optimisation                        | PV‑Leistung und Batteriespeicher‑Status werden via IEEE 2030.5 ‘DERControl’/‘DERStatus’ alle 30 s an den Utility‑DERMS übertragen; Kostenoptimierungs‑Setpoints (P/Q oder Time‑Of‑Use‑Schedule) sind CMS‑signiert als SunSpec Modbus TCP Write über TLS 1.3 an den Customer‑Energy‑Gateway zu senden und eine Modbus‑ACK binnen 1 s zu prüfen.                                                                                                   | IEEE 2030.5; SunSpec Modbus; IEC 62351‑5; TR‑03109‑5; Utility‑DER Storage Spec         |
-| Aggregated Prosumer Management                                    | Prosumer‑Messwerte (PV‑Erzeugung, Hauslast, SOC) sind im 30 s‑Raster als IEEE 2030.5 ‘MeterReading’ CMS‑signiert via HTTPS‑TLS 1.3 (beidseitige SM‑PKI) an den Prosumer‑Aggregator zu übertragen; der Aggregator sendet Day‑Ahead Self‑Consumption‑Schedules als IEEE 2030.5 ‘DERControl’ bzw. OpenADR 2.0b ‘oadrDistributeEvent’, die der Simulator innerhalb von 2 s quittiert.;                                                               | IEEE 2030.5; OpenADR 2.0b; IEC 62351‑3; TR‑03109‑5; EN 50549‑10                        |
+| Aggregated Prosumer Management                                    | Prosumer‑Messwerte (PV‑Erzeugung, Hauslast, SOC) sind im 30 s‑Raster als IEEE 2030.5 ‘MeterReading’ CMS‑signiert via HTTPS‑TLS 1.3 (beidseitige SM‑PKI) an den Prosumer‑Aggregator zu übertragen; der Aggregator sendet Day‑Ahead Self‑Consumption‑Schedules als IEEE 2030.5 ‘DERControl’ bzw. OpenADR 2.0b ‘oadrDistributeEvent’, die der Simulator innerhalb von 2 s quittiert.                                                                | IEEE 2030.5; OpenADR 2.0b; IEC 62351‑3; TR‑03109‑5; EN 50549‑10                        |
 | Vehicle‑to‑Grid (Bidirektionales Laden)                           | Bidirektionale Lade-/Entlade‑Setpoints sind CMS‑signiert als ISO 15118‑20 ‘ScheduleExchange’ über TLS 1.3 (V2G‑Root CA) an EVSE‑Gateways zu senden; IEC 63110 ‘MeterValues’ mit tatsächlicher P/Q werden im 1 s‑Raster zurückgeliefert und eine ‘ChargingStatusACK’ ≤1 s verifiziert.                                                                                                                                                            | ISO 15118‑20; IEC 63110; IEC 62351‑3; TR‑03109‑5; SAE J2847/3                          |
 | SGCG – Aggregate DER as commercial VPP                            | Aggregierte Produktionsprognosen und Day‑Ahead‑Schedules sind als IEC 62325‑351 CIM ‘ScheduleMessage’ CMS‑signiert via AS4/ebMS3 über HTTPS‑TLS 1.3 an den Marktbetreiber zu senden; der Simulator muss DER‑Setpoints (CLS ‘TargetPower’) entsprechend auf einzelne Gateways verteilen und ≥95 % ACKs ≤3 s verifizieren.                                                                                                                         | IEC 62325‑351; ENTSO‑E ESS; AS4 Profile; TR‑03109‑5; SGCG VPP Commercial UC            |
 | SGCG – Aggregate DER as technical VPP                             | Der Kommunikations‑Simulator muss Sammel‑InfoReports (ΣP, ΣQ, VoltageMargin) nach FNN‑Schema CMS‑signiert via TLS 1.3 an das DSO‑DMS senden und granular aufgelöste CLS‑Setpoints an zugehörige DER‑Gateways verteilen; der DSO‑ACK ist ≤2 s zu prüfen.                                                                                                                                                                                          | FNN Mikroprozesse; TR‑03109‑5; IEC 62351‑3; SGCG VPP Technical UC; IEC 61850‑7‑420     |
@@ -91,7 +91,7 @@
 | SGCG – Perform networked protection logic (Intertripping) | High‑Speed‑Intertrip‑Signale sind als IEC 61850‑GOOSE mit StNum/SeqNum‑Increment über redundante VLANs (PRP) zu senden; der Simulator muss TLS‑getunnelte GOOSE nach IEC 62351‑6 bereitstellen und ≤10 ms End‑to‑End‑Trip‑Bestätigungen verifizieren.                                                                      | IEC 61850‑8‑1/90‑4; IEC 62351‑6; IEEE Std C37.94; SGCG Protection Logic UC |
 | SGCG – Perform networked security logic (Interlocking)    | Interlocking‑Reihenfolgen sind als IEC 61850‑MMS ‘Operate’ (LN CSWI) CMS‑signiert via TLS 1.3 an Feld‑IEDs zu senden; lokale Rückmeldungen kommen als GOOSE‑Blocking‑Frames, die der Simulator innerhalb 20 ms korrelieren und eine ‘SecurityACK’ an das DMS sendet.                                                       | IEC 61850‑7‑2/CSWI; IEC 62351‑3/6; SGCG Security Logic UC                  |
 | SGCG – Protect a zone outside substation boundary         | Der Kommunikations‑Simulator muss Distanzschutz‑GOOSE‑Frames (LN PDIS) TLS‑getunnelt über IEC 61850‑90‑5 Routable GOOSE an Remote‑IEDs außerhalb der Umspannwerksgrenze senden und ≤20 ms Trip‑Confirm verifizieren.                                                                                                       | IEC 61850‑90‑5; IEC 62351‑5/6; SGCG Out‑of‑Substation UC                   |
-| SGCG – Set / change protection parameters                 | Parameter‑Änderungen sind als IEC 61850‑MMS ‘SettingGroupSelect’ CMS‑signiert via TLS 1.3 an Schutz‑IEDs zu schreiben; jede Setting‑ACK muss ≤1 s verarbeitet werden und ein Event‑Log wird via IEC 61850 ‘LogControl’ an das Historian gesendet.                                                                          | IEC 61850‑7‑3/8‑1; IEC 62351‑3; SGCG SetProtection UC; TR‑03109‑1          |
+| SGCG – Set / change protection parameters                 | Parameter‑Änderungen sind als IEC 61850‑MMS ‘SettingGroupSelect’ CMS‑signiert via TLS 1.3 an Schutz‑IEDs zu schreiben; jede Setting‑ACK muss ≤1 s verarbeitet werden und ein Event‑Log wird via IEC 61850 ‘LogControl’ an das Logbuch gesendet.                                                                            | IEC 61850‑7‑3/8‑1; IEC 62351‑3; SGCG SetProtection UC; TR‑03109‑1          |
 
 ## System and Security Management
 
@@ -117,4 +117,44 @@
 - **A** ist das **generische Transport-Grundgerüst** – einmal sauber definiert, gilt es für 90 % aller Anforderungen.
 - **B**, **C**, **D** und **E** sind **wiederkehrende Funktionsblöcke**, die du als Template implementieren und nur mit Use-Case-spezifischen Parametern (Timeout, Frame-Rate, Payload-Typ) instanziieren musst.
 - **F** und **G** sind Spezialmuster, die zwar weniger Use-Cases betreffen, aber ebenfalls jeweils identisch aufgebaut sind.
-- 
+
+
+## Allgemeine Anforderungen
+Über alle Use-Cases hinweg lassen sich folgende **Kern-Anforderungen** an den Kommunikations-Simulator ableiten – sie treten in nahezu jeder Einzel-Spezifikation auf und bilden somit das **Grundgerüst**:
+
+1. **Sicherer Transport**
+    - **TLS 1.2/1.3** mit **mutual X.509-Zertifikats­authentisierung** (SM-PKI) für alle Protokolle (HTTP(S), WebSocket, OPC UA, UDP/TLS).
+    - **CMS-Signatur** (und optional Payload-Verschlüsselung) jeder Nachricht, um Integrität, Authentizität und Nichtabstreitbarkeit zu garantieren.
+
+2. **Schema- und Signatur-Validierung**
+    - **Echtzeit-Validierung** aller Payloads gegen die jeweils geltenden XML/JSON-Schemas oder Binary-Formate (FNN-XSD, IEEE C37.118, OpenADR, CIM, ISO 15118, etc.).
+    - Definierte Reaktionen auf ungültige Rahmen (z. B. HTTP 400, Trip-Verwerfen, Alarm-Log).
+
+3. **Acknowledgements & Retransmits**
+    - **Gateway-ACK/ControlAck** innerhalb der spezifizierten Fristen (typ. 100 ms–5 s).
+    - **Automatisches Wiederholen** fehlender ACKs bis zu X × (Use-Case-abhängig).
+    - Gruppen-ACKs für Multicast/“Multicast-ähnliche” Streams mit Mindest-Quittierungsraten (z. B. ≥ 90 %–95 %).
+
+4. **Protokoll-Suite**
+    - **REST/HTTP(S)** für SMGW (TR-03109), OpenADR, CIM-XML.
+    - **IEC 61850 MMS & GOOSE** (inkl. TLS-Tunnel nach IEC 62351-6).
+    - **Synchrophasor-Streaming** (IEEE C37.118 über IEC 61850-90-5/UDP+TLS).
+    - **DLMS/COSEM**, **ANSI C12.22**, **OPC UA** (PubSub + Binary), **Modbus TCP / SunSpec**, **ISO 15118 / V2G**, **OCPP**, **AS4/ebMS3**, **COMTRADE**.
+
+5. **Netz-Qualitätssimulation & Security-Hooks**
+    - **QoS-Profile** (RTT, Jitter, Loss, Blackout), um Verfügbarkeits- und Performance-Tests zu fahren.
+    - **Angriffs-Injection-Punkte** (TLS-Resets, Replay, Frame-Fuzzing, MitM-Proxy, Fault-Injector) für Negativ-Tests.
+
+6. **Zeit-Synchronisation & Time-Stamping**
+    - Gemeinsame **globale Zeitbasis** (PTP IEEE 1588 oder NTP) mit max. 100 ms Drift, sub-µs-Genauigkeit bei PTP.
+    - **TimeQuality**-Flags in Phasor- und Alarm-Frames, um End-to-End-Jitter-Limits (typ. < 150–200 ms) nachzuweisen.
+
+7. **Bidirektionale APIs & Orchestrierung**
+    - Klare **Callback-/Webhook-Mechanismen**: Grid→Comms (z. B. InfoReport-Push), Comms→Grid (CLS/Operate Befehle).
+    - Unterstützung von **Echtzeit**, **Beschleunigungs-Modi** (×10, ×100) und **deterministischem Replay**.
+
+8. **Zentrales Logging & Monitoring**
+    - **CEF/JSON-Format** für alle Events (InfoReports, Steuermeldungen, Errors, Security-Logs).
+    - **IDS-Syslog** (RFC 5424) für Sicherheitsalarme, Anbindung an SOC/SIEM.
+    - Korrelations-IDs über alle Protokolle hinweg.
+
