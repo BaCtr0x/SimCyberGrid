@@ -158,3 +158,4 @@
     - **IDS-Syslog** (RFC 5424) für Sicherheitsalarme, Anbindung an SOC/SIEM.
     - Korrelations-IDs über alle Protokolle hinweg.
 
+

@@ -216,8 +216,8 @@
 - habe deren UX design fuer die Niederspannungsuebersicht gesehen, sieht gut aus, aber viele Details fehlen noch, also noch nicht soo informativ fuer uns, aber das wird noch werden, denke das wird interessant werden, damit wir auch wissen wie wir Fehlermeldungen handhaben sollten
 
 ## Notes Meeting Felix 09.05.2025
-- [ ] Ist ein LoadShedding immer das gleiche, ob fuer spannung oder frequenz?
-- [ ] Sind Operate DER, Protecting Grid Assets und Blackout management noch relevant?
+- [x] Ist ein LoadShedding immer das gleiche, ob fuer spannung oder frequenz?
+- [x] Sind Operate DER, Protecting Grid Assets und Blackout management noch relevant?
 - Sollte ja aber gut gehen, wenn wir so wie heute arbeiten, dann kann ich meinen Teil bis naechste Woche fertig haben
 - 
 
@@ -227,3 +227,9 @@
 ## Notes Weekly 15.05.2025
 - [ ] Sascha fragen ob wir die Anforderungen von Monesi bekommen koennen
 - [ ] 
+
+## Notes Milena 20.05.2025
+- [ ] David GitLab fragen und auch mal schauen ob ich den so auf dem Flur sehe, koennte schneller gehen
+- [ ] Praktische Beispiele fuer Angriffe und Analysen raussuchen
+- [ ] Dataflow Diagram und Tabelle aufbauen
+

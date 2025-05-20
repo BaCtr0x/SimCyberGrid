@@ -2,13 +2,13 @@
 
 ## 1. Grundlagen elliptischer Kurven
 1. **Kurvengleichung**  
-    Eine elliptische Kurve über einem endlichen Feld 𝐹ₚ (p-Primzahl) hat die Form
+    Eine elliptische Kurve über einem endlichen Feld $\mathbb{F}_p (p$-Primzahl) hat die Form
    $$y2=x3+ax+b\mod p$$
-	 wobei die Koeffizienten a, b so gewählt sind, dass die Kurve keine Singularitäten hat (Diskriminante ≠ 0).    
+	 wobei die Koeffizienten $a, b$ so gewählt sind, dass die Kurve keine Singularitäten hat (Diskriminante $\neq 0$).    
 2. **Gruppenstruktur**  
-    Die Punkte (x,y) auf der Kurve plus ein „Nullpunkt“ 𝒪 bilden eine abelsche Gruppe. Punktaddition und -verdopplung definieren die Gruppenoperation.
-3. **Generatorpunkt G**  
-    Für eine gegebene Kurve wählt man öffentlich einen festgelegten Punkt G, dessen Ordnung n eine große Primzahl ist.
+    Die Punkte $(x,y)$ auf der Kurve plus ein „Nullpunkt“ $𝒪$ bilden eine abelsche Gruppe. Punktaddition und -verdopplung definieren die Gruppenoperation.
+3. **Generatorpunkt $G$**  
+    Für eine gegebene Kurve wählt man öffentlich einen festgelegten Punkt $G$, dessen Ordnung $n$ eine große Primzahl ist.
 
 ## 2. Schlüsselerzeugung
 Jeder Teilnehmer erzeugt sein Schlüsselpaar:
@@ -22,7 +22,7 @@ Jeder Teilnehmer erzeugt sein Schlüsselpaar:
 Angenommen Alice und Bob wollen einen gemeinsamen Schlüssel:
 1. **Alice** wählt $𝑑_a$, berechnet $Q_a = d \cdot G$ und sendet $Q_a$ an Bob.
 2. **Bob** wählt $𝑑_{b}$, berechnet $𝐐_b = 𝑑_b \cdot G$ und sendet $𝐐_b$ an Alice.
-3. **Alice** berechnet $𝑑_a \cdot𝐐_b = 𝑑_a \cdot(𝑑_b\cdot G) = (𝑑_a\cdot𝑑_b\cdot·G$.
+3. **Alice** berechnet $𝑑_a \cdot𝐐_b = 𝑑_a \cdot(𝑑_b\cdot G) = (𝑑_a\cdot𝑑_b\cdot G$.
 4. **Bob** berechnet $𝑑_b\cdot 𝐐_a = 𝑑_b\cdot (𝑑_a \cdot G) = (𝑑_b\cdot 𝑑_a)\cdot G$.
 
 Da Multiplikation kommutativ ist, erhalten beide denselben Kurvenpunkt $𝐊 = (𝑑_a \cdot 𝑑_b)\cdot G$. Aus einer Koordinate (z. B. $x$) oder mittels Hashing dieses Punktes lässt sich dann ein symmetrischer Sitzungsschlüssel ableiten.
