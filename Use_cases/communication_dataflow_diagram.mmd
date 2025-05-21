@@ -1,0 +1,85 @@
+%%{init:{'flowchart':{'nodeSpacing':30,'rankSpacing':40,'decorateLinks': true}}}%%
+flowchart LR
+
+  subgraph Metering_Settlement
+    style Metering_Settlement fill:#fdf6e3,stroke:#eee,stroke-width:1px
+    SMGW([SMGW])
+    VNBSCADA([VNB-SCADA])
+    OMS([Outage Mgmt System])
+    ODS([Operational Data Store])
+  end
+
+  subgraph Distribution_Management
+    style Distribution_Management fill:#e8f6f3,stroke:#eee,stroke-width:1px
+    DSODMS([DSO-DMS])
+    IED([Protection-IED])
+    OperatorUI([Operator UI])
+  end
+
+  subgraph DER_VPP
+    style DER_VPP fill:#f3e8f6,stroke:#eee,stroke-width:1px
+    DERGW([DER-Gateway])
+    VPP([VPP-Operator])
+  end
+
+  subgraph Grid_Stability
+    style Grid_Stability fill:#e8eefa,stroke:#eee,stroke-width:1px
+    PMU([PMU])
+    WAMS([WAMS-Backend])
+  end
+
+  subgraph Microgrid_EVSE
+    style Microgrid_EVSE fill:#eefae8,stroke:#eee,stroke-width:1px
+    MC([Microgrid Controller])
+    EVSE([EVSE-Gateway])
+  end
+
+  subgraph Security_Services
+    style Security_Services fill:#f4f4f4,stroke:#ccc,stroke-width:1px,stroke-dasharray: 5 2
+    OCSP([OCSP-Responder])
+    CRL([CRL-Server])
+    IDS([IDS/SIEM])
+  end
+
+  %% Verbindungen Metering
+  SMGW -->|InfoReport| VNBSCADA
+  VNBSCADA -->|ControlMessage| SMGW
+  SMGW -->|PowerStatusPoll| OMS
+  OMS -->|PollResponse| SMGW
+  SMGW -->|MeterReading| ODS
+
+  %% Verbindungen Distribution
+  VNBSCADA -->|Agg. Reports| DSODMS
+  DSODMS -->|GOOSE Trip| IED
+  IED -->|GOOSE Ack| DSODMS
+  DSODMS -->|SCADA Telemetrie| OperatorUI
+  OperatorUI -->|Manual Operate| DSODMS
+
+  %% Verbindungen DER & VPP
+  DSODMS -->|CLS-Setpoint| DERGW
+  DERGW -->|ACK/Telem.| DSODMS
+  VPP -->|Register/Schedule| DERGW
+  DERGW -->|EnrollAck/Telemetry| VPP
+
+  %% Verbindungen Grid Stability
+  PMU -->|Data Frame| WAMS
+  WAMS -->|Command Frame| PMU
+  WAMS -->|Aggreg. Phasors| DSODMS
+  WAMS -->|Live Phasor| OperatorUI
+
+  %% Verbindungen Microgrid
+  MC -->|MMS Reports| DERGW
+  DERGW -->|Operate| MC
+  MC -->|SetChProfile| EVSE
+  EVSE -->|MeterValues| MC
+
+  %% Verbindungen Security
+  SMGW -->|OCSPRequest| OCSP
+  OCSP -->|OCSPResponse| SMGW
+  SMGW -->|CRLDownload| CRL
+  SMGW -->|Syslog| IDS
+
+  %% Style-Definitionen
+  linkStyle 5,10,11,16,17,18,19,22,23,24,25 stroke:#ffbb33,stroke-width:2px,color:#ffbb33
+  linkStyle 0,1,2,3,4,6,7,8,9,12,13,14,15,20,21 stroke:#86d8f7,stroke-width:2px,color:#86d8f7
+

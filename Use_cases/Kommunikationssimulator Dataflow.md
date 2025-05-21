@@ -1,66 +1,3 @@
-## 1. Normative Dokumente & Referenzen
-
-- **BSI TR-03109-1 bis -5** (FNN-Mikroprozesse, CLS, Security-Profile)
-- **IEC 61850-7-2 / -7-3 / -7-4** (ACSI, Datentypen, Logical Nodes)
-- **IEC 61850-90-5** (Routable Sampled Values)
-- **IEC 62351-3 / -5 / -6** (TLS-Profile, SV/GOOSE-Security, Key Management)
-- **IEEE C37.118.2** (Synchrophasor Data Frame & Command Frame)
-- **OpenADR 2.0b**, **IEC 63110**, **IEC 61968-9**, **ISO 15118-20** etc. für die speziellen Use-Cases
-
-> **Beschaffung:** Besorge dir die PDF-Versionen über deinen Normen-Account oder lokale Bibliothek.
-
-## 2. XML/JSON-Schemas & SCL-Vorlagen
-
-- **FNN-XSDs** für InfoReport (TAC-Container), ControlMessages (CLS)    
-- **IEC 61850 SCL-Schemas** (Substation Configuration Language) für LN-Definitionen
-- **CIM-Profile** (IEC 61970/61968) für Netzdaten
-- **OpenADR-Schemas** (oadrDistributeEvent, oadrReport)
-- **GreenButton JSON**, **ANSI C12.22 XML**, **DLMS-COSEM JSON**
-
-> **Tools:** Einsatz eines Schema-Validators (xmllint, JSON Schema Validator).
-
-## 3. PKI- und Zertifikats-Assets
-
-- **SM-PKI Root & Issuing CA** inkl. CRL-Distribution-Points & OCSP-Responder-URLs    
-- **HSM/Soft-HSM** für private Schlüssel (PKCS#11-Interface)
-- **Zertifikatsprofile** (Key Usage, EKU) für Server/Client/GOOSE/SV-Keys
-- **OCSP-Stapling-Konfiguration** für schnellen Status-Check
-
-> **Tools:** OpenSSL, certtool, cfssl, SoftHSM2.
-
-
-## 4. Code-Bibliotheken & Frameworks
-
-- **TLS-Stack** mit TLS 1.2/1.3 (OpenSSL, mbedTLS)    
-- **CMS-Implementation** (RFC 5652) zum Signieren/Verifizieren (BouncyCastle, OpenSSL-CMS)
-- **IEC 61850-Client/Server** (libIEC61850, openIEC61850)
-- **DLMS/COSEM-Stack** (gurux)
-- **OPC UA-SDK**, **Modbus-TCP**, **SunSpec-Lib**, **OpenADR-SDK**
-- **Phasor-Streaming** (openPMU, pyPMU) für IEEE C37.118
-
-> **Build:** Baue als modulare Microservices, z. B. in Go, Java oder C++.
-
-
-## 5. Simulations- und Test-Framework
-
-- **Netz-Simulator** (GridLAB-D, pandapower) für Stromfluss- und Spannungsprofile    
-- **Co-Simulation** (Mosaik, HELICS) für Kommunikations-/Power-Kopplung
-- **Traffic-Generator** (Scapy, Ostinato) für GOOSE/SV/DNP3-Frames
-- **Fault-Injector** (chaos-monkey für Netz-Ausfälle, MITM-Proxies für TLS-Unterbrechung)
-- **Performance-Tools** (iperf, ping, tc für QoS-Emulation)
-
-> **CI/CD:** Integriere Tests in Jenkins/GitLab-Pipelines mit Docker-Containern.
-
-
-## 6. Beispiel-Konfigurationen & Templates
-
-- **TLS-Server/Client-Config** (openssl.cnf-Vorlagen mit Cipher-Restriktionen)    
-- **SCL-Projektdateien** für typische Substation-Topologien
-- **Certificate Signing Requests (CSR)-Templates** für CA-Automatisierung
-- **Docker-Compose** für Test-Netzwerk mit lokalen OCSP-Responder und PKI
-
-> **Repository:** Lege alles versioniert in Git mit klarer Ordnerstruktur ab.
-
 
 ## Komponenten
 
@@ -195,3 +132,4 @@ flowchart LR
   linkStyle 5,10,11,16,17,18,19,22,23,24,25 stroke:#ffbb33,stroke-width:2px,color:#ffbb33
   linkStyle 0,1,2,3,4,6,7,8,9,12,13,14,15,20,21 stroke:#86d8f7,stroke-width:2px,color:#86d8f7
 ```
+
