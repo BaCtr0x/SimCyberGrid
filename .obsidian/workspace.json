@@ -92,20 +92,6 @@
             }
           },
           {
-            "id": "c6678a7284f7f45c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ECKA-DH"
-            }
-          },
-          {
             "id": "277b4484f74594dd",
             "type": "leaf",
             "state": {
@@ -118,9 +104,37 @@
               "icon": "lucide-file",
               "title": "TR-03109"
             }
+          },
+          {
+            "id": "c6678a7284f7f45c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "General/Notes Meeting.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notes Meeting"
+            }
+          },
+          {
+            "id": "03eef37a441a6842",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Threat Analysis Techniques.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Threat Analysis Techniques"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -241,13 +255,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Use_cases/Kommunikationssimulator Dataflow.md",
+                "file": "General/Notes Meeting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Kommunikationssimulator Dataflow"
+              "title": "Outline of Notes Meeting"
             }
           }
         ],
@@ -268,10 +282,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "653accfd249576d2",
+  "active": "c6678a7284f7f45c",
   "lastOpenFiles": [
-    "General/Abreviations.md",
+    "Security/Threat Analysis Techniques.md",
+    "General/Notes Meeting.md",
+    "Images/DFD_and_STRIDE.png",
+    "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
+    "Images/STRIDE_Steps_and_Security_Properties.png",
+    "Images/Thread_Analysis_Methods.png",
     "Use_cases/Kommunikationssimulator Dataflow.md",
+    "General/Abreviations.md",
     "Use_cases/Assets Kommunikationssimulator.md",
     "Use_cases/communication_dataflow_diagram.pdf",
     "Use_cases/communication_dataflow_diagram.mmd",
@@ -300,21 +320,14 @@
     "Smart Metering Components/Distribution Management System.md",
     "Smart Metering Components/Distribution System Operator.md",
     "Use_cases/Anforderungen.md",
-    "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
     "Technologien und Algorithmen/Algorithmen/ECDH.md",
     "Technologien und Algorithmen/Algorithmen/ECDSA.md",
-    "Technologien und Algorithmen/Algorithmen/MD5.md",
-    "Technologien und Algorithmen/Algorithmen/DES.md",
-    "Technologien und Algorithmen/Algorithmen/SSL.md",
     "Images/TAC_Table.png",
     "Images/IEC_62351_Overview.png",
     "Images/IEC_62351_Overview.png",
     "Images/IEC_61850_protocol_suit.png",
     "Images/Screenshot 2025-04-29 at 14.00.53.png",
     "Images/Smart-Meter-Gateway and its Environment.png",
-    "Images/JSON_TAC14.png",
-    "Images/OpenProject_Pricing.png",
-    "Images/Taiga_Pricing.png",
-    "Images/Nuclino_Pricing.png"
+    "Images/JSON_TAC14.png"
   ]
 }

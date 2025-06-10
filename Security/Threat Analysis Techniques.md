@@ -18,6 +18,13 @@ In this step we use a threat categorization methodology to identify threats. For
 | **Attack Trees**           | All domains     | ✔️     | ⚠️ Custom    | ✔️               | Medium     | Tree tools, paper |
 | **Risk Matrix (IEC/NIST)** | Grid-focused    | ⚠️     | ✔️           | ✔️               | Low-Med    | Compliance tools  |
 In this context we note that combining different threat modeling techniques can be useful, such as using STRIDE in combination with the attack trees to model different points of entry and give detailed attack strategies for the most relevant attacks or in our case the ones we want to test on the simulator. Additionally it is helpful to use the DFG to identify threat boundaries and document them in the DFG such that one can easily get an overview of the different points of entries. For us this is going to be a little bit more difficult, as most attacks we will be looking at will focus on destabilizing the grid, which is the result of the attack and not the attack itself. 
+
+#### Additional Thread Analysis Methods
+![[Thread_Analysis_Methods.png]]
+This is taken from the Case Study [STRIDE-based threat modeling and DREAD evaluation for the distributed control system in the oil refinery]. As well as this following figure for appllying STRIDE
+![[STRIDE_Steps_and_Security_Properties.png]]
+![[DFD_and_STRIDE.png]]
+
 ### 3. Determine Countermeasures and Mitigation
 The idea behind this step is to identify countermeasures to the attacks found in the previous step. For this one could use threat-countermeasure mapping lists. The most common factors in the counter-measurement analysis is to determine factors of the attacks like:
 - the attack itself
@@ -60,3 +67,4 @@ Thus combining both gives one the ability to prioritize attacks while having a t
 3. Prioritize mitigations based on:
 	- How many high-risk branches pass through each node
 	- What controls can reduce likelihood or break attack paths
+

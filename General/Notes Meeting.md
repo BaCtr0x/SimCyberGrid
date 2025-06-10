@@ -225,11 +225,25 @@
 - 
 
 ## Notes Weekly 15.05.2025
-- [ ] Sascha fragen ob wir die Anforderungen von Monesi bekommen koennen
+- [x] Sascha fragen ob wir die Anforderungen von Monesi bekommen koennen
 - [ ] 
 
 ## Notes Milena 20.05.2025
 - [ ] David GitLab fragen und auch mal schauen ob ich den so auf dem Flur sehe, koennte schneller gehen
-- [ ] Praktische Beispiele fuer Angriffe und Analysen raussuchen
-- [ ] Dataflow Diagram und Tabelle aufbauen
+- [x] Praktische Beispiele fuer Angriffe und Analysen raussuchen
+- [x] Dataflow Diagram und Tabelle aufbauen
 
+
+## Notes Milena 03.06.2025
+- [x] Was wurde Besprochen?
+	- war nicht da und muessen schauen wie es weiter geht
+- [x] Was sind die weiteren Plaene?
+	- siehe TODOs
+- Habe eine Case Study gefunden, die STRIDE verwendet und die Stellen eine Threat Analyse auf und validieren diese dann mit beispielsweise Stuxnet, um zu sehen ob die passenden Threats abgedeckt sind
+
+### $\rightarrow$ TODOs
+- [ ] Sicherheitsanalyse anfangen und dann schauen aehnlich zu STRIDE aber schon eher Assets-based
+- [ ] Trike analyse mal ansehen, koennte gut sein, aber wissen wir ueberhaupt was wie riskant ist
+- [ ] Schutzziele und Assets aufzubauen und dann schauen ob STRIDE oder Attack Trees sinnvoll sind
+- [ ] Auch Use-Case maessig durch die Assets und Co gehen
+- [ ] Email an Haustechnik schreiben und dann sagen, dass ich zugriff auf den Schluessel fuer Haus 18 bekomme :D
