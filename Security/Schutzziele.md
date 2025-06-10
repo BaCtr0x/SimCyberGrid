@@ -1,5 +1,6 @@
 Die Schutzziele wurden aufgrund der [TR-03109](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR03109/TR-03109-1_Anforderungen_Interoperabilitaet_2_0.pdf?__blob=publicationFile&v=2) vom BSI und der [BSI-CC-PP-0073](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03109/PP0073_SMGW.pdf?__blob=publicationFile&v=2) fuer Smart-Meter-Gateways aufgestellt. Dabei wurde darauf geachtet, dass es sich um Mittel- und Niederspannungsebenen bezogene Probleme handelt, auch wenn dies vor allem bei der Kommunikation nicht so wichtig ist. An sich gilt, wir koennen das Smart Grid als verteiltes System betrachten und somit darauf von einer IT-Sicherheitsperspektive her genauso agieren, wie in jeder anderen Instanz eines verteilten Systems.
 Somit sind die Folgenden Schutzziele genau das was wir erwarten wuerden.
+### Schutzziele
 
 | #   | Schutzziel                                                                                       | Konkrete Bedrohungen/Anforderungen in TR-03109                                                                |
 | --- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |

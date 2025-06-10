@@ -243,7 +243,24 @@
 
 ### $\rightarrow$ TODOs
 - [ ] Sicherheitsanalyse anfangen und dann schauen aehnlich zu STRIDE aber schon eher Assets-based
-- [ ] Trike analyse mal ansehen, koennte gut sein, aber wissen wir ueberhaupt was wie riskant ist
+- [x] Trike analyse mal ansehen, koennte gut sein, aber wissen wir ueberhaupt was wie riskant ist
 - [ ] Schutzziele und Assets aufzubauen und dann schauen ob STRIDE oder Attack Trees sinnvoll sind
 - [ ] Auch Use-Case maessig durch die Assets und Co gehen
-- [ ] Email an Haustechnik schreiben und dann sagen, dass ich zugriff auf den Schluessel fuer Haus 18 bekomme :D
+- [x] Email an Haustechnik schreiben und dann sagen, dass ich zugriff auf den Schluessel fuer Haus 18 bekomme :D
+
+
+## Notes Milena 10.06.2025
+- In dem Paper machen die STRIDE sehr genau und nehmen jede Operation die jedes Teil machen kann als ein Variable und dann geben sie fuer alle Angriffsbereiche wie Spoofing an welche Operationen, bzw. welcher Datanfluss wo reinfaellt. Brauchen wir das so genau oder reicht das groeber, also nicht mit read/write, Login und Co specifisch, sondern mehr component specifisch?
+- [x] Hat Milena ueber Risks angesprochen, noch nicht weil nur Sascha da war
+	- wenn wir die wissen, dann koennte Trike gut funktionieren, weil es eben auf DFD aufbaut und mit acceptable risks arbeitet, was wir in dem Stromnetz bestimmt haben werden, wie kleine Fluktuationen oder so. 
+	- STRIDE ist aber gut um eine Basis fuer die Entwicklung zu haben, damit wir direkt wissen worauf wir achten muessen.
+- Einmal Threat analyse anhand von einem Use Case machen 
+	- gerne auch mit einer Ai machen und mal schauen was die unterschiedes sind, die man selber rausbekommt und was die bekommen
+	- mit notizen machen, damit man den ganzen Process am ende als Paper aufbereiten kann 
+- Donnerstag sehen was ide anderen so haben und den Fokus auf Test und Anforderungen setzen und dann schauen wie weit wer was machen soll 
+- testfaelle sind wichtig, sonst wird angriffe fahren auch schwierig 
+- Mal schauen wenn ich an den Punkt kommen an dem Routine kommt, ob es sinnvoll ist einen Studi einzustellen, aber das kann ich dann einfach bescheid sagen.
+	- Vielleicht gibt es auch Projekte die sich anbieten oder Abschlussarbeiten die man dafuer nutzen kann 
+### $\rightarrow$ TODOs
+- [ ] mal schauen ob ich das hinbekomme eine analyse fuer Trike und STRIDE fuer Donnerstag hinbekommen, anhand eines Beispieles, wie Use-Case
+- [ ] 
