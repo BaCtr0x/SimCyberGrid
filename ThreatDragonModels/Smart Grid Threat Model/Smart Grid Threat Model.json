@@ -11,12 +11,13 @@
     "diagrams": [
       {
         "id": 0,
-        "title": "New STRIDE diagram",
+        "title": "Initial Threat Analysis",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.4.1",
-        "cells": []
+        "cells": [],
+        "description": "This is used as the initial threat analysis which is high level and will be ported to Threagile for a deeper analysis in the future."
       }
     ],
     "diagramTop": 2,
