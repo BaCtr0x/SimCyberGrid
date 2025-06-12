@@ -1,0 +1,16 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Smart Grid Threat Model",
+    "owner": "Julian",
+    "description": "The system is a combination of a communication, power and co simulator to simulate the power grid over middle and lower voltage. ",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Sascha, Felix",
+    "threatTop": 0
+  }
+}
