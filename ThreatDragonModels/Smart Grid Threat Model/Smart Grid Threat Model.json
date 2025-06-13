@@ -19,34 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 60,
-              "y": 240
-            },
-            "size": {
-              "width": 590,
-              "height": 480
-            },
-            "attrs": {
-              "label": {
-                "text": "Metering Settlement "
-              }
-            },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "83fe2191-7fd4-46ac-b251-744a20481465",
-            "zIndex": -1,
-            "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Metering Settlement ",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
               "x": 408.25,
-              "y": -169.99999999999932
+              "y": -149
             },
             "size": {
               "width": 190,
@@ -980,6 +954,682 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "GOOSE Confirmation",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850-GOOSE",
+              "threats": []
+            },
+            "labels": [
+              "GOOSE Confirmation"
+            ],
+            "id": "8f6b6b7d-27dd-4ae3-80ed-02ec5e538a11",
+            "source": {
+              "cell": "43faf482-9986-4305-9e95-7c16a28de0b4",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1150,
+                "y": 620
+              },
+              {
+                "x": 1040,
+                "y": 620
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "GOOSE-Trip",
+              "description": "Operate Frames",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850-GOOSE TLS-getunnelt",
+              "threats": []
+            },
+            "labels": [
+              "GOOSE-Trip"
+            ],
+            "id": "af7d8893-77fa-401e-98cc-881dc9e9eece",
+            "source": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "43faf482-9986-4305-9e95-7c16a28de0b4",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1030,
+                "y": 720
+              },
+              {
+                "x": 1150,
+                "y": 720
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Manuelle Steuerbefehle",
+              "description": "Operate/SetDataValues",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850 TLS 1.2/3",
+              "threats": []
+            },
+            "labels": [
+              "Manuelle Steuerbefehle"
+            ],
+            "id": "9a920796-f29e-43d7-9c18-f7881e162535",
+            "source": {
+              "cell": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "vertices": [
+              {
+                "x": 1210,
+                "y": 800
+              },
+              {
+                "x": 1040,
+                "y": 780
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SCADA-Telemetrie",
+              "description": "Strom, Spannung, Alarm, Status als MMS Report",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850",
+              "threats": []
+            },
+            "labels": [
+              "SCADA-Telemetrie"
+            ],
+            "id": "007c85cf-b345-459e-8914-da09de5881cc",
+            "source": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "target": {
+              "cell": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1030,
+                "y": 840
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Live Phasor Data",
+              "description": "Live Phasor Dashboard Data als JSON",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "WebSocket/TLS",
+              "threats": []
+            },
+            "labels": [
+              "Live Phasor Data"
+            ],
+            "id": "08a98287-1c9e-4ee5-8a66-e3eb120588d9",
+            "source": {
+              "cell": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 740,
+                "y": 930
+              },
+              {
+                "x": 1010,
+                "y": 930
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CLS-Setpoint",
+              "description": "TargetPower/LoadReduction",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CMS-signiertem CLS-JSON",
+              "threats": []
+            },
+            "labels": [
+              "CLS-Setpoint"
+            ],
+            "id": "14f2ec0c-d0ce-4dc1-bdf5-b62965b980c9",
+            "source": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 980,
+                "y": 500
+              },
+              {
+                "x": 1050,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Gateway-ACK",
+              "description": "Control Acknowledgement, Gateway Acknowledgement als einfache JSON",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2",
+              "threats": []
+            },
+            "labels": [
+              "Gateway-ACK"
+            ],
+            "id": "ed41d5ff-3b55-471f-ba9e-80e67ab92ada",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Register/Deregister DER",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CMS-signiertem IEC 63110 Device Provisioning",
+              "threats": []
+            },
+            "labels": [
+              "Register/Deregister DER"
+            ],
+            "id": "8fef2194-e057-4cc7-aae7-f8523b144ee5",
+            "source": {
+              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1500,
+                "y": 310
+              },
+              {
+                "x": 1370,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Enroll-ACK",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Enroll-ACK"
+            ],
+            "id": "45787d24-9f86-47aa-bdf8-ac3948035947",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1370,
+                "y": 390
+              },
+              {
+                "x": 1500,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "MMS Reports",
+              "description": "IEC 61850 MMS-Reports im 1s Raster",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TCP/TLS IEC 62351-3",
+              "threats": []
+            },
+            "labels": [
+              "MMS Reports"
+            ],
+            "id": "06eb1683-db3e-40ee-b7d4-ed8f9a352faf",
+            "source": {
+              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": [
+              {
+                "x": 1340,
+                "y": 200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Control",
+              "description": "Operate and Target Power als CLS-JSON",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "MMS/TLS 1.2/3",
+              "threats": []
+            },
+            "labels": [
+              "Control"
+            ],
+            "id": "97df01c5-50fa-4fa9-9064-e693d22c2439",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Meter Values",
+              "description": "P/Q, SOC als CLS-JSON",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "MMS/TLS",
+              "threats": []
+            },
+            "labels": [
+              "Meter Values"
+            ],
+            "id": "c9495c4d-aa74-4834-bb9e-bd4b3ac9e050",
+            "source": {
+              "cell": "9f867f67-f373-4fc8-9846-910039bbd1c3",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1890,
+                "y": 120
+              },
+              {
+                "x": 1760,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SetCharginProfile",
+              "description": "ISO 15118-20 ScheduleExchange",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TLS 1.3",
+              "threats": []
+            },
+            "labels": [
+              "SetCharginProfile"
+            ],
+            "id": "616c64b5-d25d-429f-b47d-1890f913b64a",
+            "source": {
+              "cell": "9f867f67-f373-4fc8-9846-910039bbd1c3",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1880,
+                "y": 210
+              },
+              {
+                "x": 1760,
+                "y": 210
+              }
+            ]
+          },
+          {
             "position": {
               "x": 447,
               "y": 480
@@ -1907,6 +2557,702 @@
               "type": "tm.Actor",
               "name": "DSO-DMS",
               "description": "Distribution Management System: Netzueberwachung, Lastfluss- und Spannungsregelung, FLISR-Funktionen",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1210,
+              "y": 639
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Protected-IED"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "43faf482-9986-4305-9e95-7c16a28de0b4",
+            "zIndex": 19,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Protected-IED",
+              "description": "Schutzrelais fuer Distanzschutz, Differentialschutz, trippt und isoliert fehlerhafte Netzzonen via GOOSE",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1210,
+              "y": 838
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Operator UI"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
+            "zIndex": 20,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Operator UI",
+              "description": "Dies ist das Grid-Operator-Dashboard, wodurch der Operator mit dem System interagieren kann.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1210,
+              "y": 320
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "DER-Gateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+            "zIndex": 21,
+            "data": {
+              "type": "tm.Actor",
+              "name": "DER-Gateway",
+              "description": "Schnittstelle zu dezentralen Erzeugungs- bzw. Speicheranlagen fuer Setpoints (P/Q) und Telemetrie (ACK, Status)",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1548,
+              "y": 320
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "VPP Operator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+            "zIndex": 22,
+            "data": {
+              "type": "tm.Actor",
+              "name": "VPP Operator",
+              "description": "Virtuelles Kraftwerks-Management: Registrierung/Deregistrierung, Aggergation von Forecasts und Schedules",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1548,
+              "y": 145
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Microgrid Controller"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+            "zIndex": 23,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Microgrid Controller",
+              "description": "Bedienoberflaeche und Steuerungfseben fuer grid-connected Microgrids; zeigt MMS-Reports und sendet Dispatch-Befehle",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1940,
+              "y": 140
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "EVSE-Gateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "9f867f67-f373-4fc8-9846-910039bbd1c3",
+            "zIndex": 24,
+            "data": {
+              "type": "tm.Actor",
+              "name": "EVSE-Gateway",
+              "description": "Schnittstelle zu Ladestationen: V2G-Setpoints (ISO 15118), Messwerte (IEC 63110) und Lade-ACKs",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
