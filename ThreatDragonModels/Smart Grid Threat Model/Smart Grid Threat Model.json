@@ -277,7 +277,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "",
+              "protocol": "HTTPS/TLS 1.2 mit CMS signierter CLS-JSON",
               "threats": []
             },
             "labels": [
@@ -331,7 +331,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "",
+              "protocol": "HTTPS/TLS 1.2 mit CMS signierter JSON/XML",
               "threats": []
             },
             "labels": [
@@ -356,6 +356,176 @@
                 "y": 390
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregierte InfoReports",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CIM-XML",
+              "threats": []
+            },
+            "labels": [
+              "Aggregierte InfoReports"
+            ],
+            "id": "55fe4c87-343d-4453-868a-41db9c4b6ee3",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 430
+              },
+              {
+                "x": 350,
+                "y": 480
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 447,
+              "y": 480
+            },
+            "size": {
+              "width": 190,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Outage Management System"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "fa71e320-0729-4932-8d51-d967246db006",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Outage Management System",
+              "description": "System fuer Ausfallermittlung: Polling von Smart Meter Gateways (ANSI C12.22/DLMS) und Auswerten von Responses",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
           }
         ],
         "description": "This is used as the initial threat analysis which is high level and will be ported to Threagile for a deeper analysis in the future."
