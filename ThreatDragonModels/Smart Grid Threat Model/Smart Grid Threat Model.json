@@ -19,6 +19,32 @@
         "cells": [
           {
             "position": {
+              "x": 60,
+              "y": 240
+            },
+            "size": {
+              "width": 590,
+              "height": 480
+            },
+            "attrs": {
+              "label": {
+                "text": "Metering Settlement "
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "83fe2191-7fd4-46ac-b251-744a20481465",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Metering Settlement ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 80,
               "y": 320
             },
