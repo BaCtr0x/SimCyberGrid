@@ -377,7 +377,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Aggregierte InfoReports",
+              "name": "PowerStatusPoll",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -385,11 +385,11 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "HTTPS/TLS 1.2 mit CIM-XML",
+              "protocol": "ANSCI C12.22 / DLMS-COSEM over TLS",
               "threats": []
             },
             "labels": [
-              "Aggregierte InfoReports"
+              "PowerStatusPoll"
             ],
             "id": "55fe4c87-343d-4453-868a-41db9c4b6ee3",
             "source": {
@@ -408,6 +408,60 @@
               {
                 "x": 350,
                 "y": 480
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "PollResponse",
+              "description": "Outage Status",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "ANSI C12.22 / DLMS-COSEM over TLS",
+              "threats": []
+            },
+            "labels": [
+              "PollResponse"
+            ],
+            "id": "2031b099-9bf3-4a73-baa7-fd4f71445a0a",
+            "source": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 440
+              },
+              {
+                "x": 270,
+                "y": 410
               }
             ]
           },
