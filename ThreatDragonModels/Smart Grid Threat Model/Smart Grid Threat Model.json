@@ -19,16 +19,16 @@
         "cells": [
           {
             "position": {
-              "x": 408.25,
+              "x": 388.25,
               "y": -149
             },
             "size": {
-              "width": 190,
+              "width": 230,
               "height": 370
             },
             "attrs": {
               "label": {
-                "text": "Security Services"
+                "text": "External Interface Boundary"
               }
             },
             "visible": true,
@@ -37,7 +37,7 @@
             "id": "61ff5c06-bbfb-45d0-b034-b94a17369f6a",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Security Services",
+              "name": "External Interface Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
@@ -998,12 +998,12 @@
             },
             "vertices": [
               {
-                "x": 1150,
-                "y": 620
+                "x": 1300,
+                "y": 600
               },
               {
-                "x": 1040,
-                "y": 620
+                "x": 1070,
+                "y": 600
               }
             ]
           },
@@ -1052,12 +1052,12 @@
             },
             "vertices": [
               {
-                "x": 1030,
-                "y": 720
+                "x": 1040,
+                "y": 740
               },
               {
-                "x": 1150,
-                "y": 720
+                "x": 1310,
+                "y": 740
               }
             ]
           },
@@ -1749,6 +1749,59 @@
                 "y": 950
               }
             ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": " IT/OT Convergence Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              " IT/OT Convergence Boundary"
+            ],
+            "id": "fc586740-5329-4fa8-a3dd-949f7e645591",
+            "source": {
+              "x": 1070,
+              "y": 560
+            },
+            "target": {
+              "x": 1080,
+              "y": 770
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": " IT/OT Convergence Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              " IT/OT Convergence Boundary"
+            ],
+            "id": "599b22ac-b135-4c04-bc62-dc9c157b0ebb",
+            "source": {
+              "x": 310,
+              "y": 650
+            },
+            "target": {
+              "x": 460,
+              "y": 580
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -2687,7 +2740,7 @@
           },
           {
             "position": {
-              "x": 1210,
+              "x": 1400,
               "y": 639
             },
             "size": {
