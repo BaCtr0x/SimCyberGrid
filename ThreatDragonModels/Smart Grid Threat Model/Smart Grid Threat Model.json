@@ -7,7 +7,14 @@
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Sascha"
+      },
+      {
+        "name": "Felix"
+      }
+    ],
     "diagrams": [
       {
         "id": 0,
