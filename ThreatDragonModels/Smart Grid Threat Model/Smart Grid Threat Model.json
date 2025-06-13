@@ -45,8 +45,8 @@
           },
           {
             "position": {
-              "x": 409.9999999999993,
-              "y": -179.99999999999932
+              "x": 408.25,
+              "y": -169.99999999999932
             },
             "size": {
               "width": 190,
@@ -772,6 +772,214 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Command Frame",
+              "description": "Control Frame",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850-GOOSE",
+              "threats": []
+            },
+            "labels": [
+              "Command Frame"
+            ],
+            "id": "454b7015-7be9-47fe-bda7-78632a37df21",
+            "source": {
+              "cell": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "49705121-6b3c-4480-a12c-a839f0aeda34",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 820
+              },
+              {
+                "x": 290,
+                "y": 820
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Frame",
+              "description": "Synchrophasor Data Frame",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850-GOOSE TLS-getunnelt",
+              "threats": []
+            },
+            "labels": [
+              "Data Frame"
+            ],
+            "id": "2dda5b89-8417-4541-b968-05f6a4ef785e",
+            "source": {
+              "cell": "49705121-6b3c-4480-a12c-a839f0aeda34",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 910
+              },
+              {
+                "x": 400,
+                "y": 910
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregierte InfoReports",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CIM-XML",
+              "threats": []
+            },
+            "labels": [
+              "Aggregierte InfoReports"
+            ],
+            "id": "87ba727a-8b47-4523-bb6f-1509797d356f",
+            "source": {
+              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": [
+              {
+                "x": 820,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregierte Phasorrports",
+              "description": "IEC 61850 MMS Report",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "CIM-XML over TLS 1.2/3",
+              "threats": []
+            },
+            "labels": [
+              "Aggregierte Phasorrports"
+            ],
+            "id": "6c7bf8d7-60a3-450a-b77a-cf347c50d511",
+            "source": {
+              "cell": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "vertices": [
+              {
+                "x": 820,
+                "y": 840
+              }
+            ]
+          },
+          {
             "position": {
               "x": 447,
               "y": 480
@@ -1245,7 +1453,7 @@
           {
             "position": {
               "x": 447,
-              "y": -103
+              "y": -104
             },
             "size": {
               "width": 112.5,
@@ -1351,6 +1559,354 @@
               "type": "tm.Actor",
               "name": "OCSP-Responder",
               "description": "On-Line Certificate Status Protocol: gibt in Echtzeit den Wiederrufstatus von X.509-Zertifikaten aus.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 80,
+              "y": 838
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "PMU"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "49705121-6b3c-4480-a12c-a839f0aeda34",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Actor",
+              "name": "PMU",
+              "description": "Messen von Phasorgroessen (U/I, Frequenz, ROCOF) mit PTP-Zeitstempel und Streaming an WAMS",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 838
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "WAMS-Backend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Actor",
+              "name": "WAMS-Backend",
+              "description": "Phasordaten-Konzentrator und Analyseplattform fuer Wide-Area Monitoring & Protection (WAMPAC, State Estimation)",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 855,
+              "y": 639
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "DSO-DMS"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+            "zIndex": 18,
+            "data": {
+              "type": "tm.Actor",
+              "name": "DSO-DMS",
+              "description": "Distribution Management System: Netzueberwachung, Lastfluss- und Spannungsregelung, FLISR-Funktionen",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
