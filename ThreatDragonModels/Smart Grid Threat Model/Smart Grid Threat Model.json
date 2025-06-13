@@ -45,6 +45,32 @@
           },
           {
             "position": {
+              "x": 409.9999999999993,
+              "y": -179.99999999999932
+            },
+            "size": {
+              "width": 190,
+              "height": 370
+            },
+            "attrs": {
+              "label": {
+                "text": "Security Services"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "61ff5c06-bbfb-45d0-b034-b94a17369f6a",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Security Services",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 80,
               "y": 320
             },
@@ -430,10 +456,6 @@
               {
                 "x": 260,
                 "y": 430
-              },
-              {
-                "x": 350,
-                "y": 480
               }
             ]
           },
@@ -586,12 +608,166 @@
             },
             "vertices": [
               {
-                "x": 310,
-                "y": 210
+                "x": 320,
+                "y": 220
               },
               {
-                "x": 390,
-                "y": 180
+                "x": 400,
+                "y": 160
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CRL Download",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            },
+            "labels": [
+              "CRL Download"
+            ],
+            "id": "52f505ae-eced-48e0-b304-73c30c262489",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 200
+              },
+              {
+                "x": 350,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OCSP Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "HTTP(S)",
+              "threats": []
+            },
+            "labels": [
+              "OCSP Request"
+            ],
+            "id": "de5ed0a0-b07c-4d31-a4ef-5bd663012793",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 90
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OCSP Respons",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": []
+            },
+            "labels": [
+              "OCSP Respons"
+            ],
+            "id": "7ee1d3db-cb40-4c81-8e2b-6a742c6c1ab6",
+            "source": {
+              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": [
+              {
+                "x": 200,
+                "y": 50
               }
             ]
           },
@@ -953,7 +1129,7 @@
           {
             "position": {
               "x": 447,
-              "y": -4
+              "y": 6
             },
             "size": {
               "width": 112.5,
@@ -1059,6 +1235,122 @@
               "type": "tm.Actor",
               "name": "CRL-Server",
               "description": "Stellt Certificate Revocation List (CRLs) bereit, damit Clients Zertifikats gueltigkeit pruefen koennen.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 447,
+              "y": -103
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "OCSP-Responder"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+                },
+                {
+                  "group": "right",
+                  "id": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+                },
+                {
+                  "group": "left",
+                  "id": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+                }
+              ]
+            },
+            "id": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Actor",
+              "name": "OCSP-Responder",
+              "description": "On-Line Certificate Status Protocol: gibt in Echtzeit den Wiederrufstatus von X.509-Zertifikaten aus.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
