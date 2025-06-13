@@ -33,8 +33,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "61ff5c06-bbfb-45d0-b034-b94a17369f6a",
             "zIndex": -1,
+            "id": "61ff5c06-bbfb-45d0-b034-b94a17369f6a",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Security Services",
@@ -64,6 +64,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -147,7 +148,6 @@
               ]
             },
             "id": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "SMGW",
@@ -180,6 +180,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -263,7 +264,6 @@
               ]
             },
             "id": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "VNB-SCADA",
@@ -1630,6 +1630,127 @@
             ]
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Field Device and Gateway Boundry",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Field Device and Gateway Boundry"
+            ],
+            "id": "2b4f87b6-c9b1-410b-8797-6f1d4884af66",
+            "source": {
+              "x": 689,
+              "y": 260
+            },
+            "target": {
+              "x": 700,
+              "y": 900
+            },
+            "vertices": [
+              {
+                "x": 689,
+                "y": 580
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Field Device and Gateway Boundry",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Field Device and Gateway Boundry"
+            ],
+            "id": "3bbd4681-5757-4401-b375-ac732d40db26",
+            "source": {
+              "x": 1480,
+              "y": -10
+            },
+            "target": {
+              "x": 1510,
+              "y": 270
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Organizational Domain Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Organizational Domain Boundary"
+            ],
+            "id": "67534cf3-cf05-441d-a96d-80d88e3b38f4",
+            "source": {
+              "x": 978,
+              "y": 320
+            },
+            "target": {
+              "x": 1220,
+              "y": 470
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": " IT/OT Convergence Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              " IT/OT Convergence Boundary"
+            ],
+            "id": "36fe19df-e258-404b-8761-1c081dd4cbb1",
+            "source": {
+              "x": 330,
+              "y": 760
+            },
+            "target": {
+              "x": 340,
+              "y": 980
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 800
+              },
+              {
+                "x": 290,
+                "y": 950
+              }
+            ]
+          },
+          {
             "position": {
               "x": 447,
               "y": 480
@@ -1650,6 +1771,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1733,7 +1855,6 @@
               ]
             },
             "id": "fa71e320-0729-4932-8d51-d967246db006",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "Outage Management System",
@@ -1769,6 +1890,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1852,7 +1974,6 @@
               ]
             },
             "id": "a8de3bb0-e2fb-48b5-833f-c936130e6060",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "Operational Data Store",
@@ -1889,6 +2010,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1972,7 +2094,6 @@
               ]
             },
             "id": "2fbfded7-34c6-44ae-adad-59596a4cd8cf",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "IDS/SIEM",
@@ -2005,6 +2126,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -2088,7 +2210,6 @@
               ]
             },
             "id": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "CRL-Server",
@@ -2121,6 +2242,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -2204,7 +2326,6 @@
               ]
             },
             "id": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
-            "zIndex": 15,
             "data": {
               "type": "tm.Actor",
               "name": "OCSP-Responder",
@@ -2237,6 +2358,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2320,7 +2442,6 @@
               ]
             },
             "id": "49705121-6b3c-4480-a12c-a839f0aeda34",
-            "zIndex": 16,
             "data": {
               "type": "tm.Actor",
               "name": "PMU",
@@ -2353,6 +2474,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2436,7 +2558,6 @@
               ]
             },
             "id": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
-            "zIndex": 17,
             "data": {
               "type": "tm.Actor",
               "name": "WAMS-Backend",
@@ -2469,6 +2590,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2552,7 +2674,6 @@
               ]
             },
             "id": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
-            "zIndex": 18,
             "data": {
               "type": "tm.Actor",
               "name": "DSO-DMS",
@@ -2585,6 +2706,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -2668,7 +2790,6 @@
               ]
             },
             "id": "43faf482-9986-4305-9e95-7c16a28de0b4",
-            "zIndex": 19,
             "data": {
               "type": "tm.Actor",
               "name": "Protected-IED",
@@ -2701,6 +2822,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -2784,7 +2906,6 @@
               ]
             },
             "id": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
-            "zIndex": 20,
             "data": {
               "type": "tm.Actor",
               "name": "Operator UI",
@@ -2817,6 +2938,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -2900,7 +3022,6 @@
               ]
             },
             "id": "6a093b79-01aa-49d7-83e9-47626aa0c060",
-            "zIndex": 21,
             "data": {
               "type": "tm.Actor",
               "name": "DER-Gateway",
@@ -2933,6 +3054,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 22,
             "ports": {
               "groups": {
                 "top": {
@@ -3016,7 +3138,6 @@
               ]
             },
             "id": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
-            "zIndex": 22,
             "data": {
               "type": "tm.Actor",
               "name": "VPP Operator",
@@ -3031,7 +3152,7 @@
           {
             "position": {
               "x": 1548,
-              "y": 145
+              "y": 140
             },
             "size": {
               "width": 150,
@@ -3049,6 +3170,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 23,
             "ports": {
               "groups": {
                 "top": {
@@ -3132,7 +3254,6 @@
               ]
             },
             "id": "eb6c76be-42dc-4648-811a-dbe66d26a036",
-            "zIndex": 23,
             "data": {
               "type": "tm.Actor",
               "name": "Microgrid Controller",
@@ -3165,6 +3286,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 24,
             "ports": {
               "groups": {
                 "top": {
@@ -3248,7 +3370,6 @@
               ]
             },
             "id": "9f867f67-f373-4fc8-9846-910039bbd1c3",
-            "zIndex": 24,
             "data": {
               "type": "tm.Actor",
               "name": "EVSE-Gateway",
