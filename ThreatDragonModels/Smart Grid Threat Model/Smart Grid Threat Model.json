@@ -548,7 +548,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -568,12 +569,44 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "TLS 1.2/3",
-              "threats": []
+              "threats": [
+                {
+                  "id": "60100415-8d0d-4384-a36c-777f3e1f2d9c",
+                  "title": "Blind Security Monitoring",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Attackers may attempt to blind security monitoring systems to avoid detection during attacks",
+                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "6e7b5418-0150-45da-9d1e-d861a7300736",
+                  "title": "Falsifying Log",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Falsifying security event logs to cover attack traces",
+                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "IDS-Syslog Alarm"
@@ -656,7 +689,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -676,12 +710,31 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTP(S)",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b6f2ef46-90b9-4ba1-b5d1-224cbaa4b340",
+                  "title": "Man in the Middel",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "OCSP Request"
@@ -706,7 +759,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -726,12 +780,31 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "HTTPS",
-              "threats": []
+              "threats": [
+                {
+                  "id": "daf0027e-f4e9-4839-98eb-198c1acd60b0",
+                  "title": "OCSP Responder Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attackers can manipulate certificate validation responses, allowing revoked certificates to appear valid",
+                  "mitigation": " - Use strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly audit and monitor certificate status and PKI integrity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "OCSP Respons"
@@ -1437,7 +1510,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1457,12 +1531,31 @@
               "description": "IEC 61850 MMS-Reports im 1s Raster",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "TCP/TLS IEC 62351-3",
-              "threats": []
+              "threats": [
+                {
+                  "id": "7166efd8-6898-4e72-8952-669982bb5cb3",
+                  "title": "Microgrid Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Manipulation of local energy management and control systems",
+                  "mitigation": "- Secure boot, hardware security modules, and firmware integrity checks\n- Regular vulnerability scanning and patch management\n- Physical security controls",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "MMS Reports"
@@ -1481,7 +1574,17 @@
                 "x": 1340,
                 "y": 200
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -2179,8 +2282,8 @@
                 "text": "CRL-Server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2276,9 +2379,27 @@
               "description": "Stellt Certificate Revocation List (CRLs) bereit, damit Clients Zertifikats gueltigkeit pruefen koennen.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5246bac7-db79-43e1-9d2b-618a63e05995",
+                  "title": "CRL-Server Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Certificate Revocation List tampering can enable use of compromised certificates",
+                  "mitigation": "- Use strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly audit and monitor certificate status and PKI integrity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -3447,6 +3568,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
