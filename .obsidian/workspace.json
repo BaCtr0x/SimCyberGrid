@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -219,8 +219,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5,
-    "collapsed": true
+    "width": 202.5
   },
   "right": {
     "id": "2bc0937f071acec5",
@@ -311,11 +310,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4432e674ee418af4",
+  "active": "03eef37a441a6842",
   "lastOpenFiles": [
+    "Technologien und Algorithmen/Techniques/DNP3.md",
+    "General/Notes Meeting.md",
     "Use_cases/Kommunikationssimulator Dataflow.md",
     "Security/Threat Analysis.md",
-    "General/Notes Meeting.md",
     "Security/TRIKE.md",
     "Security/OCTAVE.md",
     "Security/STRIDE.md",
@@ -351,7 +351,6 @@
     "Standards/OCSP.md",
     "Standards/OpenADR 2.0b.md",
     "Standards/OAuth 2.0.md",
-    "Smart Metering Components/DER-Gateway.md",
     "Images/TAC_Table.png",
     "Images/IEC_62351_Overview.png",
     "Images/IEC_62351_Overview.png",

@@ -262,5 +262,11 @@
 - Mal schauen wenn ich an den Punkt kommen an dem Routine kommt, ob es sinnvoll ist einen Studi einzustellen, aber das kann ich dann einfach bescheid sagen.
 	- Vielleicht gibt es auch Projekte die sich anbieten oder Abschlussarbeiten die man dafuer nutzen kann 
 ### $\rightarrow$ TODOs
-- [ ] mal schauen ob ich das hinbekomme eine analyse fuer Trike und STRIDE fuer Donnerstag hinbekommen, anhand eines Beispieles, wie Use-Case
-- [ ] 
+- [x] mal schauen ob ich das hinbekomme eine analyse fuer Trike und STRIDE fuer Donnerstag hinbekommen, anhand eines Beispieles, wie Use-Case
+
+
+## Note Milena 17.06.2025
+- [ ] Soll ich sowas wie Protocol Downgrad, DoS oder Fingerprinting  als Threat in jede Kommunikation einfuegen oder machen wir ein paar uebergeordnete Threats die auf alle Kommunikationswege zutreffen?
+- Darueber schon unsichere verwendete Protokolle gefunden naehmlich Modbus, DNP3 und IEC61850
+- [ ] Forum Cybersicherheit in der Stromwirtschaft, anmelden?
+- 
