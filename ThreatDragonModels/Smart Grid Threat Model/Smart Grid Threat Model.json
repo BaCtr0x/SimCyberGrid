@@ -286,7 +286,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -306,12 +307,70 @@
               "description": "TargetPower/LoadReduction",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTPS/TLS 1.2 mit CMS signierter CLS-JSON",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1f4995e2-42d1-41f1-afad-deb273e688a4",
+                  "title": "Communication Protocol Downgrade",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Forcing systems to use weaker communication protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Use nonces/timestamps to prevent replay\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "96cb3dbb-f2ed-4834-8f15-8541b0beee7b",
+                  "title": "Timestamp Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Affecting coordination between protection systems and control centers",
+                  "mitigation": "- Use authenticated time sources\n- Redundant time synchronization mechanisms\n- Monitor for anomalies in time data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting and modifying communications between control centers and field devices",
+                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Control Message"
@@ -883,7 +942,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -903,12 +963,44 @@
               "description": "Synchrophasor Data Frame",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "IEC 61850-GOOSE TLS-getunnelt",
-              "threats": []
+              "threats": [
+                {
+                  "id": "89230dbd-bd9f-4930-899c-3fe791aca6da",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
+                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "b9872757-6339-4417-8008-ac850ba3aa34",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Data Frame"
@@ -937,7 +1029,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -957,12 +1050,31 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTPS/TLS 1.2 mit CIM-XML",
-              "threats": []
+              "threats": [
+                {
+                  "id": "cff9c664-b6c4-4e8a-985b-6c1bb626d2f2",
+                  "title": "SCADA Operational data",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Altering operational data flowing to DSO-DMS systems",
+                  "mitigation": "- Network segmentation between IT and OT\n- Strict firewall rules\n- Secure protocol gateways",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Aggregierte InfoReports"
@@ -987,7 +1099,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1007,12 +1120,31 @@
               "description": "IEC 61850 MMS Report",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "CIM-XML over TLS 1.2/3",
-              "threats": []
+              "threats": [
+                {
+                  "id": "90293519-9daf-4291-8561-45c634f8cf5e",
+                  "title": "Letarel Movement",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Attackers moving laterally across network boundaries",
+                  "mitigation": "- Zero-trust network architecture\n- Micro-segmentation and least-privilege access",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Aggregierte Phasorrports"
@@ -1199,7 +1331,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1219,12 +1352,31 @@
               "description": "Strom, Spannung, Alarm, Status als MMS Report",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "IEC 61850",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5404aed8-5533-4b58-ab5a-2a6fd828e1c8",
+                  "title": "Corrupting Telemetry",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Corrupting telemetry data affecting grid monitoring and control decisions",
+                  "mitigation": "- Network segmentation between IT and OT\n- Strict firewall rules\n- Secure protocol gateways",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "SCADA-Telemetrie"
@@ -1303,7 +1455,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1323,12 +1476,31 @@
               "description": "TargetPower/LoadReduction",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTPS/TLS 1.2 mit CMS-signiertem CLS-JSON",
-              "threats": []
+              "threats": [
+                {
+                  "id": "170eb09b-bacc-4536-9156-85d6cfec07f7",
+                  "title": "Ransomeware",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Encrypting critical operational data and systems",
+                  "mitigation": "- Redundancy\n- Communication Monitoring ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "CLS-Setpoint"
@@ -1574,23 +1746,14 @@
                 "x": 1340,
                 "y": 200
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1610,12 +1773,83 @@
               "description": "Operate and Target Power als CLS-JSON",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "MMS/TLS 1.2/3",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3f34f29a-6b99-47eb-8819-e5db4212197a",
+                  "title": "DER-Gateway Exploitation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Distributed Energy Resource control manipulation to destabilize grid operations",
+                  "mitigation": "- Secure boot, hardware security modules, and firmware integrity checks\n- Regular vulnerability scanning and patch management\n- Physical security controls",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "fc71f558-2ca1-477c-adfa-5f770b46f260",
+                  "title": "Replay Attack",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Replaying legitimate control commands at inappropriate times",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Use nonces/timestamps to prevent replay\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "85447e09-e244-4a8d-8dcf-7c5ec3bae185",
+                  "title": "Command Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Inserting malicious control commands into legitimate communication streams",
+                  "mitigation": "- Strong authentication (MFA, certificates)\n- Role-based access control (RBAC)\n- Input validation and whitelisting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "a65940e8-ab11-4f85-835d-81eb9ab3aa2e",
+                  "title": "DDoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Coordinated attacks against multiple communication nodes simultaneously",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                },
+                {
+                  "id": "af008404-20e4-423d-805c-91ebf2ce0498",
+                  "title": "Fingerprinting",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "See OWASP Automated Threat #4:\nSpecific requests are sent to the application eliciting information in order to profile the application",
+                  "mitigation": "Defence includes restricting what information is provided, for example version numbers and package details",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Control"
@@ -1635,7 +1869,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1655,12 +1890,31 @@
               "description": "P/Q, SOC als CLS-JSON",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "MMS/TLS",
-              "threats": []
+              "threats": [
+                {
+                  "id": "79e3f3c1-c5bf-484c-ac97-5762b23be18f",
+                  "title": "EVSE-Gateway Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Electric vehicle charging infrastructure manipulation affecting grid load balancing",
+                  "mitigation": "- Secure boot, hardware security modules, and firmware integrity checks\n- Regular vulnerability scanning and patch management\n- Physical security controls",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Meter Values"
@@ -2532,8 +2786,8 @@
                 "text": "PMU"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2629,9 +2883,27 @@
               "description": "Messen von Phasorgroessen (U/I, Frequenz, ROCOF) mit PTP-Zeitstempel und Streaming an WAMS",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "caa8bbba-99b8-4192-a68b-716c88f497ec",
+                  "title": "GPS Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Disrupting phasor measurement timing, causing false fault detection and potential line disconnections",
+                  "mitigation": "- Use authenticated time sources\n- Redundant time synchronization mechanisms\n- Monitor for anomalies in time data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2996,8 +3268,8 @@
                 "text": "Operator UI"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3093,9 +3365,27 @@
               "description": "Dies ist das Grid-Operator-Dashboard, wodurch der Operator mit dem System interagieren kann.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "61bce97d-c9f8-48ea-915c-ca96937f5afe",
+                  "title": "Social Engineering",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Repudiation",
+                  "description": "Targeting operational personnel with access to critical systems",
+                  "mitigation": "- Security Trainings\n- Quick reaction to security attacks\n- Multi-factor authentication\n- RBAC with least privilege\n- Audit trails and behavioral monitoring",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 2
+              }
             }
           },
           {
@@ -3228,8 +3518,8 @@
                 "text": "VPP Operator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3325,9 +3615,27 @@
               "description": "Virtuelles Kraftwerks-Management: Registrierung/Deregistrierung, Aggergation von Forecasts und Schedules",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "24e7eeb2-21a4-4b66-8014-c7ba6537e563",
+                  "title": "VPP Operator Compromise",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Virtual Power Plant systems being used as attack vectors into utility networks",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -3460,8 +3768,8 @@
                 "text": "EVSE-Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3557,9 +3865,40 @@
               "description": "Schnittstelle zu Ladestationen: V2G-Setpoints (ISO 15118), Messwerte (IEC 63110) und Lade-ACKs",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "bbba3044-6c3f-457a-bfdc-451f65187fce",
+                  "title": "Supply Chain Attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Compromised components introduced through different organizational domains",
+                  "mitigation": "- Vendor risk assessments\n- Secure software/firmware supply chain\n- Code signing and verification",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 2
+              }
             }
           }
         ],
@@ -3568,6 +3907,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 6
+    "threatTop": 27
   }
 }
