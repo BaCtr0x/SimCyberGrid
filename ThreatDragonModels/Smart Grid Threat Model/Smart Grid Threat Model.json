@@ -364,11 +364,24 @@
                   "new": false,
                   "number": 27,
                   "score": ""
+                },
+                {
+                  "id": "9a842379-85cc-4d17-8fa9-95aa63a58d28",
+                  "title": "Traffic Analysis",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Inferring operational patterns and vulnerabilities through network traffic observation",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 3,
-                "informationDisclosure": 0,
+                "informationDisclosure": 2,
                 "denialOfService": 1
               }
             },
@@ -659,12 +672,25 @@
                   "new": false,
                   "number": 5,
                   "score": ""
+                },
+                {
+                  "id": "4022807d-b207-444d-abe2-1931bddc25a7",
+                  "title": "Protection System Bypass",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Disabling or manipulating protective relays and monitoring systems",
+                  "mitigation": "- Strong authentication (MFA, certificates)\n- Role-based access control (RBAC)\n- Input validation and whitelisting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 1,
                 "informationDisclosure": 1,
-                "denialOfService": 0
+                "denialOfService": 1
               }
             },
             "labels": [
@@ -1068,11 +1094,37 @@
                   "new": false,
                   "number": 13,
                   "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                },
+                {
+                  "id": "2f8dd912-738d-4a19-b9cb-0697cb08ef06",
+                  "title": "Credential Compromise",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Stolen authentication credentials being used to traverse trust boundaries",
+                  "mitigation": "- Multi-factor authentication\n- RBAC with least privilege\n- Audit trails and behavioral monitoring",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
+                "tampering": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -1494,11 +1546,24 @@
                   "new": false,
                   "number": 26,
                   "score": ""
+                },
+                {
+                  "id": "f6519fdd-6401-4799-ac0f-79976e14c7b0",
+                  "title": "Load Manipulation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Coordinated attacks across multiple boundaries to cause grid instability",
+                  "mitigation": "- Prevent simpler attacks from happening to prevent coordinated attacks. If you break the small the combination cannot appear. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -3380,11 +3445,24 @@
                   "new": false,
                   "number": 25,
                   "score": ""
+                },
+                {
+                  "id": "54c3f014-b416-4038-92fb-1f2e3d43dd86",
+                  "title": "Privileged Access Abuse",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Legitimate users with cross-boundary access conducting malicious activities",
+                  "mitigation": "- Multi-factor authentication\n- RBAC with least privilege\n- Audit trails and behavioral monitoring",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "repudiation": 2
+                "repudiation": 4
               }
             }
           },
@@ -3907,6 +3985,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 27
+    "threatTop": 33
   }
 }
