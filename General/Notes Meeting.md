@@ -266,7 +266,18 @@
 
 
 ## Note Milena 17.06.2025
-- [ ] Soll ich sowas wie Protocol Downgrad, DoS oder Fingerprinting  als Threat in jede Kommunikation einfuegen oder machen wir ein paar uebergeordnete Threats die auf alle Kommunikationswege zutreffen?
+- [x] Soll ich sowas wie Protocol Downgrad, DoS oder Fingerprinting  als Threat in jede Kommunikation einfuegen oder machen wir ein paar uebergeordnete Threats die auf alle Kommunikationswege zutreffen?
 - Darueber schon unsichere verwendete Protokolle gefunden naehmlich Modbus, DNP3 und IEC61850
-- [ ] Forum Cybersicherheit in der Stromwirtschaft, anmelden?
+
+
+## Weekly 19.06.2025
+- Sascha hat die Tabelle mit den Anforderungen ueberarbeitet, sodass wir jetzt noch 63 Stueck haben und wenn er aus dem Urlaub kommt, naechste Woche weg, macht er mit den Testfaellen weiter
+- Felix neue State Estimation vorgestellt 
+	- messungen sind minuetlich und rollierende 10 Minuten Messwerte, sonst war 15 min eher normal
+	- wollen auch mit einem der Leute die in dem Team aus dem Paper sitzen sprechen, wegen der Hill und der State Estimation, kommt noch in der Zukunft
+	- SimBench und Realnetze verwendet
+	- sinnvoll erstmal 15% ausstattung von Smartmetern annehmen, ist realistischer
+	- wenn es mehr werden, koennte das noch kommen, aber ist noch unwahrscheinlich, koennen wir uns aber gut anhand des Papers ansehen
+	- 
+- Wollen auch SimBench Netze nehmen, sind deutsche Beispielnetze und gut zur simulation, um etwas unabhaengig von Stromnetzhamburg und der Zeit bis wir hardware haben zu sein
 - 
