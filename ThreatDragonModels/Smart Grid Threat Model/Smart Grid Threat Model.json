@@ -3246,6 +3246,290 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Meter Data/Status",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "DLMS/COSEM over TLS 1.3, IEC 60870-5-104 with IEC 62351, HTTPS/TLS 1.3 (REST/JSON)",
+              "threats": [
+                {
+                  "id": "bfa99e4f-5735-422a-9f89-5eaaaa594267",
+                  "title": "API Abuse",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Using weak API authentication to enter the smart grid.",
+                  "mitigation": "- API security gateways\n- strong authentication\n- input validation\n- monitoring.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 96,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Meter Data/Status"
+            ],
+            "id": "f5e37729-16d7-45aa-ba7f-bd6bd4192157",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "2f67fb76-692e-4f87-ae67-b0229273da17",
+              "port": "9d54c958-31b4-4331-87f7-1d116b9144fb"
+            },
+            "vertices": [
+              {
+                "x": 1290,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Meter Data/Status",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "DLMS/COSEM over TLS 1.3, IEC 60870-5-104 with IEC 62351, HTTPS/TLS 1.3 (REST/JSON)",
+              "threats": [
+                {
+                  "id": "c3f149f9-aa52-4079-8e99-8708f2daba5c",
+                  "title": "API Abuse",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Using weak API authentication to enter the smart grid.",
+                  "mitigation": "- API security gateways\n- strong authentication\n- input validation\n- monitoring.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 97,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Meter Data/Status"
+            ],
+            "id": "c87c352a-33e5-4653-86e3-14fb2f440cad",
+            "source": {
+              "cell": "9f867f67-f373-4fc8-9846-910039bbd1c3",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "2f67fb76-692e-4f87-ae67-b0229273da17",
+              "port": "5cd6008b-8904-4472-8712-d5a47c15728d"
+            },
+            "vertices": [
+              {
+                "x": 1920,
+                "y": -30
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregated Data/Commands",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.3, IEC 61850 over IEC 62351-3 TLS",
+              "threats": [
+                {
+                  "id": "b3d74a66-4086-45e3-b2f0-a045594dd617",
+                  "title": "Data Poisoning via Head-End",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "This includes False Data Injection, command injection and other tampering attacks.",
+                  "mitigation": "- API security gateways\n- strong authentication\n- input validation\n- monitoring.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 98,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Aggregated Data/Commands"
+            ],
+            "id": "75627477-86ea-4b55-8f96-b0f9e6aa77f4",
+            "source": {
+              "cell": "2f67fb76-692e-4f87-ae67-b0229273da17",
+              "port": "8c4e39a2-5e15-40dc-b8d9-9a0affaf551e"
+            },
+            "target": {
+              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": [
+              {
+                "x": 1720,
+                "y": -30
+              },
+              {
+                "x": 1720,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Firmware/Software Update",
+              "description": "This is an example connection for the remote firmware/update process. This connection needs to go to all devices that are being updated remotely, such as microgrid controllers, customer DER/IoT, PMUs and so on.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.3, Code Signing (CMS, PKCS#7)",
+              "threats": [
+                {
+                  "id": "5bb31718-a334-4eac-bd26-b49af2d23af4",
+                  "title": "Insider Privilege Abuse",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An insider of the update management can push an update in order to insert either a backdoor or grand privileges to unauthorized people. ",
+                  "mitigation": "- least privilege\n- behavioral monitoring\n- strict contractor vetting\n- secure remote access.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 99,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Firmware/Software Update"
+            ],
+            "id": "804635ce-b1cb-4345-8f0b-6854a436eee2",
+            "source": {
+              "cell": "b15fe497-c939-4453-95f4-be9eec4e9b26",
+              "port": "8c4e39a2-5e15-40dc-b8d9-9a0affaf551e"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1020,
+                "y": 250
+              }
+            ]
+          },
+          {
             "position": {
               "x": 447,
               "y": 480
@@ -4998,7 +5282,7 @@
               "y": 480
             },
             "size": {
-              "width": 112.5,
+              "width": 130,
               "height": 60
             },
             "attrs": {
@@ -5013,6 +5297,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 25,
             "ports": {
               "groups": {
                 "top": {
@@ -5096,11 +5381,242 @@
               ]
             },
             "id": "033f2b80-634f-4432-bce0-1a95b5087395",
-            "zIndex": 25,
             "data": {
               "type": "tm.Actor",
               "name": "Customer DER/IoT",
               "description": "e.g., \"Balcony PV,\" \"Home Battery,\" \"Smart Appliances\"",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1468,
+              "y": -149.0000000000001
+            },
+            "size": {
+              "width": 260,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Head-End System/Integration Layer"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "17cd5ec2-9ffb-4cd2-9bfc-198f49844ebc"
+                },
+                {
+                  "group": "right",
+                  "id": "5cd6008b-8904-4472-8712-d5a47c15728d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "8c4e39a2-5e15-40dc-b8d9-9a0affaf551e"
+                },
+                {
+                  "group": "left",
+                  "id": "9d54c958-31b4-4331-87f7-1d116b9144fb"
+                }
+              ]
+            },
+            "id": "2f67fb76-692e-4f87-ae67-b0229273da17",
+            "zIndex": 26,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Head-End System/Integration Layer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 765,
+              "y": 65.99999999999986
+            },
+            "size": {
+              "width": 290,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Remote Maintenance Update Server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "17cd5ec2-9ffb-4cd2-9bfc-198f49844ebc"
+                },
+                {
+                  "group": "right",
+                  "id": "5cd6008b-8904-4472-8712-d5a47c15728d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "8c4e39a2-5e15-40dc-b8d9-9a0affaf551e"
+                },
+                {
+                  "group": "left",
+                  "id": "9d54c958-31b4-4331-87f7-1d116b9144fb"
+                }
+              ]
+            },
+            "id": "b15fe497-c939-4453-95f4-be9eec4e9b26",
+            "zIndex": 27,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Remote Maintenance Update Server",
+              "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -5114,6 +5630,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 95
+    "threatTop": 99
   }
 }
