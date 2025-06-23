@@ -1587,7 +1587,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "IEC 61850-GOOSE",
+              "protocol": "IEC 61850-GOOSE, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
                   "id": "e9aa2327-eaf7-4c62-be42-fd7431d1699d",
@@ -1614,10 +1614,23 @@
                   "new": false,
                   "number": 76,
                   "score": ""
+                },
+                {
+                  "id": "bc66757e-6e40-4a16-9a8a-e8bf08cb7c43",
+                  "title": "Backdoored Firmware in Protection-IEDs",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Backdoored firmware in field devices (e.g., smart meters or protection relays) enables persistent access.",
+                  "mitigation": "- Vendor Risk Assesment\n- Code Signing & Verification\n- Secure Boot\n- Ongoing Code Scanning\n- Zero Trust Supply Chain Model\n- Track and Trace",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 90,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1674,7 +1687,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "IEC 61850-GOOSE TLS-getunnelt",
+              "protocol": "IEC 61850-GOOSE TLS-getunnelt, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
                   "id": "57a6480b-91eb-44e7-9179-c524f6dacc4d",
@@ -2375,10 +2388,104 @@
                 "y": 390
               },
               {
+                "x": 1440,
+                "y": 390
+              },
+              {
                 "x": 1500,
                 "y": 390
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -2597,10 +2704,23 @@
                   "new": false,
                   "number": 80,
                   "score": ""
+                },
+                {
+                  "id": "ce26d833-5c25-4b34-b3e1-bd1f4e36cbda",
+                  "title": "Unauthorized Voltage Setpoint Change",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Adversaries manipulate voltage setpoints in real-time via compromised micro-controllers, causing equipment damage or cascading outages.",
+                  "mitigation": "- Role-based access control\n- Strong Authentication (MFA)\n- Command Validation\n- Anomaly detection\n- End-to-End encryption (TLS 1.3)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 89,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 5,
+                "tampering": 6,
                 "informationDisclosure": 1,
                 "denialOfService": 1
               }
@@ -2729,93 +2849,6 @@
               {
                 "x": 1760,
                 "y": 120
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "SetCharginProfile",
-              "description": "ISO 15118-20 ScheduleExchange",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "TLS 1.3",
-              "threats": [
-                {
-                  "id": "5cdb6918-11dd-4498-9495-4d1042cdf7b3",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 41,
-                  "score": ""
-                },
-                {
-                  "id": "cf2cc1d0-2fd7-4e59-bdf5-93e8f467c277",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 82,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "SetCharginProfile"
-            ],
-            "id": "616c64b5-d25d-429f-b47d-1890f913b64a",
-            "source": {
-              "cell": "9f867f67-f373-4fc8-9846-910039bbd1c3",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "target": {
-              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "vertices": [
-              {
-                "x": 1880,
-                "y": 210
-              },
-              {
-                "x": 1760,
-                "y": 210
               }
             ]
           },
@@ -2990,6 +3023,101 @@
               {
                 "x": 689,
                 "y": 860
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SetChargingProfile",
+              "description": "ISO 15118-20 ‘ScheduleExchange’ over TLS 1.3",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TLS 1.3",
+              "threats": [
+                {
+                  "id": "8be26ad8-bff2-4bd8-866e-c11b5ee4bd70",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 86,
+                  "score": ""
+                },
+                {
+                  "id": "da3d8631-2a56-4b7d-a510-3d8429dee7ae",
+                  "title": "Exploit vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 87,
+                  "score": ""
+                },
+                {
+                  "id": "f7f48b12-0e79-4933-8667-e104086613e3",
+                  "title": "Unauthorized Voltage Setpoint Change",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Adversaries manipulate voltage setpoints in real-time via compromised micro-controllers, causing equipment damage or cascading outages.",
+                  "mitigation": "- Role-based access control\n- Strong Authentication (MFA)\n- Command Validation\n- Anomaly detection\n- End-to-End encryption (TLS 1.3)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 88,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "SetChargingProfile"
+            ],
+            "id": "ae3ec07c-9f4d-4b65-86ad-1cf78020b6ea",
+            "source": {
+              "cell": "eb6c76be-42dc-4648-811a-dbe66d26a036",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "9f867f67-f373-4fc8-9846-910039bbd1c3",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1820,
+                "y": 230
               }
             ]
           },
@@ -4746,6 +4874,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 85
+    "threatTop": 90
   }
 }
