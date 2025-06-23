@@ -3032,7 +3032,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -3049,15 +3050,34 @@
             "data": {
               "type": "tm.Flow",
               "name": "Pricing",
-              "description": "",
+              "description": "Communication of the current power prices. This is done by a given interval depending on the current model. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "98a2df8c-94a1-423e-bc31-380c2b1b1740",
+                  "title": "Pricing Signal Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Adversaries falsify dynamic pricing signals sent to DERs or consumers, triggering abrupt load changes that destabilize the grid or manipulate energy markets.",
+                  "mitigation": "- Digitally sign all pricing/load signals (e.g., using IEC 62351 or OpenADR 3.0).\n- Validate signals against redundant sources (e.g., independent market feeds).\n- Deploy anomaly detection for abnormal price/load patterns.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 91,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Pricing"
@@ -4826,6 +4846,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 90
+    "threatTop": 91
   }
 }
