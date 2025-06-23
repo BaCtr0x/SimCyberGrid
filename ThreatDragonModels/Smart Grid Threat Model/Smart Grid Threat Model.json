@@ -3094,6 +3094,158 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DER Status/Telemetry",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850-7-420 over IEC 62351-3 TLS",
+              "threats": [
+                {
+                  "id": "421a9e13-338e-4e79-af61-3fd0231fc41d",
+                  "title": "Rogue Device Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Entering a third party device that porpusfully inserts false data or ignores control commands.",
+                  "mitigation": "- Device authentication \n- network segmentation\n- privacy-preserving data aggregation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 92,
+                  "score": ""
+                },
+                {
+                  "id": "5bded9d2-83f7-4e52-a1c6-84d7ce65b961",
+                  "title": "IoT Botnet Participation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An IoT device is compromised and part of a botnet, which leads to ignored control commands, false data injection and/or control sequence injection.",
+                  "mitigation": "- Device authentication \n- network segmentation\n- privacy-preserving data aggregation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 94,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "DER Status/Telemetry"
+            ],
+            "id": "d455529f-ee2b-42b0-b9a7-9b941c669737",
+            "source": {
+              "cell": "033f2b80-634f-4432-bce0-1a95b5087395",
+              "port": "d296bfea-7f04-48ac-90cb-5340ff51ea3a"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "vertices": [
+              {
+                "x": 1460,
+                "y": 540
+              },
+              {
+                "x": 1310,
+                "y": 510
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Device Data/Control",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS/TLS 1.3 (REST/JSON), MQTT over TLS 1.3",
+              "threats": [
+                {
+                  "id": "28722082-469d-4b5f-bc74-857768c3b818",
+                  "title": "Privacy Leakage via Smart Meter Data",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "A third party or otherwise compromised IoT device can leak information about the grid or customer information, leading to a privacy degredation.",
+                  "mitigation": "- Device authentication \n- network segmentation\n- privacy-preserving data aggregation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 95,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Device Data/Control"
+            ],
+            "id": "97479f0a-d5a7-415a-aa9e-0f9843c39a73",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "target": {
+              "cell": "033f2b80-634f-4432-bce0-1a95b5087395",
+              "port": "d296bfea-7f04-48ac-90cb-5340ff51ea3a"
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 447,
               "y": 480
@@ -4839,6 +4991,122 @@
                 "repudiation": 2
               }
             }
+          },
+          {
+            "position": {
+              "x": 1548,
+              "y": 480
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer DER/IoT"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "3ca781ae-09f5-4c47-a878-18fc3b5b6bd1"
+                },
+                {
+                  "group": "right",
+                  "id": "f1350e90-a810-49aa-8975-6383e99d3fdb"
+                },
+                {
+                  "group": "bottom",
+                  "id": "517ecac6-21c0-42ef-9342-dedbaaac6913"
+                },
+                {
+                  "group": "left",
+                  "id": "d296bfea-7f04-48ac-90cb-5340ff51ea3a"
+                }
+              ]
+            },
+            "id": "033f2b80-634f-4432-bce0-1a95b5087395",
+            "zIndex": 25,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Customer DER/IoT",
+              "description": "e.g., \"Balcony PV,\" \"Home Battery,\" \"Smart Appliances\"",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
           }
         ],
         "description": "This is used as the initial threat analysis which is high level and will be ported to Threagile for a deeper analysis in the future."
@@ -4846,6 +5114,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 91
+    "threatTop": 95
   }
 }
