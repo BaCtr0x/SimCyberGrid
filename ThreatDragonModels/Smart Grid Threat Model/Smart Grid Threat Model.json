@@ -3057,7 +3057,7 @@
               "isBidirectional": false,
               "isEncrypted": true,
               "isPublicNetwork": true,
-              "protocol": "",
+              "protocol": "IEC 62351-7, OpenADR 3.0",
               "threats": [
                 {
                   "id": "98a2df8c-94a1-423e-bc31-380c2b1b1740",
