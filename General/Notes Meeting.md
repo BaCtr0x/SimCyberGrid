@@ -280,4 +280,8 @@
 	- wenn es mehr werden, koennte das noch kommen, aber ist noch unwahrscheinlich, koennen wir uns aber gut anhand des Papers ansehen
 	- 
 - Wollen auch SimBench Netze nehmen, sind deutsche Beispielnetze und gut zur simulation, um etwas unabhaengig von Stromnetzhamburg und der Zeit bis wir hardware haben zu sein
-- 
+
+## Milena 24.06.2025
+- [ ] Toebermann Christian hat mir zu Smart Grids geschreiben
+- [ ] Wollen wir als Threat auch nochmal externe States einbinden, um groessere Macht zu simbolisieren oder lassen wir das weil das ja in den anderen Threats schon mit drin ist. Nach dem motto wenn die gefixt sind, dann ist auch ein Stat nicht das problem
+- [ ] brauchen wir physical attacks? am ende macht es kaum einen unterscheid of es DDoS ist oder ob das ding kaputt ist, aber sollten wir es trotzdem in der Threatanalyse aufnehmen?
