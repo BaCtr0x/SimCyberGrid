@@ -16,6 +16,8 @@
 
 STRIDE is typically used in conjunction with Data Flow Diagrams (DFDs) to map each threat type to specific system components or data flows. For each element in the system (e.g., APIs, databases, authentication mechanisms), analysts consider how each of the six STRIDE threats could manifest and what mitigations are needed.
 
+![[Threats_categories.png]]
+
 ## Key Features of STRIDE
 
 - Provides a structured, mnemonic-based approach to threat identification    

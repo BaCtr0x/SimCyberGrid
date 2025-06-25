@@ -282,6 +282,15 @@
 - Wollen auch SimBench Netze nehmen, sind deutsche Beispielnetze und gut zur simulation, um etwas unabhaengig von Stromnetzhamburg und der Zeit bis wir hardware haben zu sein
 
 ## Milena 24.06.2025
-- [ ] Toebermann Christian hat mir zu Smart Grids geschreiben
-- [ ] Wollen wir als Threat auch nochmal externe States einbinden, um groessere Macht zu simbolisieren oder lassen wir das weil das ja in den anderen Threats schon mit drin ist. Nach dem motto wenn die gefixt sind, dann ist auch ein Stat nicht das problem
-- [ ] brauchen wir physical attacks? am ende macht es kaum einen unterscheid of es DDoS ist oder ob das ding kaputt ist, aber sollten wir es trotzdem in der Threatanalyse aufnehmen?
+- [x] Toebermann Christian hat mir zu Smart Grids geschreiben
+- [x] Wollen wir als Threat auch nochmal externe States einbinden, um groessere Macht zu simbolisieren oder lassen wir das weil das ja in den anderen Threats schon mit drin ist. Nach dem motto wenn die gefixt sind, dann ist auch ein Stat nicht das problem
+	- faellt wahrscheinlich eher unter die anderen Threats und ist dann nicht mehr so als einzelne angriffe sondern ueber monitoring und andere Punkte schon abgedeckt, das werden wir nicht explizit pen testing
+	- eher in der Threataufstellung beachten
+- [x] brauchen wir physical attacks? am ende macht es kaum einen unterscheid of es DDoS ist oder ob das ding kaputt ist, aber sollten wir es trotzdem in der Threatanalyse aufnehmen?
+	- gerne aufnehmen und dann am ende dann argumentieren wie wir es aufbauen 
+- [x] brauchen wir das billing system, da von dort aus sicherheitsluecken eingebunden werden koennten, vor allem wenn dynamic pricing kommt? Ich denke wir koennen das rausnehmen, weil wir gesagt haben, dass billing nicht zu uns gehoert, aber ich wollte das nochmal abklaeren
+	- rauslassen, weil wir es nicht abdecken 
+- [x] Antrag Bestellung
+- naechste Woche dienstag kein Termin, sondern Freitag und dann mit Probezeitgespraech
+- [ ] gitlab klaeren und sonst auf github wechseln
+- [ ] 

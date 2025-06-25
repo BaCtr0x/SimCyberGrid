@@ -56,7 +56,7 @@
               "y": 320
             },
             "size": {
-              "width": 112.5,
+              "width": 60,
               "height": 60
             },
             "attrs": {
@@ -70,7 +70,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 1,
             "ports": {
               "groups": {
@@ -168,12 +168,12 @@
           },
           {
             "position": {
-              "x": 447,
-              "y": 320
+              "x": 449.5,
+              "y": 280
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 110,
+              "height": 100
             },
             "attrs": {
               "text": {
@@ -186,7 +186,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 2,
             "ports": {
               "groups": {
@@ -272,7 +272,7 @@
             },
             "id": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "VNB-SCADA",
               "description": "Leitsystem des Verteilnetzbetreibers fuer Smart-Meter-Daten und CLS-Steuerung (Load-/Generation-Commands)",
               "outOfScope": false,
@@ -281,877 +281,6 @@
               "providesAuthentication": false,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Control Message",
-              "description": "TargetPower/LoadReduction",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS/TLS 1.2 mit CMS signierter CLS-JSON",
-              "threats": [
-                {
-                  "id": "1f4995e2-42d1-41f1-afad-deb273e688a4",
-                  "title": "Communication Protocol Downgrade",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Forcing systems to use weaker communication protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Use nonces/timestamps to prevent replay\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                },
-                {
-                  "id": "96cb3dbb-f2ed-4834-8f15-8541b0beee7b",
-                  "title": "Timestamp Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Affecting coordination between protection systems and control centers",
-                  "mitigation": "- Use authenticated time sources\n- Redundant time synchronization mechanisms\n- Monitor for anomalies in time data",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 16,
-                  "score": ""
-                },
-                {
-                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
-                  "title": "DoS",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Denial of service",
-                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
-                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 20,
-                  "score": ""
-                },
-                {
-                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Intercepting and modifying communications between control centers and field devices",
-                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 27,
-                  "score": ""
-                },
-                {
-                  "id": "9a842379-85cc-4d17-8fa9-95aa63a58d28",
-                  "title": "Traffic Analysis",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "Inferring operational patterns and vulnerabilities through network traffic observation",
-                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 29,
-                  "score": ""
-                },
-                {
-                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 46,
-                  "score": ""
-                },
-                {
-                  "id": "81c91160-9abc-4e49-888c-69c7beb1c2b4",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 64,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 6,
-                "informationDisclosure": 2,
-                "denialOfService": 1
-              }
-            },
-            "labels": [
-              "Control Message"
-            ],
-            "id": "a219942e-a035-41bd-8544-df6be87ed4a0",
-            "source": {
-              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "target": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 300
-              },
-              {
-                "x": 280,
-                "y": 300
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "InfoReport",
-              "description": "TAC-Container",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS/TLS 1.2 mit CMS signierter JSON/XML",
-              "threats": [
-                {
-                  "id": "353b003b-36bb-4272-b4ee-36642bc9e589",
-                  "title": "False Data Injection",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
-                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 36,
-                  "score": ""
-                },
-                {
-                  "id": "b7a42a45-5a1c-452f-bfe3-d5714f1e96bd",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 47,
-                  "score": ""
-                },
-                {
-                  "id": "356274d7-d750-4844-b92f-b1d397f4eb39",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 65,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "InfoReport"
-            ],
-            "id": "76a23754-1f29-4cc0-9595-c704a9f5b754",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 270,
-                "y": 390
-              },
-              {
-                "x": 380,
-                "y": 390
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "PowerStatusPoll",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "ANSCI C12.22 / DLMS-COSEM over TLS",
-              "threats": [
-                {
-                  "id": "26c9452b-da84-4141-b707-38bf2ff62ac6",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 49,
-                  "score": ""
-                },
-                {
-                  "id": "0af9c592-7448-4892-8a2c-b442900d3eba",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 66,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "PowerStatusPoll"
-            ],
-            "id": "55fe4c87-343d-4453-868a-41db9c4b6ee3",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "fa71e320-0729-4932-8d51-d967246db006",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 430
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "PollResponse",
-              "description": "Outage Status",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "ANSI C12.22 / DLMS-COSEM over TLS",
-              "threats": [
-                {
-                  "id": "bb276d3e-f4c8-4841-983a-410b693f607e",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 48,
-                  "score": ""
-                },
-                {
-                  "id": "58be45e1-92fe-4b1c-9ec6-5713ec1981c4",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 67,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "PollResponse"
-            ],
-            "id": "2031b099-9bf3-4a73-baa7-fd4f71445a0a",
-            "source": {
-              "cell": "fa71e320-0729-4932-8d51-d967246db006",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "target": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 440
-              },
-              {
-                "x": 270,
-                "y": 410
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "MeterReading Batches",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "SFTP/TLS 1.3 oder HTTPS/TLS 1.3 + CIM-XML",
-              "threats": [
-                {
-                  "id": "b773246b-4491-49fa-83c9-7ab2533cfe2f",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 68,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "MeterReading Batches"
-            ],
-            "id": "7fd3e3eb-0813-437b-90c7-d45410d498ae",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "a8de3bb0-e2fb-48b5-833f-c936130e6060",
-              "port": "eb9934bd-9727-4690-8e83-39d0b345a0ac"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 500
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "IDS-Syslog Alarm",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "TLS 1.2/3",
-              "threats": [
-                {
-                  "id": "60100415-8d0d-4384-a36c-777f3e1f2d9c",
-                  "title": "Blind Security Monitoring",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Information disclosure",
-                  "description": "Attackers may attempt to blind security monitoring systems to avoid detection during attacks",
-                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": ""
-                },
-                {
-                  "id": "6e7b5418-0150-45da-9d1e-d861a7300736",
-                  "title": "Falsifying Log",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Falsifying security event logs to cover attack traces",
-                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 5,
-                  "score": ""
-                },
-                {
-                  "id": "4022807d-b207-444d-abe2-1931bddc25a7",
-                  "title": "Protection System Bypass",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
-                  "description": "Disabling or manipulating protective relays and monitoring systems",
-                  "mitigation": "- Strong authentication (MFA, certificates)\n- Role-based access control (RBAC)\n- Input validation and whitelisting",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 31,
-                  "score": ""
-                },
-                {
-                  "id": "f9f41471-19c7-4326-858c-1f1876bda7aa",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 45,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 1,
-                "denialOfService": 1
-              }
-            },
-            "labels": [
-              "IDS-Syslog Alarm"
-            ],
-            "id": "a223d659-948a-4405-bbad-f7fcfc768818",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "2fbfded7-34c6-44ae-adad-59596a4cd8cf",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 320,
-                "y": 220
-              },
-              {
-                "x": 400,
-                "y": 160
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "CRL Download",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS",
-              "threats": [
-                {
-                  "id": "1dbad3fa-713b-46d3-b2fa-da6e3fea0e72",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols\n- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 59,
-                  "score": ""
-                },
-                {
-                  "id": "e6efd483-ccc2-4392-96c2-c0ebf2d09a18",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 63,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "CRL Download"
-            ],
-            "id": "52f505ae-eced-48e0-b304-73c30c262489",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 200
-              },
-              {
-                "x": 350,
-                "y": 100
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "OCSP Request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "protocol": "HTTP(S)",
-              "threats": [
-                {
-                  "id": "b6f2ef46-90b9-4ba1-b5d1-224cbaa4b340",
-                  "title": "Man in the Middel",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": ""
-                },
-                {
-                  "id": "09663576-7aee-47ed-8894-668374902545",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 44,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "OCSP Request"
-            ],
-            "id": "de5ed0a0-b07c-4d31-a4ef-5bd663012793",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
-            },
-            "target": {
-              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 270,
-                "y": 90
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "OCSP Respons",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "HTTPS",
-              "threats": [
-                {
-                  "id": "daf0027e-f4e9-4839-98eb-198c1acd60b0",
-                  "title": "OCSP Responder Compromise",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Attackers can manipulate certificate validation responses, to allow them to revoke certificates to appear valid",
-                  "mitigation": " - Use of strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly auditing and monitoring of certificate status and PKI integrity",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 1,
-                  "score": ""
-                },
-                {
-                  "id": "7b17ece5-d282-4567-b091-8dbf0407b264",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 43,
-                  "score": ""
-                },
-                {
-                  "id": "5688c1c2-c38c-475c-a0a9-d77d6a0698d7",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 62,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 4,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "OCSP Respons"
-            ],
-            "id": "7ee1d3db-cb40-4c81-8e2b-6a742c6c1ab6",
-            "source": {
-              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "target": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
-            },
-            "vertices": [
-              {
-                "x": 200,
-                "y": 50
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -1649,12 +778,12 @@
             },
             "vertices": [
               {
-                "x": 1300,
-                "y": 600
+                "x": 1290,
+                "y": 670
               },
               {
-                "x": 1070,
-                "y": 600
+                "x": 1060,
+                "y": 640
               }
             ]
           },
@@ -1736,12 +865,12 @@
             },
             "vertices": [
               {
-                "x": 1040,
-                "y": 740
+                "x": 1050,
+                "y": 730
               },
               {
-                "x": 1310,
-                "y": 740
+                "x": 1290,
+                "y": 760
               }
             ]
           },
@@ -2340,80 +1469,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Enroll-ACK",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "ff80e035-3ee5-4c83-942c-82ebe3f6d518",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 84,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Enroll-ACK"
-            ],
-            "id": "45787d24-9f86-47aa-bdf8-ac3948035947",
-            "source": {
-              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 1370,
-                "y": 390
-              },
-              {
-                "x": 1500,
-                "y": 390
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "MMS Reports",
               "description": "IEC 61850 MMS-Reports im 1s Raster",
               "outOfScope": false,
@@ -2871,7 +1926,13 @@
             "target": {
               "x": 1080,
               "y": 770
-            }
+            },
+            "vertices": [
+              {
+                "x": 1080,
+                "y": 720
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -3450,12 +2511,8 @@
             },
             "vertices": [
               {
-                "x": 1720,
-                "y": -30
-              },
-              {
-                "x": 1720,
-                "y": 220
+                "x": 1700,
+                "y": 50
               }
             ]
           },
@@ -3524,8 +2581,1198 @@
             },
             "vertices": [
               {
-                "x": 1020,
-                "y": 250
+                "x": 1100,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Renewable generation/load forecasts",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "CIM-XML/HTTPS",
+              "threats": [
+                {
+                  "id": "9a3c7713-a16a-4298-aa5a-c3100f2fb258",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
+                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 101,
+                  "score": ""
+                },
+                {
+                  "id": "cd668ce1-ebcd-4ce2-94ce-50a650d7a14e",
+                  "title": "Exploit vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 102,
+                  "score": ""
+                },
+                {
+                  "id": "fc71f3ef-8371-49a4-a53c-d38d57f3736a",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 105,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Renewable generation/load forecasts"
+            ],
+            "id": "b0cde540-b123-4369-992f-613cbee74508",
+            "source": {
+              "cell": "996f7eb5-fd44-4281-b9eb-6d5bde20c8bf",
+              "port": "9307be41-2616-4807-87c1-14a58d9787a2"
+            },
+            "target": {
+              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1720,
+                "y": 600
+              },
+              {
+                "x": 1740,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Renewable generation/load forecasting",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "CIM-XML/HTTPS",
+              "threats": [
+                {
+                  "id": "be48c79f-ef44-4152-9b37-f7f2128a740a",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
+                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 100,
+                  "score": ""
+                },
+                {
+                  "id": "07237871-2151-45ac-a966-6bfcee1cc476",
+                  "title": "Exploit vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 103,
+                  "score": ""
+                },
+                {
+                  "id": "aadc6975-bd37-4547-9f53-547a14363e4a",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 104,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Renewable generation/load forecasting"
+            ],
+            "id": "32ff15ea-37df-4784-8435-68575974aab2",
+            "source": {
+              "cell": "996f7eb5-fd44-4281-b9eb-6d5bde20c8bf",
+              "port": "1c1df4f0-8e4f-4180-8479-354b90820dd6"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1280,
+                "y": 600
+              },
+              {
+                "x": 1070,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregated meter readings",
+              "description": "As the title suggests these are the aggregated meter readings, which are used for invoice calculation.",
+              "outOfScope": true,
+              "reasonOutOfScope": "Same as the billing system.",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "SFTP/TLS",
+              "threats": []
+            },
+            "labels": [
+              "Aggregated meter readings"
+            ],
+            "id": "153094f0-36d5-4d24-bf93-18f32a57157f",
+            "source": {
+              "cell": "a8de3bb0-e2fb-48b5-833f-c936130e6060",
+              "port": "eb9934bd-9727-4690-8e83-39d0b345a0ac"
+            },
+            "target": {
+              "cell": "ab087bd8-8854-4e3b-bf71-d833999be7e8",
+              "port": "4ebb91d1-c712-46f2-b43d-8112dd52e306"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OCSP Respons",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "id": "daf0027e-f4e9-4839-98eb-198c1acd60b0",
+                  "title": "OCSP Responder Compromise",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attackers can manipulate certificate validation responses, to allow them to revoke certificates to appear valid",
+                  "mitigation": " - Use of strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly auditing and monitoring of certificate status and PKI integrity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "7b17ece5-d282-4567-b091-8dbf0407b264",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 43,
+                  "score": ""
+                },
+                {
+                  "id": "5688c1c2-c38c-475c-a0a9-d77d6a0698d7",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 62,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "OCSP Respons"
+            ],
+            "id": "7ee1d3db-cb40-4c81-8e2b-6a742c6c1ab6",
+            "source": {
+              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": [
+              {
+                "x": 200,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "PollResponse",
+              "description": "Outage Status",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "ANSI C12.22 / DLMS-COSEM over TLS",
+              "threats": [
+                {
+                  "id": "bb276d3e-f4c8-4841-983a-410b693f607e",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 48,
+                  "score": ""
+                },
+                {
+                  "id": "58be45e1-92fe-4b1c-9ec6-5713ec1981c4",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 67,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "PollResponse"
+            ],
+            "id": "2031b099-9bf3-4a73-baa7-fd4f71445a0a",
+            "source": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 440
+              },
+              {
+                "x": 270,
+                "y": 410
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Control Message",
+              "description": "TargetPower/LoadReduction",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CMS signierter CLS-JSON",
+              "threats": [
+                {
+                  "id": "1f4995e2-42d1-41f1-afad-deb273e688a4",
+                  "title": "Communication Protocol Downgrade",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Forcing systems to use weaker communication protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Use nonces/timestamps to prevent replay\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "96cb3dbb-f2ed-4834-8f15-8541b0beee7b",
+                  "title": "Timestamp Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Affecting coordination between protection systems and control centers",
+                  "mitigation": "- Use authenticated time sources\n- Redundant time synchronization mechanisms\n- Monitor for anomalies in time data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting and modifying communications between control centers and field devices",
+                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "9a842379-85cc-4d17-8fa9-95aa63a58d28",
+                  "title": "Traffic Analysis",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Inferring operational patterns and vulnerabilities through network traffic observation",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 46,
+                  "score": ""
+                },
+                {
+                  "id": "81c91160-9abc-4e49-888c-69c7beb1c2b4",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 64,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 6,
+                "informationDisclosure": 2,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "Control Message"
+            ],
+            "id": "a219942e-a035-41bd-8544-df6be87ed4a0",
+            "source": {
+              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 300
+              },
+              {
+                "x": 280,
+                "y": 300
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OCSP Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTP(S)",
+              "threats": [
+                {
+                  "id": "b6f2ef46-90b9-4ba1-b5d1-224cbaa4b340",
+                  "title": "Man in the Middel",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "09663576-7aee-47ed-8894-668374902545",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 44,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "OCSP Request"
+            ],
+            "id": "de5ed0a0-b07c-4d31-a4ef-5bd663012793",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 90
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CRL Download",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "id": "1dbad3fa-713b-46d3-b2fa-da6e3fea0e72",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols\n- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 59,
+                  "score": ""
+                },
+                {
+                  "id": "e6efd483-ccc2-4392-96c2-c0ebf2d09a18",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 63,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "CRL Download"
+            ],
+            "id": "52f505ae-eced-48e0-b304-73c30c262489",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 200
+              },
+              {
+                "x": 350,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "IDS-Syslog Alarm",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "60100415-8d0d-4384-a36c-777f3e1f2d9c",
+                  "title": "Blind Security Monitoring",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Attackers may attempt to blind security monitoring systems to avoid detection during attacks",
+                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "6e7b5418-0150-45da-9d1e-d861a7300736",
+                  "title": "Falsifying Log",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Falsifying security event logs to cover attack traces",
+                  "mitigation": "- Secure log storage (write-once, cryptographically signed)\n- Deploy redundant monitoring\n- Use anomaly detection and regular log audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "4022807d-b207-444d-abe2-1931bddc25a7",
+                  "title": "Protection System Bypass",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Disabling or manipulating protective relays and monitoring systems",
+                  "mitigation": "- Strong authentication (MFA, certificates)\n- Role-based access control (RBAC)\n- Input validation and whitelisting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                },
+                {
+                  "id": "f9f41471-19c7-4326-858c-1f1876bda7aa",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 45,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "IDS-Syslog Alarm"
+            ],
+            "id": "a223d659-948a-4405-bbad-f7fcfc768818",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "2fbfded7-34c6-44ae-adad-59596a4cd8cf",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 220
+              },
+              {
+                "x": 400,
+                "y": 160
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "MeterReading Batches",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "SFTP/TLS 1.3 oder HTTPS/TLS 1.3 + CIM-XML",
+              "threats": [
+                {
+                  "id": "b773246b-4491-49fa-83c9-7ab2533cfe2f",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 68,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "MeterReading Batches"
+            ],
+            "id": "7fd3e3eb-0813-437b-90c7-d45410d498ae",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "a8de3bb0-e2fb-48b5-833f-c936130e6060",
+              "port": "eb9934bd-9727-4690-8e83-39d0b345a0ac"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 500
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "PowerStatusPoll",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "ANSCI C12.22 / DLMS-COSEM over TLS",
+              "threats": [
+                {
+                  "id": "26c9452b-da84-4141-b707-38bf2ff62ac6",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 49,
+                  "score": ""
+                },
+                {
+                  "id": "0af9c592-7448-4892-8a2c-b442900d3eba",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 66,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "PowerStatusPoll"
+            ],
+            "id": "55fe4c87-343d-4453-868a-41db9c4b6ee3",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 430
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "InfoReport",
+              "description": "TAC-Container",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS/TLS 1.2 mit CMS signierter JSON/XML",
+              "threats": [
+                {
+                  "id": "353b003b-36bb-4272-b4ee-36642bc9e589",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
+                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": ""
+                },
+                {
+                  "id": "b7a42a45-5a1c-452f-bfe3-d5714f1e96bd",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 47,
+                  "score": ""
+                },
+                {
+                  "id": "356274d7-d750-4844-b92f-b1d397f4eb39",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 65,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "InfoReport"
+            ],
+            "id": "76a23754-1f29-4cc0-9595-c704a9f5b754",
+            "source": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 390
+              },
+              {
+                "x": 380,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Enroll-ACK",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ff80e035-3ee5-4c83-942c-82ebe3f6d518",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 84,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Enroll-ACK"
+            ],
+            "id": "45787d24-9f86-47aa-bdf8-ac3948035947",
+            "source": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "d22fadcd-ccd4-4dd3-8bf2-4c5a0f0bead0",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1370,
+                "y": 390
+              },
+              {
+                "x": 1500,
+                "y": 390
               }
             ]
           },
@@ -3536,11 +3783,11 @@
             },
             "size": {
               "width": 190,
-              "height": 60
+              "height": 120
             },
             "attrs": {
               "text": {
-                "text": "Outage Management System"
+                "text": "Outage \nManagement \nSystem"
               },
               "body": {
                 "stroke": "#333333",
@@ -3549,7 +3796,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 11,
             "ports": {
               "groups": {
@@ -3635,8 +3882,8 @@
             },
             "id": "fa71e320-0729-4932-8d51-d967246db006",
             "data": {
-              "type": "tm.Actor",
-              "name": "Outage Management System",
+              "type": "tm.Process",
+              "name": "Outage \nManagement \nSystem",
               "description": "System fuer Ausfallermittlung: Polling von Smart Meter Gateways (ANSI C12.22/DLMS) und Auswerten von Responses",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -3774,8 +4021,8 @@
               "y": 100
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 80,
+              "height": 80
             },
             "attrs": {
               "text": {
@@ -3788,7 +4035,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 13,
             "ports": {
               "groups": {
@@ -4140,7 +4387,7 @@
               "y": 838
             },
             "size": {
-              "width": 112.5,
+              "width": 60,
               "height": 60
             },
             "attrs": {
@@ -4154,7 +4401,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 16,
             "ports": {
               "groups": {
@@ -4274,8 +4521,8 @@
               "y": 838
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 105,
+              "height": 105
             },
             "attrs": {
               "text": {
@@ -4288,7 +4535,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 17,
             "ports": {
               "groups": {
@@ -4390,8 +4637,8 @@
               "y": 639
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 80,
+              "height": 80
             },
             "attrs": {
               "text": {
@@ -4404,7 +4651,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 18,
             "ports": {
               "groups": {
@@ -4502,12 +4749,12 @@
           },
           {
             "position": {
-              "x": 1400,
-              "y": 639
+              "x": 1390,
+              "y": 730
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 95,
+              "height": 95
             },
             "attrs": {
               "text": {
@@ -4520,7 +4767,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 19,
             "ports": {
               "groups": {
@@ -4622,8 +4869,8 @@
               "y": 838
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 95,
+              "height": 95
             },
             "attrs": {
               "text": {
@@ -4636,7 +4883,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 20,
             "ports": {
               "groups": {
@@ -4769,8 +5016,8 @@
               "y": 320
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 95,
+              "height": 95
             },
             "attrs": {
               "text": {
@@ -4783,7 +5030,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 21,
             "ports": {
               "groups": {
@@ -4885,8 +5132,8 @@
               "y": 320
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 95,
+              "height": 95
             },
             "attrs": {
               "text": {
@@ -4899,7 +5146,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 22,
             "ports": {
               "groups": {
@@ -5019,12 +5266,12 @@
               "y": 140
             },
             "size": {
-              "width": 150,
-              "height": 60
+              "width": 80,
+              "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Microgrid Controller"
+                "text": "Microgrid \nController"
               },
               "body": {
                 "stroke": "#333333",
@@ -5033,7 +5280,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 23,
             "ports": {
               "groups": {
@@ -5119,8 +5366,8 @@
             },
             "id": "eb6c76be-42dc-4648-811a-dbe66d26a036",
             "data": {
-              "type": "tm.Actor",
-              "name": "Microgrid Controller",
+              "type": "tm.Process",
+              "name": "Microgrid \nController",
               "description": "Bedienoberflaeche und Steuerungsebene fuer grid-connected Microgrids; zeigt MMS-Reports und sendet Dispatch-Befehle",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -5135,8 +5382,8 @@
               "y": 140
             },
             "size": {
-              "width": 112.5,
-              "height": 60
+              "width": 105,
+              "height": 105
             },
             "attrs": {
               "text": {
@@ -5149,7 +5396,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 24,
             "ports": {
               "groups": {
@@ -5282,12 +5529,12 @@
               "y": 480
             },
             "size": {
-              "width": 130,
-              "height": 60
+              "width": 80,
+              "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Customer DER/IoT"
+                "text": "Customer \nDER/IoT"
               },
               "body": {
                 "stroke": "#333333",
@@ -5296,7 +5543,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 25,
             "ports": {
               "groups": {
@@ -5382,8 +5629,8 @@
             },
             "id": "033f2b80-634f-4432-bce0-1a95b5087395",
             "data": {
-              "type": "tm.Actor",
-              "name": "Customer DER/IoT",
+              "type": "tm.Process",
+              "name": "Customer \nDER/IoT",
               "description": "e.g., \"Balcony PV,\" \"Home Battery,\" \"Smart Appliances\"",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -5394,16 +5641,16 @@
           },
           {
             "position": {
-              "x": 1468,
-              "y": -149.0000000000001
+              "x": 1438,
+              "y": -169.0000000000001
             },
             "size": {
-              "width": 260,
-              "height": 60
+              "width": 120,
+              "height": 110
             },
             "attrs": {
               "text": {
-                "text": "Head-End System/Integration Layer"
+                "text": "Head-End \nSystem/\nIntegration\n Layer"
               },
               "body": {
                 "stroke": "#333333",
@@ -5412,7 +5659,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 26,
             "ports": {
               "groups": {
@@ -5498,8 +5745,8 @@
             },
             "id": "2f67fb76-692e-4f87-ae67-b0229273da17",
             "data": {
-              "type": "tm.Actor",
-              "name": "Head-End System/Integration Layer",
+              "type": "tm.Process",
+              "name": "Head-End \nSystem/\nIntegration\n Layer",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -5510,16 +5757,16 @@
           },
           {
             "position": {
-              "x": 765,
-              "y": 65.99999999999986
+              "x": 870,
+              "y": 30
             },
             "size": {
-              "width": 290,
-              "height": 60
+              "width": 150,
+              "height": 140
             },
             "attrs": {
               "text": {
-                "text": "Remote Maintenance Update Server"
+                "text": "Remote \nMaintenance/Update \nServer"
               },
               "body": {
                 "stroke": "#333333",
@@ -5528,7 +5775,7 @@
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "process",
             "zIndex": 27,
             "ports": {
               "groups": {
@@ -5614,11 +5861,243 @@
             },
             "id": "b15fe497-c939-4453-95f4-be9eec4e9b26",
             "data": {
-              "type": "tm.Actor",
-              "name": "Remote Maintenance Update Server",
-              "description": "",
+              "type": "tm.Process",
+              "name": "Remote \nMaintenance/Update \nServer",
+              "description": "This actor is responsible for server and device maintenance and firmware and software updates.",
               "outOfScope": false,
               "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1390,
+              "y": 594
+            },
+            "size": {
+              "width": 80,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Forcasting \nSystem"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 28,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7c2cd68d-ebfa-44ce-ad82-0935b2bdcd95"
+                },
+                {
+                  "group": "right",
+                  "id": "9307be41-2616-4807-87c1-14a58d9787a2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "6face5c1-3310-4931-b626-6271acfc15fc"
+                },
+                {
+                  "group": "left",
+                  "id": "1c1df4f0-8e4f-4180-8479-354b90820dd6"
+                }
+              ]
+            },
+            "id": "996f7eb5-fd44-4281-b9eb-6d5bde20c8bf",
+            "data": {
+              "type": "tm.Process",
+              "name": "Forcasting \nSystem",
+              "description": "Predicts energy generation (e.g., solar/wind) and load patterns.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 80,
+              "y": 639
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Billing System"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 29,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "5d388c2f-0cbd-4b54-bbf8-58b829b9d6ea"
+                },
+                {
+                  "group": "right",
+                  "id": "4ebb91d1-c712-46f2-b43d-8112dd52e306"
+                },
+                {
+                  "group": "bottom",
+                  "id": "b6cde403-8d64-4cc8-8a15-1c02c24c765b"
+                },
+                {
+                  "group": "left",
+                  "id": "b665a93a-aaeb-42c0-a8ff-fbbe097286ab"
+                }
+              ]
+            },
+            "id": "ab087bd8-8854-4e3b-bf71-d833999be7e8",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Billing System",
+              "description": "Processes metering data for customer billing and settlement.",
+              "outOfScope": true,
+              "reasonOutOfScope": "We do not have the capacity to also look at the billing process and the different evelope techniques that come with it.",
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
@@ -5630,6 +6109,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 99
+    "threatTop": 105
   }
 }
