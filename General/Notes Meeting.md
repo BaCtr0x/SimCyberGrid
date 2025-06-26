@@ -293,4 +293,8 @@
 - [x] Antrag Bestellung
 - naechste Woche dienstag kein Termin, sondern Freitag und dann mit Probezeitgespraech
 - [ ] gitlab klaeren und sonst auf github wechseln
-- [ ] 
+
+## Weekly 26.06.2025
+- wie sieht das mit dem Kooperationsvertrag aus und wann soll die erste Rechnung geschrieben/gestellt werden
+- am besten waere ein go fuer von allen Beteiligten, dass unsere Use-Cases passen
+- 

@@ -156,7 +156,7 @@
             },
             "id": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "SMGW",
               "description": "Erfasst Zaehlerdaten, verpackt sie als InfoReports und steuert ueber ControlMessages Hausanschlussgeraete",
               "outOfScope": false,
@@ -172,7 +172,7 @@
               "y": 280
             },
             "size": {
-              "width": 110,
+              "width": 100,
               "height": 100
             },
             "attrs": {
@@ -274,12 +274,14 @@
             "data": {
               "type": "tm.Process",
               "name": "VNB-SCADA",
-              "description": "Leitsystem des Verteilnetzbetreibers fuer Smart-Meter-Daten und CLS-Steuerung (Load-/Generation-Commands)",
+              "description": "Das Supervisory Control and Data Aquisition (SCADA) ist ein Leitsystem des Verteilnetzbetreibers fuer Smart-Meter-Daten und CLS-Steuerung (Load-/Generation-Commands). Es ist fuer hihg-level Ueberwachung und Kontrolle von Geraeten, Prozessen und Distributed Control Systems. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "handlesCardPayment": null,
+              "isWebApplication": null
             }
           },
           {
@@ -304,7 +306,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Command Frame",
-              "description": "Control Frame",
+              "description": "Control Frame, diese bestehen aus Start/Stop Transmissions, Fragen ueber Konfigurationen oder Header Informationen, Control Commands an bestimmt PMUs und die Anfrage von historischen PMU Daten.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -391,7 +393,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Data Frame",
-              "description": "Synchrophasor Data Frame",
+              "description": "Synchrophasor Data Frame, der daraus besteht dass dort Phasorgroessen (U/I, Frequenz, ROCOF) enthalten sind. Dazu kommen noch Antworten auf Anfragen vom WAMS-Backend.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -491,7 +493,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Aggregierte InfoReports",
-              "description": "",
+              "description": "Das SCADA System sendet eine aggregierte Sammlung an InfoReports von den SMGWs an das DSO-DMS, um die wichtigen Telemetriedaten weiterzureichen. Dabei ist eine real-time Ueberwachung nicht vorgegeben, weshalb es in Batches versendet wird.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -709,7 +711,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "GOOSE Confirmation",
-              "description": "",
+              "description": "Die GOOSE Confirmation Message ist genau das was es sagt und gibt dem DSO-DMS eine Meldung, dass die Aktion ausgefuehrt wurde und somit die zugehoerigen Breaker oder Field Devices aktiv sind. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -809,7 +811,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "GOOSE-Trip",
-              "description": "Operate Frames",
+              "description": "Der GOOSE-Trip ist ein signal an das Protected-IED, dass es auf ein Fehler reagieren soll und somit ein Circuit Breaker oder ein andere Field Device aktiviert werden muss. Dies muss in sehr kurzer Zeit passieren (unter 4ms).",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -869,6 +871,10 @@
                 "y": 730
               },
               {
+                "x": 1160,
+                "y": 750
+              },
+              {
                 "x": 1290,
                 "y": 760
               }
@@ -895,7 +901,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Manuelle Steuerbefehle",
+              "name": "Control Commands",
               "description": "Operate/SetDataValues",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -939,7 +945,7 @@
               }
             },
             "labels": [
-              "Manuelle Steuerbefehle"
+              "Control Commands"
             ],
             "id": "9a920796-f29e-43d7-9c18-f7881e162535",
             "source": {
@@ -952,12 +958,12 @@
             },
             "vertices": [
               {
-                "x": 1210,
-                "y": 800
+                "x": 1140,
+                "y": 900
               },
               {
-                "x": 1040,
-                "y": 780
+                "x": 1070,
+                "y": 850
               }
             ]
           },
@@ -982,8 +988,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SCADA-Telemetrie",
-              "description": "Strom, Spannung, Alarm, Status als MMS Report",
+              "name": "SCADA-Data",
+              "description": "Strom, Spannung, Alarm, Status als MMS Report, also alle Telemetriedaten die vom SCADA System kommen. Dazu kommen noch Logs und historische Daten vom SCADA System die der Operator gebrauchen kann.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -1039,7 +1045,7 @@
               }
             },
             "labels": [
-              "SCADA-Telemetrie"
+              "SCADA-Data"
             ],
             "id": "007c85cf-b345-459e-8914-da09de5881cc",
             "source": {
@@ -1052,8 +1058,8 @@
             },
             "vertices": [
               {
-                "x": 1030,
-                "y": 840
+                "x": 990,
+                "y": 880
               }
             ]
           },
@@ -1152,8 +1158,8 @@
                 "y": 930
               },
               {
-                "x": 1010,
-                "y": 930
+                "x": 910,
+                "y": 991
               }
             ]
           },
@@ -1179,7 +1185,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "CLS-Setpoint",
-              "description": "TargetPower/LoadReduction",
+              "description": "Der CLS-Setpoint besteht aus TargetPower, TargetVoltage, TargetFrequency festlegen, LoadReduction/Increase commands und Time Validierung, bzw. Scheduling.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -1305,7 +1311,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Gateway-ACK",
-              "description": "Control Acknowledgement, Gateway Acknowledgement als einfache JSON",
+              "description": "Control Acknowledgement, Gateway Acknowledgement als einfache JSON, dabei soll dies sagen ob ein Command angekommen ist, ob er ausgefuehrt wurde und bei Anfrage einen Zeitstempel des Geraetes zurueckgeben.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -1918,38 +1924,6 @@
             "labels": [
               " IT/OT Convergence Boundary"
             ],
-            "id": "fc586740-5329-4fa8-a3dd-949f7e645591",
-            "source": {
-              "x": 1070,
-              "y": 560
-            },
-            "target": {
-              "x": 1080,
-              "y": 770
-            },
-            "vertices": [
-              {
-                "x": 1080,
-                "y": 720
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": " IT/OT Convergence Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              " IT/OT Convergence Boundary"
-            ],
             "id": "599b22ac-b135-4c04-bc62-dc9c157b0ebb",
             "source": {
               "x": 310,
@@ -2288,7 +2262,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             },
@@ -2608,7 +2582,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Renewable generation/load forecasts",
-              "description": "",
+              "description": "Dies sagt dem DSO-DMS wie viel Strom durch erneuerbare Energie erwartet wird.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -2708,7 +2682,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Renewable generation/load forecasting",
-              "description": "",
+              "description": "Dies sagt dem DSO-DMS wie viel Strom durch erneuerbare Energie erwartet wird.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -2853,13 +2827,13 @@
             "data": {
               "type": "tm.Flow",
               "name": "OCSP Respons",
-              "description": "",
+              "description": "Antwort auf den Request, nach passender Analyse, Generierung oder als Bestaetigung eines Wiederrufs.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
               "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
               "protocol": "HTTPS",
               "threats": [
                 {
@@ -2949,7 +2923,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "PollResponse",
-              "description": "Outage Status",
+              "description": "Fragt das SMGW ueber Geraete Status an, um Outages zu bemerken, die nicht gewollt werden.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3005,12 +2979,8 @@
             },
             "vertices": [
               {
-                "x": 370,
-                "y": 440
-              },
-              {
-                "x": 270,
-                "y": 410
+                "x": 360,
+                "y": 460
               }
             ]
           },
@@ -3036,7 +3006,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Control Message",
-              "description": "TargetPower/LoadReduction",
+              "description": "Das SCADA System sendet TargetPower oder LoadReduction commands zum SMGW, um die Steuerung der Field Devices zu ermoeglichen.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3188,7 +3158,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "OCSP Request",
-              "description": "",
+              "description": "Das SMGW oder eine andere Einheit des Systems benoetigt ein Zertifikat oder checkt ob ein gegebenes Zertifikat bereits wiederrufen wurde.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3270,95 +3240,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "CRL Download",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "protocol": "HTTPS",
-              "threats": [
-                {
-                  "id": "1dbad3fa-713b-46d3-b2fa-da6e3fea0e72",
-                  "title": "Exploit Vulnerable Protocols",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
-                  "mitigation": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols\n- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 59,
-                  "score": ""
-                },
-                {
-                  "id": "e6efd483-ccc2-4392-96c2-c0ebf2d09a18",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 63,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "CRL Download"
-            ],
-            "id": "52f505ae-eced-48e0-b304-73c30c262489",
-            "source": {
-              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
-              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
-            },
-            "target": {
-              "cell": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
-              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 200
-              },
-              {
-                "x": 350,
-                "y": 100
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "IDS-Syslog Alarm",
-              "description": "",
+              "description": "Dieser Dataflow beschreibt die Benachrichtigung des SIEM durch das IDS, welches das Smart Grid ueberwacht. Es gibt also ein Alarm aus welcher dann Analysiert wird.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3421,7 +3304,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 3,
                 "informationDisclosure": 1,
                 "denialOfService": 1
               }
@@ -3440,8 +3323,8 @@
             },
             "vertices": [
               {
-                "x": 320,
-                "y": 220
+                "x": 300,
+                "y": 230
               },
               {
                 "x": 400,
@@ -3471,13 +3354,13 @@
             "data": {
               "type": "tm.Flow",
               "name": "MeterReading Batches",
-              "description": "",
+              "description": "Metering Reading Daten werden in Batches, um die Kommunikation zu reduzieren, an den Operational Data Store gesendet. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": true,
-              "isPublicNetwork": false,
+              "isPublicNetwork": true,
               "protocol": "SFTP/TLS 1.3 oder HTTPS/TLS 1.3 + CIM-XML",
               "threats": [
                 {
@@ -3514,8 +3397,8 @@
             },
             "vertices": [
               {
-                "x": 260,
-                "y": 500
+                "x": 230,
+                "y": 530
               }
             ]
           },
@@ -3541,7 +3424,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "PowerStatusPoll",
-              "description": "",
+              "description": "Gibt den Status der Geraete an das Outage Management System.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3597,8 +3480,8 @@
             },
             "vertices": [
               {
-                "x": 260,
-                "y": 430
+                "x": 340,
+                "y": 500
               }
             ]
           },
@@ -3624,7 +3507,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "InfoReport",
-              "description": "TAC-Container",
+              "description": "Werden als TAC-Container versendet. Dabei beinhalten sie Meter readings, Statusinformationen, Zeitstempel und andere wichtige Telemetriedaten. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -3777,13 +3660,786 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CRL push/download",
+              "description": "Der OCSP Responder gibt eine Pushnachricht an den CRL-Server, wenn ein Zertifikat wiederrufen wurde und kann gleichzeitig nachfragen und somit auf Anfragen antworten, ob ein gegebenes Zertifikat bereits wiederrufen wurde. Es ist auch moeglich, dass der OCSP-Responder eine aktuelle Version der CRL cached und updated, wenn notwendig.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS/TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "387a7593-50f6-436a-991a-a5c70608dcff",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Es werden zu viele Anfragen von einem externen Geraet an den CRL Server gesendet und somit die Verbindung zwischen OCSP Responder und CRL Server gestoert, sodass die CRL nicht abgerufen werden kann und ein Zertifikatswiederrufungscheck nicht moeglich ist.",
+                  "mitigation": "- Kommunikationslimit pro Geraet\n- Redumdance von OCSP Responder und CRL Server",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 106,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "CRL push/download"
+            ],
+            "id": "90ea9e91-a4bd-4614-853a-b81e5f866479",
+            "source": {
+              "cell": "041805d9-292c-462b-8c6f-3a2b9e04b62a",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "target": {
+              "cell": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SIEM Response",
+              "description": "Die Antwort auf den vom IDS gesendeten Alarm. Dieser kann system/device commands enthalten oder Aktionen die von einem Operator ausgefuehrt werden muessen.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "4d464675-5561-48cc-9b9f-319d1d7ee34e",
+                  "title": "Exploiting Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 107,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "SIEM Response"
+            ],
+            "id": "537c35b3-2eed-4dab-8db0-601ba9382c34",
+            "source": {
+              "cell": "2fbfded7-34c6-44ae-adad-59596a4cd8cf",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "605a6f57-0c8f-42ff-80b0-fcf6574c31b7",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 160
+              },
+              {
+                "x": 230,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Control Message",
+              "description": "Die Control Messages beinhalten Commands wie setpoints, load reduction und DER dispatch. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS/TLS with CMS-signed JSON",
+              "threats": [
+                {
+                  "id": "1f4995e2-42d1-41f1-afad-deb273e688a4",
+                  "title": "Communication Protocol Downgrade",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Forcing systems to use weaker communication protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Use nonces/timestamps to prevent replay\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "96cb3dbb-f2ed-4834-8f15-8541b0beee7b",
+                  "title": "Timestamp Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Affecting coordination between protection systems and control centers",
+                  "mitigation": "- Use authenticated time sources\n- Redundant time synchronization mechanisms\n- Monitor for anomalies in time data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting and modifying communications between control centers and field devices",
+                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "9a842379-85cc-4d17-8fa9-95aa63a58d28",
+                  "title": "Traffic Analysis",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Inferring operational patterns and vulnerabilities through network traffic observation",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 46,
+                  "score": ""
+                },
+                {
+                  "id": "81c91160-9abc-4e49-888c-69c7beb1c2b4",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 64,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Control Message"
+            ],
+            "id": "68cd774a-2b5e-49f4-970f-7ce6f5f70b42",
+            "source": {
+              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "6a093b79-01aa-49d7-83e9-47626aa0c060",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 800,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Outage Alarm",
+              "description": "Das Outage Management System sendet ein Alarm an das SCADA System, wenn ein groesserer Ausfall bemerkt wird, damit passende Schritte eingeleitet werden koennen.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "5bd2e3da-558f-4db6-a8a1-9659460aaf37",
+                  "title": "Vulnerable transport protocol",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Older transport protocols are vulnerable and have known vulnerabilities",
+                  "mitigation": "Use up to date cryptography and transport protocols",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 108,
+                  "score": ""
+                },
+                {
+                  "id": "18366067-c0eb-4dad-8e38-9bb1ca3f8c36",
+                  "title": "Alarm Reduction",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Der Angreifer faengt den Alarm ab und aendert oder loescht ihn, sodass das SCADA System die falschen Aktionen in die Wege leitet.",
+                  "mitigation": "- Senden eines Acknowledgements\n- Verschluesselte und signierte Kommunikation\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 109,
+                  "score": ""
+                },
+                {
+                  "id": "3c2b7aed-c181-40ec-bbc7-104f293a26c0",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 114,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "Outage Alarm"
+            ],
+            "id": "b8b2e46b-1bae-4e4d-a895-213e6f875bcf",
+            "source": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "f6bf398e-8baa-4f10-92af-9ab04e0043b6"
+            },
+            "target": {
+              "cell": "622f72b1-6eb0-4dc9-a51e-d7464552049c",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 420
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Outage/Restore Reports",
+              "description": "Im Falle von Ausfaellen oder Widerherstellungen wird ein Report in dem Operational Data Storage gespeichert.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "SFTP/TLS 1.3 oder HTTPS/TLS 1.3 + CIM-XML",
+              "threats": [
+                {
+                  "id": "e43b39ed-9a63-4a00-8655-311b86dc7a7f",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Manipulating sensor readings from PMUs and Protected-IEDs to cause incorrect state estimation",
+                  "mitigation": "- End-to-end encryption and digital signatures on all data flows\n- Anomaly detection and cross-validation with redundant data sources",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 110,
+                  "score": ""
+                },
+                {
+                  "id": "327c5cea-fccf-4c9d-8241-cd35b347d877",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 111,
+                  "score": ""
+                },
+                {
+                  "id": "39812c99-e247-4d4d-9d41-2b0830793592",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 112,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Outage/Restore Reports"
+            ],
+            "id": "888375cd-7630-46ba-9d47-6f234f18f635",
+            "source": {
+              "cell": "fa71e320-0729-4932-8d51-d967246db006",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "target": {
+              "cell": "a8de3bb0-e2fb-48b5-833f-c936130e6060",
+              "port": "d1083354-c832-4d4f-808b-3b8626c474ed"
+            },
+            "vertices": [
+              {
+                "x": 537,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DSO-DMS-Data",
+              "description": "Dies beinhaltet Logs, Wetterdaten, Alerts und Planungsdaten die vom DMS versendet oder aufgenommen werden.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "IEC 61850, IEC 61850 over IEC 62351-3 TLS",
+              "threats": [
+                {
+                  "id": "51b0c393-532b-4915-8289-b98bc810b9ff",
+                  "title": "False Data Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Corrupting logs, weather data, alerts and planning data affects the grid monitoring and control decisions of the Grid Operator.\n",
+                  "mitigation": "- Network segmentation between IT and OT\n- Strict firewall rules\n- Secure protocol gateways",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 115,
+                  "score": ""
+                },
+                {
+                  "id": "851775f1-0e16-44e6-a7e8-03008239e0e3",
+                  "title": "Exploitation of Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 116,
+                  "score": ""
+                },
+                {
+                  "id": "39b0214d-59fc-42af-856b-1f205385f53d",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 117,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "DSO-DMS-Data"
+            ],
+            "id": "cc142550-1d33-431d-9c44-e0d1f0c76acd",
+            "source": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "fe41bfba-3f55-4e02-b7b0-e5d5197d9d38"
+            },
+            "target": {
+              "cell": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 940,
+                "y": 910
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Control Commands",
+              "description": "Die Control Commands werden verwendet um manuelles oder remote switching zu ermoeglichen und Konfigurationen zu aendern.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "b236164a-d8cf-4f8b-9f0f-60fd55d0327b",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 118,
+                  "score": ""
+                },
+                {
+                  "id": "fe4656b1-435a-4725-9ee5-fa3d45cb7ddd",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 120,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Control Commands"
+            ],
+            "id": "1011824f-07ca-4862-80f2-97bd8439b8bc",
+            "source": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "target": {
+              "cell": "43faf482-9986-4305-9e95-7c16a28de0b4",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "vertices": [
+              {
+                "x": 1090,
+                "y": 778
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": " IT/OT Convergence Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              " IT/OT Convergence Boundary"
+            ],
+            "id": "fc586740-5329-4fa8-a3dd-949f7e645591",
+            "source": {
+              "x": 1070,
+              "y": 560
+            },
+            "target": {
+              "x": 1070,
+              "y": 810
+            },
+            "vertices": [
+              {
+                "x": 1070,
+                "y": 700
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Status Report",
+              "description": "Periodisches senden von Statusmeldungen und Messwerten der zugehoerigen Geraete. Dazu gehoeren auch Eventlogs.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "MMS TLS 1.2/3",
+              "threats": [
+                {
+                  "id": "6b70cac8-dbc4-4985-a9b6-12ae4c49976e",
+                  "title": "Exploit Vulnerable Protocols",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 119,
+                  "score": ""
+                },
+                {
+                  "id": "2c312900-f6f9-4b93-999a-c3815a9f2a38",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Status Report"
+            ],
+            "id": "058abb2a-2888-4722-bf92-c9e0e79613f2",
+            "source": {
+              "cell": "43faf482-9986-4305-9e95-7c16a28de0b4",
+              "port": "f0e84ba0-4c16-42bd-900e-3965ac24c8c9"
+            },
+            "target": {
+              "cell": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
+              "port": "3976d4dd-1d49-40a6-8506-06bb220cde5f"
+            },
+            "vertices": [
+              {
+                "x": 1270,
+                "y": 679
+              }
+            ]
+          },
+          {
             "position": {
-              "x": 447,
-              "y": 480
+              "x": 549.5,
+              "y": 450
             },
             "size": {
-              "width": 190,
-              "height": 120
+              "width": 120,
+              "height": 110
             },
             "attrs": {
               "text": {
@@ -3884,7 +4540,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Outage \nManagement \nSystem",
-              "description": "System fuer Ausfallermittlung: Polling von Smart Meter Gateways (ANSI C12.22/DLMS) und Auswerten von Responses",
+              "description": "System fuer Ausfallermittlung: Polling von Smart Meter Gateways (ANSI C12.22/DLMS) und Auswerten von Responses.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -3906,11 +4562,13 @@
                 "text": "Operational Data Store"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4006,13 +4664,33 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": true,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ee5d22ae-2093-4e8d-b24d-a0af3027f046",
+                  "title": "Compromised Operational Data Store",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An attacker compromises the Data Store and tampers with the logged data leading to wrong conclusions from historical data and incorrect billing calculation.",
+                  "mitigation": "- Use of strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly auditing and monitoring of certificate status and PKI integrity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 113,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -4121,14 +4799,15 @@
             },
             "id": "2fbfded7-34c6-44ae-adad-59596a4cd8cf",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "IDS/SIEM",
-              "description": "Empfaengt IDS-Alarme via Syslog, korreliert Security-Events und priorisiert Vorfaelle fuer das Security Operation Center",
+              "description": "Das Intrusion Detection System (IDS) beobachtet ein Netzwerk oder System und gibt ein Alarm aus, wenn es verdaechtige Aktivitaeten bemerkt oder gegen vorgegebene Regeln verstossen wird. \nSecurity Information and Event Management (SIEM) wiederum sammelt log Data fuer Analysen und alamiert darauf basieren die zustaendigen Einheiten. Dazu kommt noch real-time system monitoring, welches den Systemadmin ueber relevante Probleme informiert und Eventkorrelationen erstellt.\nDie beiden Systeme arbeiten meist zusammen, wobei das IDS fuer das eigentlich Monitoring und detektieren von gefaehrlichen Aktivitaeten zustaendig ist und das SIEM daraufhin alamiert wird und passende Aktionen in die Wege leitet.\nEmpfaengt IDS-Alarme via Syslog, korreliert Security-Events und priorisiert Vorfaelle fuer das Security Operation Center.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "privilegeLevel": "High"
             }
           },
           {
@@ -4148,10 +4827,20 @@
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "strokeDasharray": null
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
               }
             },
             "visible": true,
-            "shape": "actor",
+            "shape": "store",
             "zIndex": 14,
             "ports": {
               "groups": {
@@ -4237,9 +4926,9 @@
             },
             "id": "847c927b-794e-4de6-8d6c-5c5bebc3b34a",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Store",
               "name": "CRL-Server",
-              "description": "Stellt Certificate Revocation List (CRLs) bereit, damit Clients Zertifikats gueltigkeit pruefen koennen.",
+              "description": "Stellt Certificate Revocation List (CRLs) bereit, damit Clients die Zertifikatsgueltigkeit pruefen koennen.\nAm ende ist es eine Art Datastorage in dem ein Liste an allen gespeicherten Zertifikaten liegt, die vom OCSP-Responder wiederrufen wurden.\nDie CRL Dateien wiederum sind signiert vom Certificate Authority via RSA mit SHA 256/512.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
@@ -4250,7 +4939,7 @@
                   "title": "CRL-Server Compromise",
                   "status": "Open",
                   "severity": "High",
-                  "type": "Repudiation",
+                  "type": "Tampering",
                   "description": "Certificate Revocation List tampering can enable the use of compromised certificates",
                   "mitigation": "- Use of strong mutual TLS authentication for all PKI communications\n- Harden and isolate PKI servers\n- Regularly auditing and monitoring of certificate status and PKI integrity",
                   "modelType": "STRIDE",
@@ -4262,7 +4951,12 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "repudiation": 2
-              }
+              },
+              "isALog": true,
+              "isEncrypted": null,
+              "storesInventory": null,
+              "storesCredentials": null,
+              "isSigned": null
             }
           },
           {
@@ -4373,7 +5067,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "OCSP-Responder",
-              "description": "On-Line Certificate Status Protocol: gibt in Echtzeit den Wiederrufstatus von X.509-Zertifikaten aus.",
+              "description": "Online Certificate Status Protocol (OCSP): gibt in Echtzeit den Wiederrufstatus von X.509-Zertifikaten aus.\nIm Allgemeinen ist es ein certificate manager der fuer die Erstellung, Speicherung und Wiederrufung digitaler Sicherheitszertifikate notwendig ist.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -4487,7 +5181,7 @@
             },
             "id": "49705121-6b3c-4480-a12c-a839f0aeda34",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "PMU",
               "description": "Messen von Phasorgroessen (U/I, Frequenz, ROCOF) mit PTP-Zeitstempel und Streaming an WAMS",
               "outOfScope": false,
@@ -4621,14 +5315,17 @@
             },
             "id": "19e2ffde-bbef-4f7f-baa5-71ee92048c46",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "WAMS-Backend",
-              "description": "Phasordaten-Konzentrator und Analyseplattform fuer Wide-Area Monitoring & Protection (WAMPAC, State Estimation)",
+              "description": "Das Wide Area Monitoring System (WAMS) sammelt Phasordaten und fungiert als Analyseplattform fuer Wide-Area Monitoring & Protection (WAMPAC, State Estimation). Dabei werden die Daten visualisiert und fuer einen Operator aufbereitet. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "handlesCardPayment": null,
+              "isWebApplication": null,
+              "privilegeLevel": "Access to Sensitive Data, Critical Security Role, Full Operational Control"
             }
           },
           {
@@ -4737,14 +5434,15 @@
             },
             "id": "945bd50d-35c8-43b0-b37b-3eb23ca10580",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "DSO-DMS",
-              "description": "Distribution Management System: Netzueberwachung, Lastfluss- und Spannungsregelung, FLISR-Funktionen",
+              "description": "Distributed System Operator: Real-Time Grid Operation und Monitoring. Er nutzt das Distribution Management System, um damit Controll Commands anhand der InfoReports und weiteren eingehenden Informationen auszugeben, um die Systemrequirements sicher zu stellen.\nDistribution Management System: Netzueberwachung, Lastfluss- und Spannungsregelung, FLISR-Funktionen",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "privilegeLevel": "Full Operational Control, Access to Sensitive Data, Critical Security Role"
             }
           },
           {
@@ -4853,20 +5551,21 @@
             },
             "id": "43faf482-9986-4305-9e95-7c16a28de0b4",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "Protected-IED",
-              "description": "Schutzrelais fuer Distanzschutz, Differentialschutz, trippt und isoliert fehlerhafte Netzzonen via GOOSE",
+              "description": "Das Protected-IED (Intelligent Electronic Device) Schutzrelais fuer Distanzschutz, Differentialschutz. Wenn ein Fehler bemerkt wird, dann wird ein trip command an die Breaker via GOOSE ausgeloest, um die fehlerhafte Netzzonen zu isolieren. Somit beinhaltet das Protected-IED auch monitoring Funktionen.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "privilegeLevel": "Full Operational Control, Access to Sensitive Data, Critical Security Role"
             }
           },
           {
             "position": {
-              "x": 1210,
-              "y": 838
+              "x": 1150,
+              "y": 943
             },
             "size": {
               "width": 95,
@@ -4969,7 +5668,7 @@
             },
             "id": "9deeb371-9565-4a69-9e43-451a7e9e5af8",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "Operator UI",
               "description": "Dies ist das Grid-Operator-Dashboard, wodurch der Operator mit dem System interagieren kann.",
               "outOfScope": false,
@@ -5007,7 +5706,8 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "repudiation": 4
-              }
+              },
+              "privilegeLevel": "Operational Control, Access to Sensitive Data, Critical Security Role"
             }
           },
           {
@@ -5116,7 +5816,7 @@
             },
             "id": "6a093b79-01aa-49d7-83e9-47626aa0c060",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "DER-Gateway",
               "description": "Schnittstelle zu dezentralen Erzeugungs- bzw. Speicheranlagen fuer Setpoints (P/Q) und Telemetrie (ACK, Status)",
               "outOfScope": false,
@@ -5868,7 +6568,8 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "privilegeLevel": "High to enable maintanance and update installation."
             }
           },
           {
@@ -6109,6 +6810,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 105
+    "threatTop": 121
   }
 }
