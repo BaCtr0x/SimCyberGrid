@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -283,13 +283,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Notes Meeting.md",
+                "file": "Security/Threat Analysis.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Notes Meeting"
+              "title": "Outline of Threat Analysis"
             }
           }
         ],
@@ -309,10 +309,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "03eef37a441a6842",
+  "active": "4432e674ee418af4",
   "lastOpenFiles": [
-    "General/Abreviations.md",
     "General/Notes Meeting.md",
+    "General/Abreviations.md",
     "Security/STRIDE.md",
     "Images/Threats_categories.png",
     "Technologien und Algorithmen/Algorithmen/ECDSA.md",
