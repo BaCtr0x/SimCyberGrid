@@ -651,19 +651,6 @@
                   "score": ""
                 },
                 {
-                  "id": "cfb6b7d3-3c3c-4dc7-b52f-2b4a87f496fa",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 52,
-                  "score": ""
-                },
-                {
                   "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
@@ -3024,13 +3011,13 @@
                 },
                 {
                   "id": "402b8a87-786d-4724-b745-17f1bba354b5",
-                  "title": "Man-in-the-Middle",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
-                  "modelType": "STRIDE",
+                  "title": "man-in-the-middle",
+                  "status": "open",
+                  "severity": "critical",
+                  "type": "tampering",
+                  "description": "intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- enforce certificate pinning\n - strict tls validation\n- use hsts and ocsp stapling\n - regular key rotation\n network segmentation",
+                  "modeltype": "stride",
                   "new": false,
                   "number": 85,
                   "score": ""
@@ -3258,16 +3245,16 @@
               "protocol": "HTTP(S)",
               "threats": [
                 {
-                  "id": "b6f2ef46-90b9-4ba1-b5d1-224cbaa4b340",
-                  "title": "Man in the Middel",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
+                  "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 3,
+                  "number": 85,
                   "score": ""
                 },
                 {
