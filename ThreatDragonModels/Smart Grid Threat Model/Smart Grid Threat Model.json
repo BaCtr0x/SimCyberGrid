@@ -321,7 +321,7 @@
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
@@ -329,16 +329,16 @@
                   "score": ""
                 },
                 {
-                  "id": "cce00ac7-e5f5-4095-abd3-4bdf344333c5",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 69,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -416,29 +416,29 @@
                   "score": ""
                 },
                 {
-                  "id": "b9872757-6339-4417-8008-ac850ba3aa34",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 24,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "7a5ba0ce-28f9-487e-ac0e-ddf04a8a9a69",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 70,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -542,34 +542,47 @@
                   "score": ""
                 },
                 {
-                  "id": "753633f7-9832-4f81-a316-d49e489c5e78",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 57,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "ba7b5dad-04b1-4609-867f-ef1254745ac5",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 77,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 3,
+                "tampering": 4,
                 "informationDisclosure": 2,
                 "denialOfService": 0
               }
@@ -651,16 +664,16 @@
                   "score": ""
                 },
                 {
-                  "id": "56e2b7db-ccf7-4086-9206-091063fb6fc6",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 72,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -721,29 +734,29 @@
               "protocol": "IEC 61850-GOOSE, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
-                  "id": "e9aa2327-eaf7-4c62-be42-fd7431d1699d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 55,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "7a928354-e84e-43e2-895f-d886ecae9771",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 76,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -821,29 +834,29 @@
               "protocol": "IEC 61850-GOOSE TLS-getunnelt, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
-                  "id": "57a6480b-91eb-44e7-9179-c524f6dacc4d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 56,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "e07ce0e5-96bc-4007-a097-32acdfe55f70",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 75,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -912,29 +925,29 @@
               "protocol": "IEC 61850 TLS 1.2/3, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
-                  "id": "8debbedc-1cdd-417f-86b4-42b719c24dc0",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 54,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "01592df3-189e-4144-8edb-c3a8ee02738f",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 74,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -1012,29 +1025,29 @@
                   "score": ""
                 },
                 {
-                  "id": "c34102a2-72da-4c38-a7d7-9f66e62add2b",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 53,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "d0bcce38-4be3-4a19-9610-6565eec667c0",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 73,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -1108,29 +1121,42 @@
                   "score": ""
                 },
                 {
-                  "id": "7ac4f94a-6156-4b62-a5cb-a83a100579b0",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 51,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "21e1db65-6586-43bb-a46d-1ed6dd8fd602",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 71,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -1234,29 +1260,29 @@
                   "score": ""
                 },
                 {
-                  "id": "0048dc54-4d33-4c78-ac1c-3b1adfdfd180",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 38,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "d8c43648-9b93-4de6-b3df-1d20d5c8c6d2",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 78,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -1321,29 +1347,29 @@
               "protocol": "HTTPS/TLS 1.2",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
-                  "title": "Man-in-the-Middle",
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
                   "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 85,
+                  "number": 18,
                   "score": ""
                 }
               ],
@@ -1399,29 +1425,29 @@
               "protocol": "HTTPS/TLS 1.2 mit CMS-signiertem IEC 63110 Device Provisioning",
               "threats": [
                 {
-                  "id": "017a168a-4385-4816-86af-c05d1448ec26",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 60,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "72495f22-91a4-486d-b203-c434da6205cb",
-                  "title": "Man-in-the-Middle",
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
                   "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 83,
+                  "number": 18,
                   "score": ""
                 },
                 {
@@ -1512,29 +1538,42 @@
                   "score": ""
                 },
                 {
-                  "id": "ab7b7dc8-8385-448d-8485-db0662ed55ea",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 42,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "9060acfd-52a8-4896-b46d-13733bda8a6f",
-                  "title": "Man-in-the-Middle",
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
                   "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 79,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -1660,29 +1699,29 @@
                   "score": ""
                 },
                 {
-                  "id": "51ae57a2-b572-414e-8cc1-3b42d3ff8df1",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 39,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "2070eebb-18c4-4865-a4cb-63c85c0a4caa",
-                  "title": "Man-in-the-Middle",
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
                   "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 80,
+                  "number": 18,
                   "score": ""
                 },
                 {
@@ -1777,29 +1816,29 @@
                   "score": ""
                 },
                 {
-                  "id": "5dc81190-9d60-4d8b-809a-183fe41e1a29",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 40,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "1a067a92-ba12-4e08-b2ac-d2ab8996529e",
-                  "title": "Man-in-the-Middle",
+                  "id": "5daf25b4-0267-4577-bde2-2bd0f5a05885",
+                  "title": "Third Party Integration",
                   "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Vulnerabilities in external operator connections becoming entry points",
+                  "mitigation": "- Network segmentation and strict inter-domain access controls\n- Continuous monitoring of inter-domain traffic\n- Security vetting of third-party components",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 81,
+                  "number": 18,
                   "score": ""
                 }
               ],
@@ -1985,16 +2024,16 @@
               "protocol": "TLS 1.3",
               "threats": [
                 {
-                  "id": "8be26ad8-bff2-4bd8-866e-c11b5ee4bd70",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 86,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -2170,6 +2209,19 @@
                   "new": false,
                   "number": 94,
                   "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -2309,6 +2361,19 @@
                   "new": false,
                   "number": 96,
                   "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -2378,6 +2443,19 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 97,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -2519,6 +2597,19 @@
                   "new": false,
                   "number": 99,
                   "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -2604,16 +2695,16 @@
                   "score": ""
                 },
                 {
-                  "id": "fc71f3ef-8371-49a4-a53c-d38d57f3736a",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 105,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -2704,16 +2795,16 @@
                   "score": ""
                 },
                 {
-                  "id": "aadc6975-bd37-4547-9f53-547a14363e4a",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 104,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -2836,29 +2927,29 @@
                   "score": ""
                 },
                 {
-                  "id": "7b17ece5-d282-4567-b091-8dbf0407b264",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 43,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "5688c1c2-c38c-475c-a0a9-d77d6a0698d7",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 62,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -2919,29 +3010,29 @@
               "protocol": "ANSI C12.22 / DLMS-COSEM over TLS",
               "threats": [
                 {
-                  "id": "bb276d3e-f4c8-4841-983a-410b693f607e",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 48,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "58be45e1-92fe-4b1c-9ec6-5713ec1981c4",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 67,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -3041,16 +3132,16 @@
                   "score": ""
                 },
                 {
-                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Intercepting and modifying communications between control centers and field devices",
-                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 27,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -3067,29 +3158,42 @@
                   "score": ""
                 },
                 {
-                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 46,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "81c91160-9abc-4e49-888c-69c7beb1c2b4",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 64,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -3167,16 +3271,16 @@
                   "score": ""
                 },
                 {
-                  "id": "09663576-7aee-47ed-8894-668374902545",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 44,
+                  "number": 50,
                   "score": ""
                 }
               ],
@@ -3276,16 +3380,16 @@
                   "score": ""
                 },
                 {
-                  "id": "f9f41471-19c7-4326-858c-1f1876bda7aa",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 45,
+                  "number": 50,
                   "score": ""
                 }
               ],
@@ -3350,21 +3454,34 @@
               "protocol": "SFTP/TLS 1.3 oder HTTPS/TLS 1.3 + CIM-XML",
               "threats": [
                 {
-                  "id": "b773246b-4491-49fa-83c9-7ab2533cfe2f",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 68,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3420,34 +3537,47 @@
               "protocol": "ANSCI C12.22 / DLMS-COSEM over TLS",
               "threats": [
                 {
-                  "id": "26c9452b-da84-4141-b707-38bf2ff62ac6",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 49,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "0af9c592-7448-4892-8a2c-b442900d3eba",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 66,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3516,34 +3646,60 @@
                   "score": ""
                 },
                 {
-                  "id": "b7a42a45-5a1c-452f-bfe3-d5714f1e96bd",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 47,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "356274d7-d750-4844-b92f-b1d397f4eb39",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 65,
+                  "number": 85,
+                  "score": ""
+                },
+                {
+                  "id": "00020274-860f-4832-bfea-3aa5073c06bc",
+                  "title": "DoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Flooding critical communication channels, especially affecting real-time control systems",
+                  "mitigation": "- Rate limiting and traffic filtering\n- Redundant network paths and failover\n- DDoS mitigation appliances/services",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 3,
+                "tampering": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3603,16 +3759,16 @@
               "protocol": "HTTPS/TLS1.2",
               "threats": [
                 {
-                  "id": "ff80e035-3ee5-4c83-942c-82ebe3f6d518",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 84,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -3855,16 +4011,16 @@
                   "score": ""
                 },
                 {
-                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Intercepting and modifying communications between control centers and field devices",
-                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 27,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -3881,16 +4037,29 @@
                   "score": ""
                 },
                 {
-                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 46,
+                  "number": 50,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -4060,29 +4229,29 @@
                   "score": ""
                 },
                 {
-                  "id": "327c5cea-fccf-4c9d-8241-cd35b347d877",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 111,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "39812c99-e247-4d4d-9d41-2b0830793592",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 112,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -4169,16 +4338,16 @@
                   "score": ""
                 },
                 {
-                  "id": "39b0214d-59fc-42af-856b-1f205385f53d",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 117,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -4239,29 +4408,29 @@
               "protocol": "TLS 1.2/3",
               "threats": [
                 {
-                  "id": "b236164a-d8cf-4f8b-9f0f-60fd55d0327b",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 118,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "fe4656b1-435a-4725-9ee5-fa3d45cb7ddd",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 120,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -4354,29 +4523,29 @@
               "protocol": "MMS TLS 1.2/3",
               "threats": [
                 {
-                  "id": "6b70cac8-dbc4-4985-a9b6-12ae4c49976e",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 119,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "2c312900-f6f9-4b93-999a-c3815a9f2a38",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 121,
+                  "number": 85,
                   "score": ""
                 }
               ],
@@ -4437,29 +4606,29 @@
               "protocol": "IEC 63110 Device Provisioning",
               "threats": [
                 {
-                  "id": "402e7253-ff65-43a2-94e4-0571fc2644da",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 122,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "19f3c95d-dbbb-47c5-90d3-f5689e52a757",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 123,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -4533,29 +4702,29 @@
               "protocol": "HTTPS/TLS 1.3, IEC 61850 over IEC 62351-3 TLS",
               "threats": [
                 {
-                  "id": "017a168a-4385-4816-86af-c05d1448ec26",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 60,
+                  "number": 50,
                   "score": ""
                 },
                 {
-                  "id": "72495f22-91a4-486d-b203-c434da6205cb",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 83,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -4629,16 +4798,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -4648,7 +4817,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -4730,16 +4899,16 @@
               "protocol": "HTTPS/TLS 1.2/3 als JSON",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -4749,7 +4918,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -4866,16 +5035,16 @@
                   "score": ""
                 },
                 {
-                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Intercepting and modifying communications between control centers and field devices",
-                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 27,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -4892,23 +5061,36 @@
                   "score": ""
                 },
                 {
-                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 46,
+                  "number": 50,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
+                "tampering": 4,
+                "informationDisclosure": 2,
+                "denialOfService": 1
               }
             },
             "labels": [
@@ -5001,16 +5183,16 @@
                   "score": ""
                 },
                 {
-                  "id": "56a65d84-aded-48e7-a404-7369903c3147",
+                  "id": "402b8a87-786d-4724-b745-17f1bba354b5",
                   "title": "Man-in-the-Middle",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Intercepting and modifying communications between control centers and field devices",
-                  "mitigation": "- Mutual authentication (certificates)\n- Regular protocol and certificate audits",
+                  "description": "Intercepting certificate validation traffic to enable impersonation attacks",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 27,
+                  "number": 85,
                   "score": ""
                 },
                 {
@@ -5027,16 +5209,29 @@
                   "score": ""
                 },
                 {
-                  "id": "427d9ae5-a246-4466-8de5-bba07e3dbed1",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 46,
+                  "number": 50,
+                  "score": ""
+                },
+                {
+                  "id": "6437b6d4-639f-4929-802f-a836dba2bab3",
+                  "title": "Eavesdropping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Passive monitoring of sensitive operational data and control commands",
+                  "mitigation": "- Use strong encryption (TLS/IPsec) for all data in transit\n- Regular key rotation and management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
                   "score": ""
                 }
               ],
@@ -5092,16 +5287,16 @@
               "protocol": "HTTPS/TLS 1.2/3 via GOOSE",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5111,7 +5306,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5189,16 +5384,16 @@
               "protocol": "TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5208,7 +5403,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5281,16 +5476,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5300,7 +5495,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5373,16 +5568,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5392,7 +5587,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5470,16 +5665,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5489,7 +5684,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5567,16 +5762,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5586,7 +5781,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5664,16 +5859,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5683,7 +5878,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5765,16 +5960,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5784,7 +5979,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -5862,16 +6057,16 @@
               "protocol": "HTTPS/TLS 1.2/3",
               "threats": [
                 {
-                  "id": "c53c0e3f-1261-4363-b7b0-b5b264800c8d",
+                  "id": "80282328-26bb-4590-8397-c3fbf5f46d53",
                   "title": "Exploit Vulnerable Protocols",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Tampering",
-                  "description": " Exploiting vulnerabilities in DNP3, IEC 61850, and other industrial protocols",
+                  "description": " Exploiting vulnerabilities in DNP3, GOOSE over IEC 61850, MMS over IEC 61850, and IEC 60850-5-104",
                   "mitigation": "- Only allow secure, up-to-date protocols (e.g., TLS 1.3)\n- Disable legacy/weak protocol support",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 58,
+                  "number": 50,
                   "score": ""
                 },
                 {
@@ -5881,7 +6076,7 @@
                   "severity": "Critical",
                   "type": "Tampering",
                   "description": "Intercepting certificate validation traffic to enable impersonation attacks",
-                  "mitigation": "- Enforce certificate pinning and strict TLS validation\n- Use HSTS and OCSP stapling",
+                  "mitigation": "- Enforce certificate pinning\n - strict TLS validation\n- Use HSTS and OCSP stapling\n - Regular Key Rotation\n Network segmentation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 85,
@@ -6262,6 +6457,19 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 113,
+                  "score": ""
+                },
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
                   "score": ""
                 }
               ],
@@ -6781,6 +6989,19 @@
                   "new": false,
                   "number": 15,
                   "score": ""
+                },
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -7138,7 +7359,29 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              },
               "privilegeLevel": "Full Operational Control, Access to Sensitive Data, Critical Security Role"
             }
           },
@@ -7795,6 +8038,19 @@
                   "new": false,
                   "number": 19,
                   "score": ""
+                },
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -7817,8 +8073,8 @@
                 "text": "Customer \nDER/IoT"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -7914,9 +8170,31 @@
               "description": "e.g., \"Balcony PV,\" \"Home Battery,\" \"Smart Appliances\"",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -8148,7 +8426,21 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "262a1b37-6950-43e7-ade4-6ca8af65317e",
+                  "title": "Physical Threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The physical threat described the unauthorized access, tampering, vandalism, theft, sabotage, environmental hazards, or destruction of a device or infrastructure in the grid.",
+                  "mitigation": "- Permite Survailance \n- Tampering Seals\n- Access Control (Keycards etc, Visitor/Maintanance Management)\n- Access logging (digitally and physically)\n- Lifecycle Security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
+                }
+              ],
               "privilegeLevel": "High to enable maintanance and update installation."
             }
           },
@@ -8383,6 +8675,179 @@
               "providesAuthentication": false,
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 2182.5,
+              "y": 161
+            },
+            "size": {
+              "width": 240,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Field Communication Infrastructure"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 30,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "10bf94f9-6cd8-44a6-b120-baba88ab4652"
+                },
+                {
+                  "group": "right",
+                  "id": "2a461eb8-4d5e-465c-85fd-1cd840bcf57d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "29adf73a-d2df-440d-be42-95c2362669f6"
+                },
+                {
+                  "group": "left",
+                  "id": "ee06395f-601e-43ef-9b91-b82ecb8108b6"
+                }
+              ]
+            },
+            "id": "0ccd0316-657c-4e64-915d-e894689733eb",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Field Communication Infrastructure",
+              "description": "Physical communication channels (e.g., fiber optics, power-line communication, wireless links) enabling data transmission between grid components. Vulnerable to physical tampering, environmental damage, and jamming",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "f0831fdb-da37-4c1a-8155-c1cf78c750ca",
+                  "title": "Cable Tampering/Cutting",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Repudiation",
+                  "description": "Physical destruction of wired links (e.g., fiber, copper)",
+                  "mitigation": "- Bury critical cables\n- Use tamper-evident conduits\n- Deploy seismic/vibration sensors",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 125,
+                  "score": ""
+                },
+                {
+                  "id": "1400da73-bd90-4cb8-a90e-888a7b98e322",
+                  "title": "Wireless Jamming",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Repudiation",
+                  "description": "Disrupting RF signals (e.g., LTE, Wi-Fi, Zigbee)",
+                  "mitigation": "- Frequency-hopping spread spectrum\n- Wired fallback paths\n- Jamming detection systems",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 126,
+                  "score": ""
+                },
+                {
+                  "id": "fc88e298-0831-4a73-b5f8-b2499de291fa",
+                  "title": "Device Tampering",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Unauthorized access to routers, switches, or repeaters",
+                  "mitigation": "- Secure locked enclosures\n- Tamper-evident seals\n- Remote integrity checks",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 127,
+                  "score": ""
+                },
+                {
+                  "id": "05df0312-6b65-4d2a-b5f5-7563d0a56ca9",
+                  "title": "Environmental Hazards",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Damage from floods, fires, or extreme weather",
+                  "mitigation": "- Weatherproof enclosures\n- Redundant paths\n- Environmental monitoring",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 128,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 4
+              }
+            }
           }
         ],
         "description": "This is used as the initial threat analysis which is high level and will be ported to Threagile for a deeper analysis in the future."
@@ -8390,6 +8855,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Sascha, Felix",
-    "threatTop": 123
+    "threatTop": 128
   }
 }
