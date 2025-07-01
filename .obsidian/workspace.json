@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -283,13 +283,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Threat Analysis.md",
+                "file": "General/Notes Meeting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Threat Analysis"
+              "title": "Outline of Notes Meeting"
             }
           }
         ],
@@ -309,8 +309,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4432e674ee418af4",
+  "active": "03eef37a441a6842",
   "lastOpenFiles": [
+    "ThreatDragonModels/Smart Grid Threat Model/Smart Grid Threat Model.json~",
+    "ThreatDragonModels/Smart Grid Threat Model/4913",
+    "Security/Threat Analysis.md",
     "General/Notes Meeting.md",
     "General/Abreviations.md",
     "Security/STRIDE.md",
@@ -322,7 +325,6 @@
     "Standards/IEC 60870.md",
     "Technologien und Algorithmen/Techniques/DNP3.md",
     "Use_cases/Kommunikationssimulator Dataflow.md",
-    "Security/Threat Analysis.md",
     "Security/TRIKE.md",
     "Security/OCTAVE.md",
     "Security/Threat Analysis Techniques.md",
@@ -345,7 +347,6 @@
     "General/diagram.pdf",
     "General/diagram.md",
     "General/diagram.mmd",
-    "General/toPdfViaTempFile15999-0.html",
     "Standards/RFC 5424.md",
     "Standards/RFC 5425.md",
     "Standards/IEC 61970.md",
