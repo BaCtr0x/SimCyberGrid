@@ -64,8 +64,8 @@
                 "text": "SMGW"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -161,7 +161,7 @@
               "description": "Erfasst Zaehlerdaten, verpackt sie als InfoReports und steuert ueber ControlMessages Hausanschlussgeraete",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -207,8 +207,8 @@
                 "text": "VNB-SCADA"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -304,7 +304,7 @@
               "description": "Das Supervisory Control and Data Aquisition (SCADA) ist ein Leitsystem des Verteilnetzbetreibers fuer Smart-Meter-Daten und CLS-Steuerung (Load-/Generation-Commands). Es ist fuer hihg-level Ueberwachung und Kontrolle von Geraeten, Prozessen und Distributed Control Systems. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -8330,8 +8330,8 @@
                 "text": "IDS/SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -8427,7 +8427,7 @@
               "description": "Das Intrusion Detection System (IDS) beobachtet ein Netzwerk oder System und gibt ein Alarm aus, wenn es verdaechtige Aktivitaeten bemerkt oder gegen vorgegebene Regeln verstossen wird. \nSecurity Information and Event Management (SIEM) wiederum sammelt log Data fuer Analysen und alamiert darauf basieren die zustaendigen Einheiten. Dazu kommt noch real-time system monitoring, welches den Systemadmin ueber relevante Probleme informiert und Eventkorrelationen erstellt.\nDie beiden Systeme arbeiten meist zusammen, wobei das IDS fuer das eigentlich Monitoring und detektieren von gefaehrlichen Aktivitaeten zustaendig ist und das SIEM daraufhin alamiert wird und passende Aktionen in die Wege leitet.\nEmpfaengt IDS-Alarme via Syslog, korreliert Security-Events und priorisiert Vorfaelle fuer das Security Operation Center.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -8444,7 +8444,15 @@
                   "score": ""
                 }
               ],
-              "privilegeLevel": "High"
+              "privilegeLevel": "High",
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -8610,8 +8618,8 @@
                 "text": "OCSP-Responder"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -8707,7 +8715,7 @@
               "description": "Online Certificate Status Protocol (OCSP): gibt in Echtzeit den Wiederrufstatus von X.509-Zertifikaten aus.\nIm Allgemeinen ist es ein certificate manager der fuer die Erstellung, Speicherung und Wiederrufung digitaler Sicherheitszertifikate notwendig ist.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -9006,8 +9014,8 @@
                 "text": "DSO-DMS"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -9103,7 +9111,7 @@
               "description": "Distributed System Operator: Real-Time Grid Operation und Monitoring. Er nutzt das Distribution Management System, um damit Controll Commands anhand der InfoReports und weiteren eingehenden Informationen auszugeben, um die Systemrequirements sicher zu stellen.\nDistribution Management System: Netzueberwachung, Lastfluss- und Spannungsregelung, FLISR-Funktionen",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -9150,8 +9158,8 @@
                 "text": "Protected-IED"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -9247,7 +9255,7 @@
               "description": "Das Protected-IED (Intelligent Electronic Device) Schutzrelais fuer Distanzschutz, Differentialschutz. Wenn ein Fehler bemerkt wird, dann wird ein trip command an die Breaker via GOOSE ausgeloest, um die fehlerhafte Netzzonen zu isolieren. Somit beinhaltet das Protected-IED auch monitoring Funktionen.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -9489,8 +9497,8 @@
                 "text": "DER-Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -9586,7 +9594,7 @@
               "description": "Schnittstelle zu dezentralen Erzeugungs- bzw. Speicheranlagen fuer Setpoints (P/Q) und Telemetrie (ACK, Status)",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -9766,8 +9774,8 @@
                 "text": "Microgrid \nController"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -9863,7 +9871,7 @@
               "description": "Bedienoberflaeche und Steuerungsebene fuer grid-connected Microgrids; zeigt MMS-Reports und sendet Dispatch-Befehle",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -10246,8 +10254,8 @@
                 "text": "Head-End \nSystem/\nIntegration\n Layer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -10343,7 +10351,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -10389,8 +10397,8 @@
                 "text": "Remote \nMaintenance/Update \nServer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -10486,7 +10494,7 @@
               "description": "This actor is responsible for server and device maintenance and firmware and software updates.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
