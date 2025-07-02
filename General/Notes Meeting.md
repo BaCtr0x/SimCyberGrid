@@ -297,4 +297,11 @@
 ## Weekly 26.06.2025
 - wie sieht das mit dem Kooperationsvertrag aus und wann soll die erste Rechnung geschrieben/gestellt werden
 - am besten waere ein go fuer von allen Beteiligten, dass unsere Use-Cases passen
+
+
+## Weekly 02.07.2025
+- Kooperationsvertrag geht jetzt bis 04 Juli soll rueckmeldung gegeben werden und finale bis 18.07. weil die Verlaengerung bis 25.07. geht
+- Sascha gut mit den Testfaellen vorran gekommen, liegt extra
+- Felix schaut sich mit Kolja das Threatmodel an
+- Felix macht sonst auch Koosimulation
 - 
