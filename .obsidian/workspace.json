@@ -161,8 +161,7 @@
               "title": "TRIKE"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -283,13 +282,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Notes Meeting.md",
+                "file": "General/Abreviations.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Notes Meeting"
+              "title": "Outline of Abreviations"
             }
           }
         ],
@@ -309,12 +308,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "03eef37a441a6842",
+  "active": "5a708a7caf31053c",
   "lastOpenFiles": [
+    "General/Notes Meeting.md",
     "ThreatDragonModels/Smart Grid Threat Model/Smart Grid Threat Model.json~",
     "ThreatDragonModels/Smart Grid Threat Model/4913",
     "Security/Threat Analysis.md",
-    "General/Notes Meeting.md",
     "General/Abreviations.md",
     "Security/STRIDE.md",
     "Images/Threats_categories.png",
@@ -346,7 +345,6 @@
     "General/diagram_2.mmd",
     "General/diagram.pdf",
     "General/diagram.md",
-    "General/diagram.mmd",
     "Standards/RFC 5424.md",
     "Standards/RFC 5425.md",
     "Standards/IEC 61970.md",
