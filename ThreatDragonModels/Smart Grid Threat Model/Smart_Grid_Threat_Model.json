@@ -3628,7 +3628,7 @@
                   "new": false,
                   "number": 17,
                   "score": ""
-                }
+                },
                 {
                   "id": "9a842379-85cc-4d17-8fa9-95aa63a58d28",
                   "title": "Traffic Analysis",
@@ -3732,7 +3732,7 @@
                   "new": false,
                   "number": 17,
                   "score": ""
-                }
+                },
                 {
                   "id": "caa8bbba-99b8-4192-a68b-716c88f497ec",
                   "title": "GPS Spoofing",
@@ -4596,7 +4596,7 @@
                   "new": false,
                   "number": 17,
                   "score": ""
-                }
+                },
                 {
                   "id": "18366067-c0eb-4dad-8e38-9bb1ca3f8c36",
                   "title": "Alarm Reduction",
@@ -7362,7 +7362,7 @@
                   "new": false,
                   "number": 17,
                   "score": ""
-                }
+                },
                 {
                   "id": "1f4995e2-42d1-41f1-afad-deb273e688a4",
                   "title": "Communication Protocol Downgrade",

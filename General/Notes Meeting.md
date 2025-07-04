@@ -292,7 +292,7 @@
 	- rauslassen, weil wir es nicht abdecken 
 - [x] Antrag Bestellung
 - naechste Woche dienstag kein Termin, sondern Freitag und dann mit Probezeitgespraech
-- [ ] gitlab klaeren und sonst auf github wechseln
+- [x] gitlab klaeren und sonst auf github wechseln
 
 ## Weekly 26.06.2025
 - wie sieht das mit dem Kooperationsvertrag aus und wann soll die erste Rechnung geschrieben/gestellt werden
@@ -304,4 +304,11 @@
 - Sascha gut mit den Testfaellen vorran gekommen, liegt extra
 - Felix schaut sich mit Kolja das Threatmodel an
 - Felix macht sonst auch Koosimulation
+
+## Milena 04.07.2025
+- Overarching Test, das wenn alle einzelteile laufen auch das ganze system laeuft.
+- [ ] github ueber academic einrichten fuer uns
+- [ ]  Konferenzen Mailing listen anmelden
+- [ ]  Andere fragen ob wir sowas das threatmodel auf den Konferezen vorstellen wollen
+- [ ]  Wollen alles open source machen, wie im Antrag oder nicht
 - 

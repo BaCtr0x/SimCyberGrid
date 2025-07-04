@@ -161,7 +161,8 @@
               "title": "TRIKE"
             }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -282,13 +283,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Abreviations.md",
+                "file": "General/Notes Meeting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Abreviations"
+              "title": "Outline of Notes Meeting"
             }
           }
         ],
@@ -308,13 +309,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a708a7caf31053c",
+  "active": "03eef37a441a6842",
   "lastOpenFiles": [
+    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model_04_07_25.json",
+    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model copy.json",
+    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model.json",
+    "General/Abreviations.md",
     "General/Notes Meeting.md",
     "ThreatDragonModels/Smart Grid Threat Model/Smart Grid Threat Model.json~",
     "ThreatDragonModels/Smart Grid Threat Model/4913",
     "Security/Threat Analysis.md",
-    "General/Abreviations.md",
     "Security/STRIDE.md",
     "Images/Threats_categories.png",
     "Technologien und Algorithmen/Algorithmen/ECDSA.md",
@@ -342,8 +346,6 @@
     "General/communication_dataflow_diagram.mmd",
     "General/test.mmd",
     "General/diagram_2.pdf",
-    "General/diagram_2.mmd",
-    "General/diagram.pdf",
     "General/diagram.md",
     "Standards/RFC 5424.md",
     "Standards/RFC 5425.md",
