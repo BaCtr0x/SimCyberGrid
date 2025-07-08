@@ -305,10 +305,16 @@
 - Felix schaut sich mit Kolja das Threatmodel an
 - Felix macht sonst auch Koosimulation
 
+<<<<<<< HEAD
 ## Milena 04.07.2025
 - Overarching Test, das wenn alle einzelteile laufen auch das ganze system laeuft.
 - [ ] github ueber academic einrichten fuer uns
 - [ ]  Konferenzen Mailing listen anmelden
 - [ ]  Andere fragen ob wir sowas das threatmodel auf den Konferezen vorstellen wollen
 - [ ]  Wollen alles open source machen, wie im Antrag oder nicht
+=======
+## Milena 08.07.2025
+- Perplexity bekommt die Syntax nicht hin, selbst mit erneuten hinweisen auf Korrekturen, am Ende bekommt man eine kleine halbwegs funktionierende Darstellung als Konzept, aber die Syntax und somit das model um es direkt in Threatdragon zu packen bekommt man nicht hin, zumindest nicht mit 10 Promts.
+- Einfach so weitermachen wie bis jetzt
+>>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
 - 

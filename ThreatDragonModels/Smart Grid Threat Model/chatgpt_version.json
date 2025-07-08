@@ -1,0 +1,1664 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "German Smart Grid Threat Model (Mid & Low Voltage)",
+    "owner": "",
+    "description": "Threat model for a German mid- and low-voltage smart grid, compliant with BSI technical requirements and relevant IEC protocols.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      "ChatGPT"
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "German_Smart_Grid_MidLowVoltage",
+        "diagramType": "STRIDE",
+        "placeholder": "Smart grid diagram for mid & low voltage domains",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [
+          {
+            "position": {
+              "x": 50,
+              "y": 50
+            },
+            "size": {
+              "width": 700,
+              "height": 600
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "boundary-mid-low",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Mid & Low Voltage Grid",
+              "description": "Trust boundary for the mid- and low-voltage domain.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "ports": {
+              "groups": {},
+              "items": []
+            }
+          },
+          {
+            "position": {
+              "x": 100,
+              "y": 100
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFFFFF",
+                "stroke": "#000000",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "DSO",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "9c918bea-41bc-444f-9703-c8a1bcfe38e5"
+                },
+                {
+                  "group": "right",
+                  "id": "ce2f0b4e-d136-4935-8799-9737722bec2c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "eca68f21-a03e-477b-9c2b-9eef6945e47d"
+                },
+                {
+                  "group": "left",
+                  "id": "096b623e-c3e1-460e-93f5-e0315afbb151"
+                }
+              ]
+            },
+            "id": "actor-dso",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Distribution System Operator (DSO)",
+              "description": "Responsible for operating the middle and low voltage distribution grid.",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 300,
+              "y": 100
+            },
+            "size": {
+              "width": 140,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#E8F3FE",
+                "stroke": "#0A64A0",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Energy Supplier",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "94c77d5f-4b49-4140-a864-943082634bd9"
+                },
+                {
+                  "group": "right",
+                  "id": "6890a8e2-72e0-46b1-b437-b450bf503eaa"
+                },
+                {
+                  "group": "bottom",
+                  "id": "08b2079d-d49d-4637-873b-10d3ab56151e"
+                },
+                {
+                  "group": "left",
+                  "id": "3e994ca6-2eda-4ea0-bd57-e89e7586a552"
+                }
+              ]
+            },
+            "id": "actor-energy-supplier",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Energy Supplier",
+              "description": "Supplies energy to the grid and receives consumption data.",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 100,
+              "y": 200
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FEF3E8",
+                "stroke": "#A05A0A",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Prosumer",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f57371bc-887a-4aba-8b04-46ebaeb97204"
+                },
+                {
+                  "group": "right",
+                  "id": "35172130-3ac6-457b-877f-e4bafbc1d324"
+                },
+                {
+                  "group": "bottom",
+                  "id": "87dfd2bf-81c7-4358-9828-437e06a99b68"
+                },
+                {
+                  "group": "left",
+                  "id": "5496648e-2b91-406e-92e8-697e361db01f"
+                }
+              ]
+            },
+            "id": "actor-prosumer",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Prosumer",
+              "description": "Consumer with local generation (e.g., rooftop PV).",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 300,
+              "y": 200
+            },
+            "size": {
+              "width": 180,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#E8FEF3",
+                "stroke": "#0AA05A",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "HEMS",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "ae2ba525-d186-4819-bef1-5044503f6253"
+                },
+                {
+                  "group": "right",
+                  "id": "4a0bc145-a20c-4327-b0ce-d2aefd3abfd1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "6a0ce57b-f02f-4990-ab11-633123de0b9d"
+                },
+                {
+                  "group": "left",
+                  "id": "4dbe3860-f1ba-4a17-b422-170c68bb9894"
+                }
+              ]
+            },
+            "id": "actor-hems",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Home Energy Management System (HEMS)",
+              "description": "Manages local loads and generation within a smart home.",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 200,
+              "y": 300
+            },
+            "size": {
+              "width": 140,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFF3E8",
+                "stroke": "#A05A0A",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Smart Meter",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c32ef358-5fb3-4dd7-82b4-f16e53605c6c"
+                },
+                {
+                  "group": "right",
+                  "id": "435f255c-bfde-4e09-8d17-3ecfa60aa24d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "8a97fe7f-60c0-4af8-8171-c6357b761fea"
+                },
+                {
+                  "group": "left",
+                  "id": "de9bcd78-73c3-4eff-891f-4144401f261a"
+                }
+              ]
+            },
+            "id": "actor-smart-meter",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Smart Meter",
+              "description": "Records consumption and production data at the customer premises using DLMS/COSEM.",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 100,
+              "y": 400
+            },
+            "size": {
+              "width": 140,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#F3E8FE",
+                "stroke": "#5A0AA0",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "RTU",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "b24a3b95-b51a-4e66-9344-028bd1539205"
+                },
+                {
+                  "group": "right",
+                  "id": "4157b2a3-0b05-4382-9101-ea8f1c3f769e"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f394e1e7-f75c-432d-95f1-5442646a7f33"
+                },
+                {
+                  "group": "left",
+                  "id": "5d8090e0-1c44-4452-82ff-0014bf933c3b"
+                }
+              ]
+            },
+            "id": "actor-rtu",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Remote Terminal Unit (RTU)",
+              "description": "Collects telemetry from grid assets in substations.",
+              "outOfScope": false,
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 300,
+              "y": 300
+            },
+            "size": {
+              "width": 180,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFFFFF",
+                "stroke": "#333333",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Meter Data Aggregation",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "2f5730da-e7a5-4dbb-bb27-bec1c7f11a0f"
+                },
+                {
+                  "group": "right",
+                  "id": "aaeb885d-20ee-41d8-bbfc-21cccf4dd10f"
+                },
+                {
+                  "group": "bottom",
+                  "id": "29cd6bfe-8288-4e1d-b37c-2eca3ee77219"
+                },
+                {
+                  "group": "left",
+                  "id": "709d125e-978b-4345-be64-33a34f2bd246"
+                }
+              ]
+            },
+            "id": "process-meter-data-aggregation",
+            "data": {
+              "type": "tm.Process",
+              "name": "Meter Data Aggregation",
+              "description": "Aggregates meter readings from Smart Meters into a central system.",
+              "outOfScope": false
+            }
+          },
+          {
+            "position": {
+              "x": 500,
+              "y": 300
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFFFFF",
+                "stroke": "#333333",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Load Forecasting",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c971d29e-9ec1-4950-bab8-65b0b2fcc460"
+                },
+                {
+                  "group": "right",
+                  "id": "440f2a4a-1047-4088-b221-5b7bec0673f3"
+                },
+                {
+                  "group": "bottom",
+                  "id": "e88d3507-b44f-4cc9-8f06-9fdd5b1ad0b2"
+                },
+                {
+                  "group": "left",
+                  "id": "430293b0-40b5-4d03-8c08-dbf862794bb4"
+                }
+              ]
+            },
+            "id": "process-load-forecasting",
+            "data": {
+              "type": "tm.Process",
+              "name": "Load Forecasting",
+              "description": "Predicts short-term load profiles based on historical data.",
+              "outOfScope": false
+            }
+          },
+          {
+            "position": {
+              "x": 300,
+              "y": 400
+            },
+            "size": {
+              "width": 200,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFFFFF",
+                "stroke": "#333333",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Demand Response",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "71befb17-acbf-45c4-b6f3-83ef03a4825a"
+                },
+                {
+                  "group": "right",
+                  "id": "34c10f14-d6a9-4df5-8d20-d96a89d29031"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4518b4a6-9646-4069-bf6f-e966861e725c"
+                },
+                {
+                  "group": "left",
+                  "id": "63ca698e-76e9-4cfc-886c-3e2f5293a0ad"
+                }
+              ]
+            },
+            "id": "process-demand-response",
+            "data": {
+              "type": "tm.Process",
+              "name": "Demand Response Management",
+              "description": "Issues real-time control signals to balance load and generation.",
+              "outOfScope": false
+            }
+          },
+          {
+            "position": {
+              "x": 500,
+              "y": 400
+            },
+            "size": {
+              "width": 200,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#FFFFFF",
+                "stroke": "#333333",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Voltage Regulation",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "535818a9-2650-4e9b-bbc0-cab2dca0a7f3"
+                },
+                {
+                  "group": "right",
+                  "id": "96d98755-b322-4fb4-a139-41eaee168a9d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "333bfd9c-6a4e-40ae-b2e5-9b69451d5237"
+                },
+                {
+                  "group": "left",
+                  "id": "496d0f19-babe-4880-8f31-7d4a058308b8"
+                }
+              ]
+            },
+            "id": "process-voltage-regulation",
+            "data": {
+              "type": "tm.Process",
+              "name": "Voltage Regulation Controller",
+              "description": "Monitors and adjusts voltage levels across feeders.",
+              "outOfScope": false
+            }
+          },
+          {
+            "position": {
+              "x": 500,
+              "y": 200
+            },
+            "size": {
+              "width": 180,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "fill": "#EFEFEF",
+                "stroke": "#555555",
+                "strokeWidth": 2
+              },
+              "label": {
+                "text": "Meter Data Store",
+                "fontSize": 12
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "537b5d41-93e9-4a8a-bbac-93b3011f62cd"
+                },
+                {
+                  "group": "right",
+                  "id": "20d89127-0d97-49ba-acd1-e1e192d78f8c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "1052322a-c483-4159-b63b-5854bd676e3b"
+                },
+                {
+                  "group": "left",
+                  "id": "7e090389-ce26-4460-9e4e-05a4a43d7a27"
+                }
+              ]
+            },
+            "id": "store-meter-data",
+            "data": {
+              "type": "tm.Store",
+              "name": "Meter Data Store",
+              "description": "Secure database for historical consumption and production records.",
+              "outOfScope": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              ".connection": {
+                "stroke": "#1a237e",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Meter Data",
+              "description": "Smart Meter sends readings securely to aggregation.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "IEC 62056/DLMS/COSEM",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Meter Data (DLMS/COSEM, BSI TR-03109-1)"
+                  }
+                }
+              }
+            ],
+            "id": "flow-meter-to-aggregation",
+            "source": {
+              "cell": "actor-smart-meter",
+              "port": "right"
+            },
+            "target": {
+              "cell": "process-meter-data-aggregation",
+              "port": "left"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              },
+              ".connection": {
+                "stroke": "#ffa000",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Prosumer Usage",
+              "description": "Prosumer energy consumption/production is measured.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Energy/Usage"
+                  }
+                }
+              }
+            ],
+            "id": "flow-prosumer-to-meter",
+            "source": {
+              "cell": "actor-prosumer",
+              "port": "right"
+            },
+            "target": {
+              "cell": "actor-smart-meter",
+              "port": "left"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              ".connection": {
+                "stroke": "#388e3c",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aggregated Data",
+              "description": "Aggregated data sent to secure store.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS/TLS",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Aggregated Meter Data (TLS)"
+                  }
+                }
+              }
+            ],
+            "id": "flow-aggregation-to-store",
+            "source": {
+              "cell": "process-meter-data-aggregation",
+              "port": "right"
+            },
+            "target": {
+              "cell": "store-meter-data",
+              "port": "left"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              ".connection": {
+                "stroke": "#1976d2",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Historical Data Feed",
+              "description": "Meter store provides data for forecasting.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "MQTT/TLS",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Historical Data Feed (MQTT/TLS)"
+                  }
+                }
+              }
+            ],
+            "id": "flow-store-to-forecasting",
+            "source": {
+              "cell": "store-meter-data",
+              "port": "right"
+            },
+            "target": {
+              "cell": "process-load-forecasting",
+              "port": "left"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              },
+              ".connection": {
+                "stroke": "#616161",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Forecast Results",
+              "description": "Forecasting output used for demand response.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Forecast Results"
+                  }
+                }
+              }
+            ],
+            "id": "flow-loadforecast-to-demandresponse",
+            "source": {
+              "cell": "process-load-forecasting",
+              "port": "bottom"
+            },
+            "target": {
+              "cell": "process-demand-response",
+              "port": "top"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              ".connection": {
+                "stroke": "#c62828",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Control Signals",
+              "description": "Demand response sends commands to RTU.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "IEC 61850/IEC 62351",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Control Signals (IEC 61850)"
+                  }
+                }
+              }
+            ],
+            "id": "flow-demandresponse-to-rtu",
+            "source": {
+              "cell": "process-demand-response",
+              "port": "bottom"
+            },
+            "target": {
+              "cell": "actor-rtu",
+              "port": "top"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              ".connection": {
+                "stroke": "#512da8",
+                "strokeWidth": 2
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 2,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Telemetry",
+              "description": "RTU provides substation telemetry.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "IEC 61850 GOOSE/SV",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  },
+                  "text": {
+                    "text": "Telemetry (GOOSE/SV)"
+                  }
+                }
+              }
+            ],
+            "id": "flow-rtu-to-voltagecontroller",
+            "source": {
+              "cell": "actor-rtu",
+              "port": "right"
+            },
+            "target": {
+              "cell": "process-voltage-regulation",
+              "port": "left"
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}

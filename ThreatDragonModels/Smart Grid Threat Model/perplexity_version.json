@@ -1,0 +1,2328 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "German Smart Grid Threat Model",
+    "owner": "",
+    "description": "Smart grid threat model for German middle and low voltage, aligned with BSI and technical requirements.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Smart Grid STRIDE",
+        "diagramType": "STRIDE",
+        "placeholder": "German Smart Grid STRIDE diagram",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [
+          {
+            "position": {
+              "x": 342,
+              "y": 441
+            },
+            "size": {
+              "width": 128,
+              "height": 60
+            },
+            "attrs": {
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "B",
+                "4": "o",
+                "5": "u",
+                "6": "n",
+                "7": "d",
+                "8": "a",
+                "9": "r",
+                "10": "y",
+                "11": "B",
+                "12": "o",
+                "13": "x"
+              },
+              "name": {
+                "0": "T",
+                "1": "r",
+                "2": "u",
+                "3": "s",
+                "4": "t",
+                "5": " ",
+                "6": "B",
+                "7": "o",
+                "8": "u",
+                "9": "n",
+                "10": "d",
+                "11": "a",
+                "12": "r",
+                "13": "y"
+              },
+              "description": {
+                "0": "B",
+                "1": "o",
+                "2": "u",
+                "3": "n",
+                "4": "d",
+                "5": "a",
+                "6": "r",
+                "7": "y",
+                "8": " ",
+                "9": "b",
+                "10": "e",
+                "11": "t",
+                "12": "w",
+                "13": "e",
+                "14": "e",
+                "15": "n",
+                "16": " ",
+                "17": "f",
+                "18": "i",
+                "19": "e",
+                "20": "l",
+                "21": "d",
+                "22": " ",
+                "23": "d",
+                "24": "e",
+                "25": "v",
+                "26": "i",
+                "27": "c",
+                "28": "e",
+                "29": "s",
+                "30": " ",
+                "31": "a",
+                "32": "n",
+                "33": "d",
+                "34": " ",
+                "35": "b",
+                "36": "a",
+                "37": "c",
+                "38": "k",
+                "39": "e",
+                "40": "n",
+                "41": "d",
+                "42": "."
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "trust-boundary-box",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 150,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "A",
+                "4": "c",
+                "5": "t",
+                "6": "o",
+                "7": "r"
+              },
+              "name": {
+                "0": "D",
+                "1": "i",
+                "2": "s",
+                "3": "t",
+                "4": "r",
+                "5": "i",
+                "6": "b",
+                "7": "u",
+                "8": "t",
+                "9": "i",
+                "10": "o",
+                "11": "n",
+                "12": " ",
+                "13": "S",
+                "14": "y",
+                "15": "s",
+                "16": "t",
+                "17": "e",
+                "18": "m",
+                "19": " ",
+                "20": "O",
+                "21": "p",
+                "22": "e",
+                "23": "r",
+                "24": "a",
+                "25": "t",
+                "26": "o",
+                "27": "r",
+                "28": " ",
+                "29": "(",
+                "30": "D",
+                "31": "S",
+                "32": "O",
+                "33": ")"
+              },
+              "description": {
+                "0": "M",
+                "1": "a",
+                "2": "n",
+                "3": "a",
+                "4": "g",
+                "5": "e",
+                "6": "s",
+                "7": " ",
+                "8": "t",
+                "9": "h",
+                "10": "e",
+                "11": " ",
+                "12": "d",
+                "13": "i",
+                "14": "s",
+                "15": "t",
+                "16": "r",
+                "17": "i",
+                "18": "b",
+                "19": "u",
+                "20": "t",
+                "21": "i",
+                "22": "o",
+                "23": "n",
+                "24": " ",
+                "25": "g",
+                "26": "r",
+                "27": "i",
+                "28": "d",
+                "29": " ",
+                "30": "a",
+                "31": "t",
+                "32": " ",
+                "33": "m",
+                "34": "e",
+                "35": "d",
+                "36": "i",
+                "37": "u",
+                "38": "m",
+                "39": " ",
+                "40": "a",
+                "41": "n",
+                "42": "d",
+                "43": " ",
+                "44": "l",
+                "45": "o",
+                "46": "w",
+                "47": " ",
+                "48": "v",
+                "49": "o",
+                "50": "l",
+                "51": "t",
+                "52": "a",
+                "53": "g",
+                "54": "e",
+                "55": " ",
+                "56": "l",
+                "57": "e",
+                "58": "v",
+                "59": "e",
+                "60": "l",
+                "61": "s",
+                "62": "."
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "82ca3be7-032a-45a3-a449-27a09254731b"
+                },
+                {
+                  "group": "right",
+                  "id": "b1f8b963-016a-436e-818f-e85208eea6b6"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3ba20688-0827-431b-9f9f-17fd8c96ee78"
+                },
+                {
+                  "group": "left",
+                  "id": "d68cf132-a4d1-407f-8d87-43a7fe25d7a0"
+                }
+              ]
+            },
+            "id": "actor-dso",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Actor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 350,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "A",
+                "4": "c",
+                "5": "t",
+                "6": "o",
+                "7": "r"
+              },
+              "name": {
+                "0": "S",
+                "1": "m",
+                "2": "a",
+                "3": "r",
+                "4": "t",
+                "5": " ",
+                "6": "M",
+                "7": "e",
+                "8": "t",
+                "9": "e",
+                "10": "r",
+                "11": " ",
+                "12": "G",
+                "13": "a",
+                "14": "t",
+                "15": "e",
+                "16": "w",
+                "17": "a",
+                "18": "y",
+                "19": " ",
+                "20": "A",
+                "21": "d",
+                "22": "m",
+                "23": "i",
+                "24": "n"
+              },
+              "description": {
+                "0": "R",
+                "1": "e",
+                "2": "s",
+                "3": "p",
+                "4": "o",
+                "5": "n",
+                "6": "s",
+                "7": "i",
+                "8": "b",
+                "9": "l",
+                "10": "e",
+                "11": " ",
+                "12": "f",
+                "13": "o",
+                "14": "r",
+                "15": " ",
+                "16": "s",
+                "17": "e",
+                "18": "c",
+                "19": "u",
+                "20": "r",
+                "21": "e",
+                "22": " ",
+                "23": "o",
+                "24": "p",
+                "25": "e",
+                "26": "r",
+                "27": "a",
+                "28": "t",
+                "29": "i",
+                "30": "o",
+                "31": "n",
+                "32": " ",
+                "33": "a",
+                "34": "n",
+                "35": "d",
+                "36": " ",
+                "37": "m",
+                "38": "a",
+                "39": "n",
+                "40": "a",
+                "41": "g",
+                "42": "e",
+                "43": "m",
+                "44": "e",
+                "45": "n",
+                "46": "t",
+                "47": " ",
+                "48": "o",
+                "49": "f",
+                "50": " ",
+                "51": "s",
+                "52": "m",
+                "53": "a",
+                "54": "r",
+                "55": "t",
+                "56": " ",
+                "57": "m",
+                "58": "e",
+                "59": "t",
+                "60": "e",
+                "61": "r",
+                "62": " ",
+                "63": "g",
+                "64": "a",
+                "65": "t",
+                "66": "e",
+                "67": "w",
+                "68": "a",
+                "69": "y",
+                "70": "s",
+                "71": "."
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c71864e9-f549-49b7-9258-4ace1170c91d"
+                },
+                {
+                  "group": "right",
+                  "id": "8c7251fe-db1a-4fdf-944f-550abe0ef3e7"
+                },
+                {
+                  "group": "bottom",
+                  "id": "73f1e788-decb-4b15-aa60-39e6e9d85a4f"
+                },
+                {
+                  "group": "left",
+                  "id": "cd15e230-03da-40fa-bd20-e9da0d241087"
+                }
+              ]
+            },
+            "id": "actor-smgw-admin",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Actor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 550,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "A",
+                "4": "c",
+                "5": "t",
+                "6": "o",
+                "7": "r"
+              },
+              "name": {
+                "0": "E",
+                "1": "n",
+                "2": "d",
+                "3": " ",
+                "4": "U",
+                "5": "s",
+                "6": "e",
+                "7": "r",
+                "8": " ",
+                "9": "/",
+                "10": " ",
+                "11": "C",
+                "12": "o",
+                "13": "n",
+                "14": "s",
+                "15": "u",
+                "16": "m",
+                "17": "e",
+                "18": "r"
+              },
+              "description": {
+                "0": "R",
+                "1": "e",
+                "2": "s",
+                "3": "i",
+                "4": "d",
+                "5": "e",
+                "6": "n",
+                "7": "t",
+                "8": "i",
+                "9": "a",
+                "10": "l",
+                "11": ",",
+                "12": " ",
+                "13": "c",
+                "14": "o",
+                "15": "m",
+                "16": "m",
+                "17": "e",
+                "18": "r",
+                "19": "c",
+                "20": "i",
+                "21": "a",
+                "22": "l",
+                "23": ",",
+                "24": " ",
+                "25": "o",
+                "26": "r",
+                "27": " ",
+                "28": "i",
+                "29": "n",
+                "30": "d",
+                "31": "u",
+                "32": "s",
+                "33": "t",
+                "34": "r",
+                "35": "i",
+                "36": "a",
+                "37": "l",
+                "38": " ",
+                "39": "c",
+                "40": "u",
+                "41": "s",
+                "42": "t",
+                "43": "o",
+                "44": "m",
+                "45": "e",
+                "46": "r",
+                "47": "."
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "db19da39-aa0c-4db0-8b4b-5b5c9435864d"
+                },
+                {
+                  "group": "right",
+                  "id": "75597890-7bc6-44e0-93f7-82dc0dcb80a2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "96d2c0d2-e424-4509-8186-53679895e3a1"
+                },
+                {
+                  "group": "left",
+                  "id": "6c563921-e99a-4301-bb68-45df79425cbd"
+                }
+              ]
+            },
+            "id": "actor-enduser",
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            },
+            "data": {
+              "type": "tm.Actor",
+              "name": "Actor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 350,
+              "y": 250
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "P",
+                "4": "r",
+                "5": "o",
+                "6": "c",
+                "7": "e",
+                "8": "s",
+                "9": "s"
+              },
+              "name": {
+                "0": "M",
+                "1": "e",
+                "2": "t",
+                "3": "e",
+                "4": "r",
+                "5": " ",
+                "6": "D",
+                "7": "a",
+                "8": "t",
+                "9": "a",
+                "10": " ",
+                "11": "A",
+                "12": "c",
+                "13": "q",
+                "14": "u",
+                "15": "i",
+                "16": "s",
+                "17": "i",
+                "18": "t",
+                "19": "i",
+                "20": "o",
+                "21": "n"
+              },
+              "description": {
+                "0": "C",
+                "1": "o",
+                "2": "l",
+                "3": "l",
+                "4": "e",
+                "5": "c",
+                "6": "t",
+                "7": "s",
+                "8": " ",
+                "9": "c",
+                "10": "o",
+                "11": "n",
+                "12": "s",
+                "13": "u",
+                "14": "m",
+                "15": "p",
+                "16": "t",
+                "17": "i",
+                "18": "o",
+                "19": "n",
+                "20": " ",
+                "21": "a",
+                "22": "n",
+                "23": "d",
+                "24": " ",
+                "25": "g",
+                "26": "e",
+                "27": "n",
+                "28": "e",
+                "29": "r",
+                "30": "a",
+                "31": "t",
+                "32": "i",
+                "33": "o",
+                "34": "n",
+                "35": " ",
+                "36": "d",
+                "37": "a",
+                "38": "t",
+                "39": "a",
+                "40": " ",
+                "41": "f",
+                "42": "r",
+                "43": "o",
+                "44": "m",
+                "45": " ",
+                "46": "s",
+                "47": "m",
+                "48": "a",
+                "49": "r",
+                "50": "t",
+                "51": " ",
+                "52": "m",
+                "53": "e",
+                "54": "t",
+                "55": "e",
+                "56": "r",
+                "57": "s",
+                "58": "."
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "71995e13-a29f-4209-8f12-d29735a97478"
+                },
+                {
+                  "group": "right",
+                  "id": "82c1ae8d-e80a-4017-9dc3-9a52995a2d9a"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2f2f8511-dc9d-4215-831b-2a9dd7864d69"
+                },
+                {
+                  "group": "left",
+                  "id": "543e3ddb-e340-4a22-b86b-4b6c197420ca"
+                }
+              ]
+            },
+            "id": "process-meterdata"
+          },
+          {
+            "position": {
+              "x": 150,
+              "y": 400
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "S",
+                "4": "t",
+                "5": "o",
+                "6": "r",
+                "7": "e"
+              },
+              "name": {
+                "0": "S",
+                "1": "m",
+                "2": "a",
+                "3": "r",
+                "4": "t",
+                "5": " ",
+                "6": "M",
+                "7": "e",
+                "8": "t",
+                "9": "e",
+                "10": "r"
+              },
+              "description": {
+                "0": "M",
+                "1": "e",
+                "2": "a",
+                "3": "s",
+                "4": "u",
+                "5": "r",
+                "6": "e",
+                "7": "s",
+                "8": " ",
+                "9": "e",
+                "10": "l",
+                "11": "e",
+                "12": "c",
+                "13": "t",
+                "14": "r",
+                "15": "i",
+                "16": "c",
+                "17": "i",
+                "18": "t",
+                "19": "y",
+                "20": " ",
+                "21": "c",
+                "22": "o",
+                "23": "n",
+                "24": "s",
+                "25": "u",
+                "26": "m",
+                "27": "p",
+                "28": "t",
+                "29": "i",
+                "30": "o",
+                "31": "n",
+                "32": "/",
+                "33": "g",
+                "34": "e",
+                "35": "n",
+                "36": "e",
+                "37": "r",
+                "38": "a",
+                "39": "t",
+                "40": "i",
+                "41": "o",
+                "42": "n",
+                "43": "."
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "16fcac13-2275-4372-ac48-947fc6ed26ef"
+                },
+                {
+                  "group": "right",
+                  "id": "b36c22a1-c4af-4b31-8c86-c396b6e6ac3d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f135f0c5-d04d-4da6-9d91-e2e53c197d3f"
+                },
+                {
+                  "group": "left",
+                  "id": "6d6c59e1-3bf7-47c5-a245-bf3dbf788ddf"
+                }
+              ]
+            },
+            "id": "datastore-meter",
+            "data": {
+              "type": "tm.Store",
+              "name": "Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 350,
+              "y": 400
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "S",
+                "4": "t",
+                "5": "o",
+                "6": "r",
+                "7": "e"
+              },
+              "name": {
+                "0": "S",
+                "1": "m",
+                "2": "a",
+                "3": "r",
+                "4": "t",
+                "5": " ",
+                "6": "M",
+                "7": "e",
+                "8": "t",
+                "9": "e",
+                "10": "r",
+                "11": " ",
+                "12": "G",
+                "13": "a",
+                "14": "t",
+                "15": "e",
+                "16": "w",
+                "17": "a",
+                "18": "y",
+                "19": " ",
+                "20": "(",
+                "21": "S",
+                "22": "M",
+                "23": "G",
+                "24": "W",
+                "25": ")"
+              },
+              "description": {
+                "0": "S",
+                "1": "e",
+                "2": "c",
+                "3": "u",
+                "4": "r",
+                "5": "e",
+                "6": " ",
+                "7": "c",
+                "8": "o",
+                "9": "m",
+                "10": "m",
+                "11": "u",
+                "12": "n",
+                "13": "i",
+                "14": "c",
+                "15": "a",
+                "16": "t",
+                "17": "i",
+                "18": "o",
+                "19": "n",
+                "20": " ",
+                "21": "d",
+                "22": "e",
+                "23": "v",
+                "24": "i",
+                "25": "c",
+                "26": "e",
+                "27": " ",
+                "28": "b",
+                "29": "e",
+                "30": "t",
+                "31": "w",
+                "32": "e",
+                "33": "e",
+                "34": "n",
+                "35": " ",
+                "36": "m",
+                "37": "e",
+                "38": "t",
+                "39": "e",
+                "40": "r",
+                "41": "s",
+                "42": " ",
+                "43": "a",
+                "44": "n",
+                "45": "d",
+                "46": " ",
+                "47": "e",
+                "48": "x",
+                "49": "t",
+                "50": "e",
+                "51": "r",
+                "52": "n",
+                "53": "a",
+                "54": "l",
+                "55": " ",
+                "56": "n",
+                "57": "e",
+                "58": "t",
+                "59": "w",
+                "60": "o",
+                "61": "r",
+                "62": "k",
+                "63": "s",
+                "64": "."
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "05c6d8c0-4ffa-44bf-b635-2afc09086d08"
+                },
+                {
+                  "group": "right",
+                  "id": "c27d55ce-c170-4cb6-9960-072e54f491a2"
+                },
+                {
+                  "group": "bottom",
+                  "id": "fe0d239c-aaec-4cc9-9616-832aa2d79112"
+                },
+                {
+                  "group": "left",
+                  "id": "d4f3f2b2-445f-4154-9a5f-e80fa52ca4fc"
+                }
+              ]
+            },
+            "id": "datastore-smgw",
+            "data": {
+              "type": "tm.Store",
+              "name": "Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 550,
+              "y": 400
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "S",
+                "4": "t",
+                "5": "o",
+                "6": "r",
+                "7": "e"
+              },
+              "name": {
+                "0": "D",
+                "1": "S",
+                "2": "O",
+                "3": " ",
+                "4": "B",
+                "5": "a",
+                "6": "c",
+                "7": "k",
+                "8": "e",
+                "9": "n",
+                "10": "d"
+              },
+              "description": {
+                "0": "B",
+                "1": "a",
+                "2": "c",
+                "3": "k",
+                "4": "e",
+                "5": "n",
+                "6": "d",
+                "7": " ",
+                "8": "s",
+                "9": "y",
+                "10": "s",
+                "11": "t",
+                "12": "e",
+                "13": "m",
+                "14": "s",
+                "15": " ",
+                "16": "f",
+                "17": "o",
+                "18": "r",
+                "19": " ",
+                "20": "g",
+                "21": "r",
+                "22": "i",
+                "23": "d",
+                "24": " ",
+                "25": "m",
+                "26": "o",
+                "27": "n",
+                "28": "i",
+                "29": "t",
+                "30": "o",
+                "31": "r",
+                "32": "i",
+                "33": "n",
+                "34": "g",
+                "35": " ",
+                "36": "a",
+                "37": "n",
+                "38": "d",
+                "39": " ",
+                "40": "m",
+                "41": "a",
+                "42": "n",
+                "43": "a",
+                "44": "g",
+                "45": "e",
+                "46": "m",
+                "47": "e",
+                "48": "n",
+                "49": "t",
+                "50": "."
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "87f359ba-2b45-4f5e-b4ae-eb778cacfc91"
+                },
+                {
+                  "group": "right",
+                  "id": "ff0788f4-ea95-4578-802c-811d4cc4b184"
+                },
+                {
+                  "group": "bottom",
+                  "id": "41b2b1be-9525-4bcf-b765-3ecbe51148a7"
+                },
+                {
+                  "group": "left",
+                  "id": "d9cdd9ab-e9f9-4155-8a35-22f9f86718bc"
+                }
+              ]
+            },
+            "id": "datastore-dso-backend",
+            "data": {
+              "type": "tm.Store",
+              "name": "Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "attrs": {
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "B",
+                "4": "o",
+                "5": "u",
+                "6": "n",
+                "7": "d",
+                "8": "a",
+                "9": "r",
+                "10": "y"
+              },
+              "name": {
+                "0": "P",
+                "1": "u",
+                "2": "b",
+                "3": "l",
+                "4": "i",
+                "5": "c",
+                "6": " ",
+                "7": "N",
+                "8": "e",
+                "9": "t",
+                "10": "w",
+                "11": "o",
+                "12": "r",
+                "13": "k",
+                "14": " ",
+                "15": "B",
+                "16": "o",
+                "17": "u",
+                "18": "n",
+                "19": "d",
+                "20": "a",
+                "21": "r",
+                "22": "y"
+              },
+              "description": {
+                "0": "B",
+                "1": "o",
+                "2": "u",
+                "3": "n",
+                "4": "d",
+                "5": "a",
+                "6": "r",
+                "7": "y",
+                "8": " ",
+                "9": "f",
+                "10": "o",
+                "11": "r",
+                "12": " ",
+                "13": "W",
+                "14": "A",
+                "15": "N",
+                "16": " ",
+                "17": "c",
+                "18": "o",
+                "19": "m",
+                "20": "m",
+                "21": "u",
+                "22": "n",
+                "23": "i",
+                "24": "c",
+                "25": "a",
+                "26": "t",
+                "27": "i",
+                "28": "o",
+                "29": "n",
+                "30": "s",
+                "31": "."
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "trust-boundary-line",
+            "source": {
+              "x": 280,
+              "y": 200
+            },
+            "target": {
+              "x": 530,
+              "y": 240
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#5F95FF",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "F",
+                "4": "l",
+                "5": "o",
+                "6": "w"
+              },
+              "name": {
+                "0": "M",
+                "1": "e",
+                "2": "t",
+                "3": "e",
+                "4": "r",
+                "5": " ",
+                "6": "R",
+                "7": "e",
+                "8": "a",
+                "9": "d",
+                "10": "i",
+                "11": "n",
+                "12": "g",
+                "13": " ",
+                "14": "T",
+                "15": "r",
+                "16": "a",
+                "17": "n",
+                "18": "s",
+                "19": "m",
+                "20": "i",
+                "21": "s",
+                "22": "s",
+                "23": "i",
+                "24": "o",
+                "25": "n"
+              },
+              "description": {
+                "0": "S",
+                "1": "m",
+                "2": "a",
+                "3": "r",
+                "4": "t",
+                "5": " ",
+                "6": "M",
+                "7": "e",
+                "8": "t",
+                "9": "e",
+                "10": "r",
+                "11": " ",
+                "12": "→",
+                "13": " ",
+                "14": "S",
+                "15": "M",
+                "16": "G",
+                "17": "W",
+                "18": " ",
+                "19": "(",
+                "20": "L",
+                "21": "M",
+                "22": "N",
+                "23": ",",
+                "24": " ",
+                "25": "D",
+                "26": "L",
+                "27": "M",
+                "28": "S",
+                "29": "/",
+                "30": "C",
+                "31": "O",
+                "32": "S",
+                "33": "E",
+                "34": "M",
+                "35": ")"
+              },
+              "protocol": {
+                "0": "L",
+                "1": "M",
+                "2": "N",
+                "3": ",",
+                "4": " ",
+                "5": "D",
+                "6": "L",
+                "7": "M",
+                "8": "S",
+                "9": "/",
+                "10": "C",
+                "11": "O",
+                "12": "S",
+                "13": "E",
+                "14": "M"
+              },
+              "threats": {
+                "0": {
+                  "id": "threat-spoofing-meter",
+                  "title": "Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Unauthorized device impersonates a smart meter.",
+                  "mitigation": "Use device authentication as per BSI TR-03109.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                "1": {
+                  "id": "threat-tampering-meter",
+                  "title": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Manipulation of meter readings (energy theft).",
+                  "mitigation": "Integrity checks and signed data transfer.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              },
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0,
+                "repudiation": 0
+              },
+              "labels": {
+                "0": "Data Flow"
+              },
+              "id": {
+                "0": "f",
+                "1": "l",
+                "2": "o",
+                "3": "w",
+                "4": "-",
+                "5": "m",
+                "6": "e",
+                "7": "t",
+                "8": "e",
+                "9": "r",
+                "10": "-",
+                "11": "s",
+                "12": "m",
+                "13": "g",
+                "14": "w"
+              },
+              "source": {
+                "cell": "datastore-meter",
+                "port": "bottom"
+              },
+              "target": {
+                "cell": "datastore-smgw",
+                "port": "left"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "9cd092a6-2d1c-430e-b7a7-a6f7918ea44a"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#5F95FF",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "F",
+                "4": "l",
+                "5": "o",
+                "6": "w"
+              },
+              "name": {
+                "0": "G",
+                "1": "a",
+                "2": "t",
+                "3": "e",
+                "4": "w",
+                "5": "a",
+                "6": "y",
+                "7": " ",
+                "8": "D",
+                "9": "a",
+                "10": "t",
+                "11": "a",
+                "12": " ",
+                "13": "U",
+                "14": "p",
+                "15": "l",
+                "16": "i",
+                "17": "n",
+                "18": "k"
+              },
+              "description": {
+                "0": "S",
+                "1": "M",
+                "2": "G",
+                "3": "W",
+                "4": " ",
+                "5": "→",
+                "6": " ",
+                "7": "D",
+                "8": "S",
+                "9": "O",
+                "10": " ",
+                "11": "B",
+                "12": "a",
+                "13": "c",
+                "14": "k",
+                "15": "e",
+                "16": "n",
+                "17": "d",
+                "18": " ",
+                "19": "(",
+                "20": "W",
+                "21": "A",
+                "22": "N",
+                "23": ",",
+                "24": " ",
+                "25": "T",
+                "26": "L",
+                "27": "S",
+                "28": ",",
+                "29": " ",
+                "30": "B",
+                "31": "S",
+                "32": "I",
+                "33": " ",
+                "34": "T",
+                "35": "R",
+                "36": "-",
+                "37": "0",
+                "38": "3",
+                "39": "1",
+                "40": "0",
+                "41": "9",
+                "42": "-",
+                "43": "1",
+                "44": "/",
+                "45": "5",
+                "46": ")"
+              },
+              "protocol": {
+                "0": "T",
+                "1": "L",
+                "2": "S",
+                "3": ",",
+                "4": " ",
+                "5": "H",
+                "6": "T",
+                "7": "T",
+                "8": "P",
+                "9": "S",
+                "10": ",",
+                "11": " ",
+                "12": "B",
+                "13": "S",
+                "14": "I",
+                "15": " ",
+                "16": "T",
+                "17": "R",
+                "18": "-",
+                "19": "0",
+                "20": "3",
+                "21": "1",
+                "22": "0",
+                "23": "9",
+                "24": "-",
+                "25": "1",
+                "26": "/",
+                "27": "T",
+                "28": "R",
+                "29": "-",
+                "30": "0",
+                "31": "3",
+                "32": "1",
+                "33": "0",
+                "34": "9",
+                "35": "-",
+                "36": "5"
+              },
+              "threats": {
+                "0": {
+                  "id": "threat-mitm",
+                  "title": "Man-in-the-Middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information Disclosure",
+                  "description": "Interception or modification of communication between SMGW and DSO.",
+                  "mitigation": "End-to-end encryption and mutual authentication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                "1": {
+                  "id": "threat-dos",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of Service",
+                  "description": "Flooding SMGW or DSO systems with requests.",
+                  "mitigation": "Rate limiting, anomaly detection.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              },
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0,
+                "repudiation": 0
+              },
+              "labels": {
+                "0": "Data Flow"
+              },
+              "id": {
+                "0": "f",
+                "1": "l",
+                "2": "o",
+                "3": "w",
+                "4": "-",
+                "5": "s",
+                "6": "m",
+                "7": "g",
+                "8": "w",
+                "9": "-",
+                "10": "d",
+                "11": "s",
+                "12": "o"
+              },
+              "source": {
+                "cell": "datastore-smgw",
+                "port": "right"
+              },
+              "target": {
+                "cell": "datastore-dso-backend",
+                "port": "left"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "a293fb19-7230-48da-a7a9-29845b315e2e"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#5F95FF",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              },
+              "type": {
+                "0": "t",
+                "1": "m",
+                "2": ".",
+                "3": "F",
+                "4": "l",
+                "5": "o",
+                "6": "w"
+              },
+              "name": {
+                "0": "R",
+                "1": "e",
+                "2": "m",
+                "3": "o",
+                "4": "t",
+                "5": "e",
+                "6": " ",
+                "7": "M",
+                "8": "a",
+                "9": "n",
+                "10": "a",
+                "11": "g",
+                "12": "e",
+                "13": "m",
+                "14": "e",
+                "15": "n",
+                "16": "t",
+                "17": " ",
+                "18": "C",
+                "19": "o",
+                "20": "m",
+                "21": "m",
+                "22": "a",
+                "23": "n",
+                "24": "d",
+                "25": "s"
+              },
+              "description": {
+                "0": "A",
+                "1": "d",
+                "2": "m",
+                "3": "i",
+                "4": "n",
+                "5": " ",
+                "6": "→",
+                "7": " ",
+                "8": "S",
+                "9": "M",
+                "10": "G",
+                "11": "W",
+                "12": " ",
+                "13": "(",
+                "14": "W",
+                "15": "A",
+                "16": "N",
+                "17": ",",
+                "18": " ",
+                "19": "T",
+                "20": "L",
+                "21": "S",
+                "22": ",",
+                "23": " ",
+                "24": "B",
+                "25": "S",
+                "26": "I",
+                "27": " ",
+                "28": "T",
+                "29": "R",
+                "30": "-",
+                "31": "0",
+                "32": "3",
+                "33": "1",
+                "34": "0",
+                "35": "9",
+                "36": "-",
+                "37": "6",
+                "38": ")"
+              },
+              "protocol": {
+                "0": "T",
+                "1": "L",
+                "2": "S",
+                "3": ",",
+                "4": " ",
+                "5": "H",
+                "6": "T",
+                "7": "T",
+                "8": "P",
+                "9": "S",
+                "10": ",",
+                "11": " ",
+                "12": "B",
+                "13": "S",
+                "14": "I",
+                "15": " ",
+                "16": "T",
+                "17": "R",
+                "18": "-",
+                "19": "0",
+                "20": "3",
+                "21": "1",
+                "22": "0",
+                "23": "9",
+                "24": "-",
+                "25": "6"
+              },
+              "threats": {
+                "0": {
+                  "id": "threat-eop",
+                  "title": "Elevation of Privilege",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of Privilege",
+                  "description": "Exploiting SMGW vulnerabilities to gain admin rights.",
+                  "mitigation": "Role-based access control, regular patching.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                "1": {
+                  "id": "threat-remote-control",
+                  "title": "Unauthorized Remote Control",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Exploiting remote management to switch off/on supply.",
+                  "mitigation": "Command authorization, logging, and monitoring.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              },
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1,
+                "repudiation": 0
+              },
+              "labels": {
+                "0": "Data Flow"
+              },
+              "id": {
+                "0": "f",
+                "1": "l",
+                "2": "o",
+                "3": "w",
+                "4": "-",
+                "5": "a",
+                "6": "d",
+                "7": "m",
+                "8": "i",
+                "9": "n",
+                "10": "-",
+                "11": "s",
+                "12": "m",
+                "13": "g",
+                "14": "w"
+              },
+              "source": {
+                "cell": "actor-smgw-admin",
+                "port": "bottom"
+              },
+              "target": {
+                "cell": "datastore-smgw",
+                "port": "top"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "26a2aad1-58a1-463d-8879-56ee09164aca"
+          }
+        ]
+      }
+    ],
+    "diagramTop": 10,
+    "threatTop": 100
+  }
+}
