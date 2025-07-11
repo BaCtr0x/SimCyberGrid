@@ -1,182 +1,41 @@
 {
   "main": {
-    "id": "a71a3723dc57ea09",
+    "id": "ab0f80352de5319b",
     "type": "split",
     "children": [
       {
-        "id": "c84d774f592fdfd8",
+        "id": "8fad12b8bcec1a29",
         "type": "tabs",
         "children": [
           {
-            "id": "5a708a7caf31053c",
+            "id": "dd90788ba503b047",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Abreviations.md",
+                "file": "General/Notes Meeting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abreviations"
-            }
-          },
-          {
-            "id": "5bfd541946b49d8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Sicherheitsangriffe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sicherheitsangriffe"
-            }
-          },
-          {
-            "id": "9da6247459301841",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Schutzziele.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Schutzziele"
-            }
-          },
-          {
-            "id": "f25843410e4fe679",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Standards/IEC 62351.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "IEC 62351"
-            }
-          },
-          {
-            "id": "d4b9d28cdc16b1cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/STRIDE.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "STRIDE"
-            }
-          },
-          {
-            "id": "653accfd249576d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Use_cases/Kommunikationssimulator Dataflow.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kommunikationssimulator Dataflow"
-            }
-          },
-          {
-            "id": "277b4484f74594dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "General/TR-03109.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TR-03109"
-            }
-          },
-          {
-            "id": "c6678a7284f7f45c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/OCTAVE.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "OCTAVE"
-            }
-          },
-          {
-            "id": "03eef37a441a6842",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Smart Metering Components/Akteure am SMGW.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Akteure am SMGW"
-            }
-          },
-          {
-            "id": "4432e674ee418af4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Threat Analysis.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Threat Analysis"
-            }
-          },
-          {
-            "id": "af9e099982118e06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/TRIKE.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TRIKE"
+              "title": "Notes Meeting"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "bc7acbf1da373093",
+    "id": "e5b7e3ce4e7a8de5",
     "type": "split",
     "children": [
       {
-        "id": "6f35e5505c3909e5",
+        "id": "52d008fb4931e6c3",
         "type": "tabs",
         "children": [
           {
-            "id": "c84c5630b7d88ddc",
+            "id": "97efe271a8ee78ba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -189,7 +48,7 @@
             }
           },
           {
-            "id": "d5096e7dc954ea39",
+            "id": "e00c9e071f2dc836",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -206,7 +65,7 @@
             }
           },
           {
-            "id": "1656a205e064ea97",
+            "id": "a9aecd442f94f2f3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -219,25 +78,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5
+    "width": 300
   },
   "right": {
-    "id": "2bc0937f071acec5",
+    "id": "194ffbf3c7e4f56e",
     "type": "split",
     "children": [
       {
-        "id": "6415d148d5bb5b98",
+        "id": "8894f160158b7237",
         "type": "tabs",
         "children": [
           {
-            "id": "51b0156cdea82426",
+            "id": "2f738656767015c0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technologien und Algorithmen/Algorithmen/Eliptic Curve.md",
-                "collapseAll": true,
-                "extraContext": true,
+                "collapseAll": false,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -245,25 +103,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Eliptic Curve"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "4f7fca7553e97e12",
+            "id": "95de94e9685b3d0c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unterlagen/Masterarbeit_Moritz.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Masterarbeit_Moritz"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "74a7840e9ea5d38e",
+            "id": "2aeeb75cc8369455",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -278,26 +135,25 @@
             }
           },
           {
-            "id": "9456b72bfc5dc62a",
+            "id": "fa9afbf892e90a83",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Smart Metering Components/Akteure am SMGW.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Akteure am SMGW"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -309,68 +165,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "03eef37a441a6842",
-  "lastOpenFiles": [
-<<<<<<< HEAD
-    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model_04_07_25.json",
-    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model copy.json",
-    "ThreatDragonModels/Smart Grid Threat Model/Smart_Grid_Threat_Model.json",
-    "General/Abreviations.md",
-    "General/Notes Meeting.md",
-    "ThreatDragonModels/Smart Grid Threat Model/Smart Grid Threat Model.json~",
-    "ThreatDragonModels/Smart Grid Threat Model/4913",
-    "Security/Threat Analysis.md",
-=======
-    "ThreatDragonModels/Smart Grid Threat Model/chatgpt_version.json~",
-    "ThreatDragonModels/Smart Grid Threat Model/4913",
-    "General/TR-03109.md",
-    "General/Notes Meeting.md",
-    "ThreatDragonModels/Smart Grid Threat Model/chatgpt_version.json",
-    "ThreatDragonModels/Smart Grid Threat Model/new-model.json",
-    "ThreatDragonModels/Smart Grid Threat Model/perplexity_version.json~",
-    "ThreatDragonModels/Smart Grid Threat Model/Smart Grid Threat Model.json~",
-    "Security/Threat Analysis.md",
-    "General/Abreviations.md",
->>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
-    "Security/STRIDE.md",
-    "Images/Threats_categories.png",
-    "Technologien und Algorithmen/Algorithmen/ECDSA.md",
-    "Technologien und Algorithmen/Techniques/Nachrichten Typen.md",
-    "Standards/IEC 62351.md",
-    "Images/IEC_62351_crypt_algos.png",
-    "Standards/IEC 60870.md",
-    "Technologien und Algorithmen/Techniques/DNP3.md",
-    "Use_cases/Kommunikationssimulator Dataflow.md",
-    "Security/TRIKE.md",
-    "Security/OCTAVE.md",
-    "Security/Threat Analysis Techniques.md",
-    "Analysis/Dataflow Diagram Smart Grid.md",
-    "Security/Schutzziele.md",
-    "Security/Sicherheitsstandards.md",
-    "Security/Sicherheitsangriffe.md",
-    "Images/DFD_and_STRIDE.png",
-    "Technologien und Algorithmen/Algorithmen/ECKA-DH.md",
-    "Images/STRIDE_Steps_and_Security_Properties.png",
-    "Images/Thread_Analysis_Methods.png",
-    "Use_cases/Assets Kommunikationssimulator.md",
-    "Use_cases/communication_dataflow_diagram.pdf",
-    "Use_cases/communication_dataflow_diagram.mmd",
-    "General/communication_dataflow_diagram.pdf",
-    "General/communication_dataflow_diagram.mmd",
-<<<<<<< HEAD
-    "General/test.mmd",
-    "General/diagram_2.pdf",
-=======
->>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
-    "General/diagram.md",
-    "Standards/RFC 5424.md",
-    "Standards/RFC 5425.md",
-    "Standards/IEC 61970.md",
-    "Standards/X.509.md",
-    "Images/TAC_Table.png",
-    "Images/IEC_62351_Overview.png",
-    "Images/IEC_62351_Overview.png",
-    "Images/IEC_61850_protocol_suit.png",
-    "Images/Screenshot 2025-04-29 at 14.00.53.png"
-  ]
+  "active": "dd90788ba503b047",
+  "lastOpenFiles": []
 }

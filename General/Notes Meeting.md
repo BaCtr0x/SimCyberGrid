@@ -317,4 +317,7 @@
 - Perplexity bekommt die Syntax nicht hin, selbst mit erneuten hinweisen auf Korrekturen, am Ende bekommt man eine kleine halbwegs funktionierende Darstellung als Konzept, aber die Syntax und somit das model um es direkt in Threatdragon zu packen bekommt man nicht hin, zumindest nicht mit 10 Promts.
 - Einfach so weitermachen wie bis jetzt
 >>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
-- 
+
+## Milena 15.07.2025
+- [ ] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
+- [ ] 
