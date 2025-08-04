@@ -320,4 +320,34 @@
 
 ## Milena 15.07.2025
 - [ ] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
-- [ ] 
+	- Koennen davon ausgehen, dass nur minimum wirklich da ist und der rest ist vielleicht da, aber sascha schaut mal ob er HNE nochmal fragt was die meinen
+
+## Weekly 1707.2025
+- Kooperationsvertrag sollte alles auf dem Weg sein, Sascha ist aber nicht soo tief drin/er hat nicht soo viel mitgebkommen und von Merlin weiss er, dass es bei den richtigen Leuten ist 
+- Sascha schreibt nen Antrag mit Deadline morgen und somit hat er nichts geschafft, aber danach ist er wieder voll dabei 
+	- Treffen mit dem Dude der ueber das Threatmodel schaut kam noch nicht zustande, kommt aber noch 
+- Felix hat sich die Use Cases noch angeschaut und nach 14a und EEG9 angeschaut
+	- Transmission networks sind nicht fuer uns, weil hoechstspannung fuer uns nicht interessant sind und transmission darein faellt
+	- Sascha und ich bleiben erstmal bei den groesseren Mengen an Use Cases, damit wir die Anforderungen beibehalten
+	- Umspannwerkt und uebertragungsnetze eher unwichtig ist auch irrelevant
+
+## Milena 22.07.2025:
+- [x] Anschauen ob man aus Excel git issues bauen kann
+	- Kann man machen
+- [x] Bekommen wir das hin, dass sowas wie Topologie und Kommunikationsprotokolle eher modular sind
+	- hardware in the loop scheint modular zu sein, die frage ist also eher eine sache von Kommunikationssimulator problem
+	- also alles was von der Hardware ermoeglicht wird sollte/muss von der Software abgebildet werden
+
+## Weekly 24.07.2025:
+- Sollen eine Steuerbox bekommen, die man manipulieren kann
+	- Sollen auch nicht Teil vom Hauptteil von HNE sind und eine extra Domaine bekommen, so dass man das Ganze etwas abgekapselt hat. Somit koennen wir selbst was triggern und muessen nicht auf irgendwas achten
+
+
+## Weekly 04.08.2025
+- `.md` files auch als excel haben
+  einfach ein Export schreiben
+- Sascha braut noch was fuer die Testfaelle und dann erstell ich noch ne `.md` file draus
+- Wollen nochmal ueber die Anforderungen schauen und dann bau ich die als issues
+- script schreiben um anforderungen zu reduzieren und eine externe tabelle zu schreiben die nur 14a, EEG9 und Markdinelichkeits Anforderungen beinhaltet
+- Steal now break later attack fuer Netzwektopology relevant sein koennen
+- 
