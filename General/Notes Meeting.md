@@ -319,5 +319,12 @@
 >>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
 
 ## Milena 15.07.2025
-- [ ] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
-- [ ] 
+- [x] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
+
+## Milena 29.07.2025
+- gi workshop und strom/energie konferenzen mal anschauen, ob man da was zu den Threats vorstellen kann
+- ansonsten schauen, dass ich die Tabellen und so hinbekomme und dann weiter machen wie geplant
+
+## Milena 05.08.2025
+- Donnerstag einmal fragen, ob es schon so tools gibt fuer sowas wie false data injection oder ob man da selber schauen muss, oder ob bekannt ist, dass man das eh alles selber bauen muss
+- weiter an den mitigations arbeiten und versuchen bis ende August mit dem Sicherheitspacket durch zu sein
