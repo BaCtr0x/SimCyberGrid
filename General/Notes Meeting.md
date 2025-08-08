@@ -341,6 +341,10 @@
 - Sollen eine Steuerbox bekommen, die man manipulieren kann
 	- Sollen auch nicht Teil vom Hauptteil von HNE sind und eine extra Domaine bekommen, so dass man das Ganze etwas abgekapselt hat. Somit koennen wir selbst was triggern und muessen nicht auf irgendwas achten
 
+## Milena 29.07.2025
+- gi workshop und strom/energie konferenzen mal anschauen, ob man da was zu den Threats vorstellen kann
+- ansonsten schauen, dass ich die Tabellen und so hinbekomme und dann weiter machen wie geplant
+
 
 ## Weekly 04.08.2025
 - `.md` files auch als excel haben
@@ -349,4 +353,8 @@
 - Wollen nochmal ueber die Anforderungen schauen und dann bau ich die als issues
 - script schreiben um anforderungen zu reduzieren und eine externe tabelle zu schreiben die nur 14a, EEG9 und Markdinelichkeits Anforderungen beinhaltet
 - Steal now break later attack fuer Netzwektopology relevant sein koennen
-- 
+
+## Milena 05.08.2025
+- Donnerstag einmal fragen, ob es schon so tools gibt fuer sowas wie false data injection oder ob man da selber schauen muss, oder ob bekannt ist, dass man das eh alles selber bauen muss
+- weiter an den mitigations arbeiten und versuchen bis ende August mit dem Sicherheitspacket durch zu sein
+
