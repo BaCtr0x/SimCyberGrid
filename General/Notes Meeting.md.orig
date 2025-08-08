@@ -319,7 +319,9 @@
 >>>>>>> 9bf3522 (added the models that were created after 10 to 15 promts for perplexity and chatgpt and the notes from the weekly with milena")
 
 ## Milena 15.07.2025
-- [x] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
+<<<<<<< HEAD
+- [ ] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
+	- Koennen davon ausgehen, dass nur minimum wirklich da ist und der rest ist vielleicht da, aber sascha schaut mal ob er HNE nochmal fragt was die meinen
 
 ## Weekly 1707.2025
 - Kooperationsvertrag sollte alles auf dem Weg sein, Sascha ist aber nicht soo tief drin/er hat nicht soo viel mitgebkommen und von Merlin weiss er, dass es bei den richtigen Leuten ist 
@@ -350,3 +352,14 @@
 - script schreiben um anforderungen zu reduzieren und eine externe tabelle zu schreiben die nur 14a, EEG9 und Markdinelichkeits Anforderungen beinhaltet
 - Steal now break later attack fuer Netzwektopology relevant sein koennen
 - 
+=======
+- [x] Wollen wir sicherheitsluecken, die entstehen, weil es nicht vorgegeben, sondern nur empfohlen ist als luecken festlegen oder nehmen wir an, dass es dann auch umgesaetzt wird?
+
+## Milena 29.07.2025
+- gi workshop und strom/energie konferenzen mal anschauen, ob man da was zu den Threats vorstellen kann
+- ansonsten schauen, dass ich die Tabellen und so hinbekomme und dann weiter machen wie geplant
+
+## Milena 05.08.2025
+- Donnerstag einmal fragen, ob es schon so tools gibt fuer sowas wie false data injection oder ob man da selber schauen muss, oder ob bekannt ist, dass man das eh alles selber bauen muss
+- weiter an den mitigations arbeiten und versuchen bis ende August mit dem Sicherheitspacket durch zu sein
+>>>>>>> refs/remotes/origin/main
