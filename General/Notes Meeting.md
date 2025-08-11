@@ -358,3 +358,8 @@
 - Donnerstag einmal fragen, ob es schon so tools gibt fuer sowas wie false data injection oder ob man da selber schauen muss, oder ob bekannt ist, dass man das eh alles selber bauen muss
 - weiter an den mitigations arbeiten und versuchen bis ende August mit dem Sicherheitspacket durch zu sein
 
+## Milena 11.08.2025
+- Kann zwar die einzelnen Komponenten noch einfaerben, aber wenn man dann in ThreatDragon die Componenten auswaehlt werden die Farben einfach wieder ueberschrieben, also nicht so hilfreich?
+- Habe noch generelle Threats aufgeschrieben, damit man eine Ubersicht hat 
+- Scripte verbessert und uebersichtlicher gemacht.
+- Scheint als sei Panda Power mit Mosaik und OMNet++ die beste Option
