@@ -2,5 +2,8 @@
   "enabledCssSnippets": [
     "obsidian"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "textFontFamily": "Tahoma",
+  "interfaceFontFamily": "Tahoma",
+  "monospaceFontFamily": "Tahoma"
 }
