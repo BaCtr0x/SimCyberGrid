@@ -367,5 +367,13 @@
 	- Als Co-Simulator scheint [Mosaik](https://mosaik.offis.de/) gut zu sein, damit kann man Power- und Kommunikationssimulator zusammen bringen. Und vor allem wirkt es auch gut bedienbar. Muss man sich mal anschauen, wenn man sich ein Beispiel zusammengebaut hat. Aber es gibt auf jeden Fall eine python library um Mosaik und PandaPower zu verbinden und ein Paper um OMNeT++ und Mosaik zusammen zu bringen. Es gibt auch ein Projekt das OMNeT++ mit Mosaik verbindet das [COSIMA](https://github.com/OFFIS-DAI/cosima) heisst, muss ich mir nochmal anschauen, nutzt [mango-argents](https://pypi.org/project/mango-agents/).
 	- Fuer die Kommunikationssimulation koennte dann [OMNeT++](https://omnetpp.org/intro/) eine Option sein, das ist eine modulare Komponenten basierte C++ Simulations Bibliothek die auf netzwerk simulation spezialisiert ist und unterstuetzt einige Internet Protokolle, wie TCP, UDP und Co durch das [INET](https://inet.omnetpp.org/Introduction.html) Framework.
 - [ ] 1-3 bekannte Angriffe raussuchen und schauen ob die noch valide sind mit der aktuellen Threat analyse.
-- [ ] Schauen ob man OMNeT++ mit OWASP Threat/Attack tool verbinden kann
+- [x] Schauen ob man OMNeT++ mit OWASP Threat/Attack tool verbinden kann
 - [ ] aufschreiben von ergebnissen aus Threatanalyse als eine Art short paper oder poster, je nachdem was besser passt
+- [x] Anschauen was in dem Detect Threats script falsch laeuft, es wird aus irgend einem grund der Status nicht richtig zugeordnet in der prettifier funktion
+
+## Milena 20.08.2025:
+- schauen ob OMNet++ wirklich das richtige ist, schauen ob es auch wirklich was fuer Pentest representationen finden kann
+	- muss nicht tiefer gehen, nur schauen ob es ueberhaupt was in richtung pentesting schon als art librarie oder so fuer OMNet gibt
+- Ansonsten haupt fokus auf Stuxnet und famous attacks fuer aktuelle version ansehen und schauen was man noch umsetzten kann 
+	- auch allgemeiner schauen was man machen kann
+- 
