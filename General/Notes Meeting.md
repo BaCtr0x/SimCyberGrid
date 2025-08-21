@@ -367,6 +367,7 @@
 	- Als Co-Simulator scheint [Mosaik](https://mosaik.offis.de/) gut zu sein, damit kann man Power- und Kommunikationssimulator zusammen bringen. Und vor allem wirkt es auch gut bedienbar. Muss man sich mal anschauen, wenn man sich ein Beispiel zusammengebaut hat. Aber es gibt auf jeden Fall eine python library um Mosaik und PandaPower zu verbinden und ein Paper um OMNeT++ und Mosaik zusammen zu bringen. Es gibt auch ein Projekt das OMNeT++ mit Mosaik verbindet das [COSIMA](https://github.com/OFFIS-DAI/cosima) heisst, muss ich mir nochmal anschauen, nutzt [mango-argents](https://pypi.org/project/mango-agents/).
 	- Fuer die Kommunikationssimulation koennte dann [OMNeT++](https://omnetpp.org/intro/) eine Option sein, das ist eine modulare Komponenten basierte C++ Simulations Bibliothek die auf netzwerk simulation spezialisiert ist und unterstuetzt einige Internet Protokolle, wie TCP, UDP und Co durch das [INET](https://inet.omnetpp.org/Introduction.html) Framework.
 - [ ] 1-3 bekannte Angriffe raussuchen und schauen ob die noch valide sind mit der aktuellen Threat analyse.
+<<<<<<< Updated upstream
 - [x] Schauen ob man OMNeT++ mit OWASP Threat/Attack tool verbinden kann
 - [ ] aufschreiben von ergebnissen aus Threatanalyse als eine Art short paper oder poster, je nachdem was besser passt
 - [x] Anschauen was in dem Detect Threats script falsch laeuft, es wird aus irgend einem grund der Status nicht richtig zugeordnet in der prettifier funktion
@@ -377,3 +378,35 @@
 - Ansonsten haupt fokus auf Stuxnet und famous attacks fuer aktuelle version ansehen und schauen was man noch umsetzten kann 
 	- auch allgemeiner schauen was man machen kann
 - 
+=======
+- [ ] Schauen ob man OMNeT++ mit OWASP Threat/Attack tool verbinden kann
+	- Es gibt NETA, was ein Network attack framework fuer OMNET ist, scheint aber kleiner zu sein und das Git wurde das letzte mal vor 8 Jahren geupdated
+	- Es gibt noch SEA++, was ein high level attack simulations tool fuer OMNET ist, wobei nicht die angriffe selbst simuliert werden, sondern angenommen wird es gibt einen erfolgreichen Angriff und dann wird simuliert wie sich dieser auswirkt. 
+	- Ansonsten kann man vielleicht auch Nettacker von OWASP mit OMNeT verbinden, aber es gibt zumindest keine direkte Implementation, indem man ueber sockets geht, aber da kann ich so nicht einschaetzen ob das sehr aufwaendig wird oder geht. Das muss man sich dann mal im genaueren anschauen, wenn man ein bisschen mit dem Tool rumgespielt hat. 
+	- Es gibt auch sonst kein Pentesting Tool fuer OMNeT.
+- [ ] aufschreiben von ergebnissen aus Threatanalyse als eine Art short paper oder poster, je nachdem was besser passt
+- [ ] Ist es moeglich, dass man Mosaik so verwerndet, dass man in entweder OMNeT ein Netzwerk erstell und dann ein passendes Netzwerk in PandaPower gebaut wird und anders herum?
+
+## Weekly 21.08.2025
+- Fuer die GI von der HAW kann noch eine Vorstellung von der aktuellen Promotionsthemen kommen, soll aber nur so 1-2 Seiten sein und dann auch Paula fragen ob sie auch dabei sein will.
+- Finale Anforderungen und Use Cases sind schon im Teams, die Testversion kommt auch noch heute oder morgen
+- Somit koennen wir Arbeitspacket abharken
+- [x] Kann Anforderungen als Issues ins Github Hauen
+- Gridlab-D mal ansehen als powersimulation
+- ns-3 und rettij mal genauer fuer kommunikationssimulator mal ansehen
+- Sascha schaut sich an wie weit Wattson gekommen ist seitdem die ihren Kram 2022 veroeffentlicht haben
+- mal sowas wie rettij und so auch in den code schauen und sehen ob sich das lohnt das zu uebernehem oder lieber von null anfaengt, weil der andere Kram buggy ist und man doch viel umbauen muss, weil man sonst 2 wochen zum einrichten braucht und dann doch noch einiges baut, was man sich vielleicht sonst sparen kann.
+- Sascha schaut sich das Ganze mal genauer an und gibt naechste Woche feedback
+	- Schaut auch welches Tool man nutzen kann oder ob man doch lieber selbst was macht
+	- Kann auch noch ein bisschen laenger dauer
+	- Auch vom Testing anschauen und wie modular kann man das Ganze aufbauen
+	- Klingt zum Teil nicht, als ob man gewisse Angriffe einfach einbinden kann, sondern eher vorgefertigt
+	- Also wie abstrakt ist das Ganze aufgebaut
+	- Verteilnetz und Uebertragungsnetze sind zu gross und interessieren uns nicht
+- [x] Gleich mal Issues aufbauen fuer Sascha und mich, dann kann ich da mal einen Uberblick bauen und man weiss was gemacht wird
+	- [x] Sascha Simulationstools anschauen und bestimmen welche Komplett Tools interessant sind und welche einzel Simulatoren interessant sind
+	- [x] Fuer mich Famous Attacks feasibility anschauen und bestimmen
+	- [x] Fuer mich OWASP und andere Standard Pentesting tools fuer Rattij, NS-3 und OMNet anschauen, ob da was sinnvolles dabei sit oder ob man das selber bauen muesste
+- [ ] Test anforderungen auch ins Git packen (wenn oben)
+- [ ] 
+>>>>>>> Stashed changes
