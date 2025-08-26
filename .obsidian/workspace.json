@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Famous Attacks/Dragonfly.md",
+                "file": "Security/Famous Attacks/Sunburst.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dragonfly"
+              "title": "Sunburst"
             }
           },
           {
@@ -199,13 +199,14 @@
   },
   "active": "a478a4b53ab3f2ff",
   "lastOpenFiles": [
+    "Security/Famous Attacks/Sunburst.md",
+    "Security/Famous Attacks/Trisis or Triton.md",
+    "Security/Famous Attacks/Industroyer or CrashOverride (2016).md",
     "Security/Famous Attacks/Dragonfly.md",
+    "General/Notes Meeting.md",
     "Security/Famous Attacks/Black Energy 3.md",
     "Security/Famous Attacks/Havex.md",
-    "Security/Famous Attacks/Sunburst.md",
     "Security/Famous Attacks/SAML.md",
-    "Security/Famous Attacks/Trisis or Triton.md",
-    "General/Notes Meeting.md",
     "Images/SimCyberGrid_Logo_white_background.png",
     "Images/SimCyberGrid_Logo.png",
     "General/Abreviations.md"
