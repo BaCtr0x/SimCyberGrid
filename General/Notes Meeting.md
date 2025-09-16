@@ -407,6 +407,7 @@
 	- [x] Sascha Simulationstools anschauen und bestimmen welche Komplett Tools interessant sind und welche einzel Simulatoren interessant sind
 	- [x] Fuer mich Famous Attacks feasibility anschauen und bestimmen
 	- [x] Fuer mich OWASP und andere Standard Pentesting tools fuer Rattij, NS-3 und OMNet anschauen, ob da was sinnvolles dabei sit oder ob man das selber bauen muesste
-- [ ] Test anforderungen auch ins Git packen (wenn oben)
-- [ ] 
->>>>>>> Stashed changes
+- [x] Test anforderungen auch ins Git packen (wenn oben)
+
+## Meeting Notes HiWi
+
