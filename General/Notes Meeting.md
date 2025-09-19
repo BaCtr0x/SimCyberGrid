@@ -407,7 +407,20 @@
 	- [x] Sascha Simulationstools anschauen und bestimmen welche Komplett Tools interessant sind und welche einzel Simulatoren interessant sind
 	- [x] Fuer mich Famous Attacks feasibility anschauen und bestimmen
 	- [x] Fuer mich OWASP und andere Standard Pentesting tools fuer Rattij, NS-3 und OMNet anschauen, ob da was sinnvolles dabei sit oder ob man das selber bauen muesste
+- [ ] Test anforderungen auch ins Git packen (wenn oben)
+- [ ] 
 - [x] Test anforderungen auch ins Git packen (wenn oben)
 
+
+## Milena 26.08.2025
+- Ich denke man sollte ein automatische mapping zwischen pandapower und den communicationssimulatoren aufbauen koennen. Vielleicht kann Mosaik das schon ansonsten sollte man da gut regel einfuehren koennen, sodass man ein script hat, was anhand derer die passenden netzwerke in dem jeweil anderen Framework erstellt werden. Das scheint nicht soo viel aufwand zu sein.
+- Anschauen mit GridAttack und wattson, mal sehen was die genau machen und wie haben die die angriffe simuliert
+- Vor allem Wattson mal anschauen und durch die publications schauen was die so gemacht haben und ob die wirklich ausgereift angriffe betrachten oder auch mehr ein resiliance testing machen
+- vielleicht auch die Liste von Folie 6 durchgehen und schauen was machen die in bezug auf Cyberangriffe so
+	- [ ] Am besten einmal eine Uebersicht aufstellen
+- [ ] bis naechste Woche mal ueberlegen, was ein HiWi machen koennte
+
+## Weekly 11.09.2025
+- 
 ## Meeting Notes HiWi
 
