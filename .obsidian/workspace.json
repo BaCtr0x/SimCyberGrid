@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Famous Attacks/Sunburst.md",
+                "file": "Paper/ANALYSE — LEARNING TO ATTACK CYBER-PHYSICAL  ENERGY SYSTEMS WITH INTELLIGENT AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sunburst"
+              "title": "ANALYSE — LEARNING TO ATTACK CYBER-PHYSICAL  ENERGY SYSTEMS WITH INTELLIGENT AGENTS"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 237.5
   },
   "right": {
     "id": "194ffbf3c7e4f56e",
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Famous Attacks/Sunburst.md",
+                "file": "Paper/ANALYSE — LEARNING TO ATTACK CYBER-PHYSICAL  ENERGY SYSTEMS WITH INTELLIGENT AGENTS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Sunburst"
+              "title": "Outline of ANALYSE — LEARNING TO ATTACK CYBER-PHYSICAL  ENERGY SYSTEMS WITH INTELLIGENT AGENTS"
             }
           }
         ],
@@ -170,7 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 270.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,12 +185,16 @@
   },
   "active": "6688901f73170027",
   "lastOpenFiles": [
+    "General/Abreviations.md",
+    "Paper/ANALYSE — LEARNING TO ATTACK CYBER-PHYSICAL  ENERGY SYSTEMS WITH INTELLIGENT AGENTS.md",
+    "Paper/Comprehensively Analyzing the Impact of Cyberattacks on Power Grids.md",
+    "Paper/Emulating and Evaluating Transport Layer Protocols  for Resilient Communication in Smart Grids.md",
+    "Paper/A Modern ICT Network Simulator for Co-Simulations in Smart Grid  Applications.md",
+    "Security/Famous Attacks/Sunburst.md",
     "Paper/Sherlock A Dataset for Process aware Intrusion Detection Research on Power Grid Networks.md",
     "Paper/On Process Awareness in Detecting Multi-stage  Cyberattacks in Smart Grids.md",
-    "Paper/A Modern ICT Network Simulator for Co-Simulations in Smart Grid  Applications.md",
     "Paper",
     "General/Notes Meeting.md",
-    "Security/Famous Attacks/Sunburst.md",
     "Security/Famous Attacks/Trisis or Triton.md",
     "Security/Famous Attacks/Industroyer or CrashOverride (2016).md",
     "Security/Famous Attacks/Dragonfly.md",
@@ -198,7 +202,6 @@
     "Security/Famous Attacks/Havex.md",
     "Security/Famous Attacks/SAML.md",
     "Images/SimCyberGrid_Logo_white_background.png",
-    "Images/SimCyberGrid_Logo.png",
-    "General/Abreviations.md"
+    "Images/SimCyberGrid_Logo.png"
   ]
 }
