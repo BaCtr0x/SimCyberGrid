@@ -66,4 +66,6 @@
 | FLISR       | Fault Location, Isolation & Service Restoration                           |
 | ASCI        | Abstract Communication Service Interface                                  |
 | CRL         | Certificate Recovery List                                                 |
+| SAML        | Security Assertion Markup Language                                        |
+| PKI         | Public Key Infrastructure                                                 |
 
